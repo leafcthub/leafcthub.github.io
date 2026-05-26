@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Submit Dataset | Leaf CT Hub</title>
+    <meta name="description" content="Contribute a plant or leaf CT dataset to Leaf CT Hub.">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Leaf CT Hub</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="datasets.html">Datasets</a>
+        <a data-nav href="submit.html">Submit</a>
+        <a data-nav href="about.html">About</a>
+        <a href="https://huggingface.co/spaces/WorasitSangjan/Leaf-CT-Segmentation" target="_blank" rel="noopener">Segmentation App</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Contribute</p>
+        <h1>Submit a dataset record</h1>
+        <p>Share a leaf X-ray micro-CT dataset by sending metadata and a link to the data. The Leaf CT Hub team will review the submission, process preview images, and update the catalog.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Dataset Submission</p>
+          <h2>Submit metadata and a dataset link</h2>
+        </div>
+        <form class="submission-form" data-submission-form>
+          <div class="submission-form__note">
+            <strong>How it works:</strong> add metadata and a dataset link. We review, process previews, and update the catalog.
+          </div>
+          <div class="submission-form__section">Plant information</div>
+          <label>
+            <span>Dataset title <em>required</em></span>
+            <input name="dataset_title" type="text" placeholder="Example: Olive leaf X-ray micro-CT dataset" required>
+          </label>
+          <label>
+            <span>Scientific name <em>required</em></span>
+            <input name="scientific_name" type="text" placeholder="Example: Olea europaea" required>
+          </label>
+          <label>
+            <span>Common name</span>
+            <input name="common_name" type="text" placeholder="Example: Olive">
+          </label>
+          <label>
+            <span>Family</span>
+            <input name="family" type="text" placeholder="Example: Oleaceae">
+          </label>
+          <div class="submission-form__section">Equipment</div>
+          <label>
+            <span>Imaging modality</span>
+            <input name="imaging_modality" type="text" value="X-ray micro-CT">
+          </label>
+          <label>
+            <span>Instrument / facility</span>
+            <input name="instrument_facility" type="text" placeholder="Example: X-ray μCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory">
+          </label>
+          <label class="submission-form__wide">
+            <span>Instrument location</span>
+            <input name="instrument_location" type="text" placeholder="Example: Berkeley, CA, United States">
+          </label>
+          <div class="submission-form__section">Image and file details</div>
+          <label>
+            <span>Image size</span>
+            <input name="image_size" type="text" placeholder="Example: 1503 x 501">
+          </label>
+          <label>
+            <span>Image/mask pairs</span>
+            <input name="image_mask_pairs" type="text" placeholder="Example: 30 images / 30 masks">
+          </label>
+          <label>
+            <span>File format</span>
+            <input name="file_format" type="text" placeholder="Example: TIF">
+          </label>
+          <div class="submission-form__section">Segmentation</div>
+          <label class="submission-form__wide">
+            <span>Annotation classes</span>
+            <textarea name="segmentation_labels" rows="4" placeholder="Example: Background, epidermis, vascular region, mesophyll, air space"></textarea>
+          </label>
+          <div class="submission-form__section">Source and access</div>
+          <label>
+            <span>Image/mask provider</span>
+            <input name="provider" type="text" placeholder="Example: Santiago Trueba">
+          </label>
+          <label>
+            <span>Provider affiliation</span>
+            <input name="provider_affiliation" type="text" placeholder="Example: AMAP Lab, University of Montpellier, Montpellier, France">
+          </label>
+          <label>
+            <span>Dataset or repository link <em>required</em></span>
+            <input name="repository_url" type="url" placeholder="https://..." required>
+          </label>
+          <label>
+            <span>Paper DOI or publication link</span>
+            <input name="paper_reference" type="text" placeholder="Example: 10.xxxx/xxxxx or https://...">
+          </label>
+          <label class="submission-form__wide">
+            <span>Notes for processing</span>
+            <textarea name="processing_notes" rows="4" placeholder="Tell us about folder structure, mask encoding, preview slice preference, or anything we should know."></textarea>
+          </label>
+          <label class="submission-form__wide">
+            <span>Contact</span>
+            <input name="contact" type="text" placeholder="Name and email or GitHub username">
+          </label>
+          <div class="submission-form__actions">
+            <button class="button" type="submit">Create submission issue</button>
+            <a class="button button--secondary" href="datasets.html">View current catalog</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="site-footer__brand">Leaf CT Hub</span>
+      <span class="site-footer__note">Website code is MIT licensed. Dataset media remain with contributors; see records for attribution and reuse terms. <a href="https://github.com/WorasitSangjan/WebDatabase-Leaf-CT-Hub" target="_blank" rel="noopener">Contribute on GitHub</a>.</span>
+      <span class="site-footer__year">&copy; <span data-year></span></span>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/submit.js"></script>
+  </body>
+</html>

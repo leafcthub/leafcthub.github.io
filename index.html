@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leaf CT Hub</title>
+    <meta name="description" content="A scientific catalog for discovering plant and leaf X-ray micro-CT datasets linked to USDA Ag Data Commons.">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Leaf CT Hub</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="datasets.html">Datasets</a>
+        <a data-nav href="submit.html">Submit</a>
+        <a data-nav href="about.html">About</a>
+        <a href="https://huggingface.co/spaces/WorasitSangjan/Leaf-CT-Segmentation" target="_blank" rel="noopener">Segmentation App</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero--solo">
+        <div class="hero__content">
+          <h1>Leaf X-ray micro-CT Datasets</h1>
+          <p>
+            Leaf CT Hub is an open catalog for discovering and reusing plant X-ray micro-CT datasets.
+            The hub provides preview images, segmentation labels, metadata, and repository links
+            to support leaf anatomy, phenotyping, and image segmentation research.
+          </p>
+        </div>
+      </section>
+
+      <section class="section how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow">How It Works</p>
+          <h2>Browse here, download from trusted repositories</h2>
+        </div>
+        <div class="how-it-works__content">
+          <p class="body-copy">
+            Leaf CT Hub provides a searchable catalog of dataset records. Large image files and
+            segmentation labels are stored in DOI-backed repositories such as USDA Ag Data Commons,
+            while this website provides metadata, preview images, citations, and direct access links.
+          </p>
+          <div class="action-row">
+            <a class="button" href="datasets.html">Browse datasets</a>
+            <a class="button button--secondary" href="submit.html">Contribute data</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Catalog Summary</p>
+          <section class="stats-band" aria-label="Catalog summary">
+            <div>
+              <strong data-total-datasets>92</strong>
+              <span>dataset records</span>
+            </div>
+            <div>
+              <strong data-total-categories>13</strong>
+              <span>catalog categories</span>
+            </div>
+            <div>
+              <strong data-total-slices>1147</strong>
+              <span>annotated slices</span>
+            </div>
+          </section>
+          <h2>Representative Dataset Records</h2>
+          <p class="body-copy">
+            Representative records show the type of metadata, preview images, labels, and repository
+            links included in the catalog.
+          </p>
+        </div>
+        <div class="dataset-grid dataset-grid--featured" data-featured-datasets></div>
+      </section>
+
+      <section class="section two-column section--tools">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Segmentation Tools</p>
+            <h2>Companion Tools for Leaf CT Segmentation</h2>
+          </div>
+          <p class="body-copy">
+            The catalog is paired with open resources for testing the segmentation app, reviewing
+            the web app source code, and following the training workflow used to develop leaf CT
+            segmentation models.
+          </p>
+        </div>
+        <div class="info-panel">
+          <h2>Leaf CT Segmentation App</h2>
+          <p>
+            Access the hosted segmentation app, inspect the web application source code, or review
+            the training workflow used to build the segmentation model.
+          </p>
+          <div class="action-row tool-actions">
+            <a class="button" href="https://huggingface.co/spaces/WorasitSangjan/Leaf-CT-Segmentation" target="_blank" rel="noopener">Open Segmentation App</a>
+            <a class="button button--secondary" href="https://github.com/WorasitSangjan/WebApp-Leaf-microCT-Segmentation" target="_blank" rel="noopener">View web app repo</a>
+            <a class="button button--secondary" href="https://github.com/WorasitSangjan/Training-Leaf-microCT-Segmentation" target="_blank" rel="noopener">View training pipeline repo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="site-footer__brand">Leaf CT Hub</span>
+      <span class="site-footer__note">Website code is MIT licensed. Dataset media remain with contributors; see records for attribution and reuse terms. <a href="https://github.com/WorasitSangjan/WebDatabase-Leaf-CT-Hub" target="_blank" rel="noopener">Contribute on GitHub</a>.</span>
+      <span class="site-footer__year">&copy; <span data-year></span></span>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/datasets.js"></script>
+  </body>
+</html>
