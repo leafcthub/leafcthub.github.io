@@ -1,0 +1,41 @@
+{
+  "name": "grape_w",
+  "image_dir": "/pscratch/sd/w/worasit/datasets/grape_w/images",
+  "mask_dir": "/pscratch/sd/w/worasit/datasets/grape_w/masks",
+  "num_classes": 5,
+  "ignore_index": 254,
+  "has_bse_label": false,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Vascular_Region",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "170": 0,
+    "85": 1,
+    "95": 1,
+    "152": 2,
+    "180": 2,
+    "55": 3,
+    "0": 3,
+    "255": 4,
+    "140": 254,
+    "150": 254,
+    "207": 254,
+    "235": 254,
+    "237": 254
+  },
+  "_notes": {
+    "encoding": "Devin standard",
+    "note": "Values 140,150,207,235,237 are boundary artifacts mapped to ignore (254)",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+    "source_contributor": "Mina Momayyezi",
+    "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
+    "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
+    "source_contact": "mmomayyezi@ucdavis.edu"
+  }
+}

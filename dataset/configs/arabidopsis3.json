@@ -1,0 +1,34 @@
+{
+  "num_classes": 5,
+  "ignore_index": 254,
+  "has_bse_label": false,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Vascular_Region",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "name": "arabidopsis3",
+  "image_dir": "/pscratch/sd/w/worasit/datasets/arabidopsis3/images",
+  "mask_dir": "/pscratch/sd/w/worasit/datasets/arabidopsis3/masks",
+  "mapping": {
+    "0": 4,
+    "85": 0,
+    "170": 1,
+    "255": 3
+  },
+  "_notes": {
+    "annotator": "Leila_Fletcher",
+    "note": "Slices with no visible vascular tissue \u2014 same encoding as arabidopsis1",
+    "mask_mode": "P (palette-indexed)",
+    "n_files": 4,
+    "num_classes_note": "num_classes=5 is correct for the unified scheme; vascular class (103) simply absent in these slices",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+    "source_contributor": "Leila R. Fletcher",
+    "source_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
+    "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu"
+  }
+}

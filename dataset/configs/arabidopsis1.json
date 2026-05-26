@@ -1,0 +1,34 @@
+{
+  "num_classes": 5,
+  "ignore_index": 254,
+  "has_bse_label": false,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Vascular_Region",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "name": "arabidopsis1",
+  "image_dir": "/pscratch/sd/w/worasit/datasets/arabidopsis1/images",
+  "mask_dir": "/pscratch/sd/w/worasit/datasets/arabidopsis1/masks",
+  "mapping": {
+    "0": 4,
+    "85": 0,
+    "103": 2,
+    "170": 1,
+    "255": 3
+  },
+  "_notes": {
+    "annotator": "Leila_Fletcher",
+    "line": "Col-0 and ARTH-15 mutant",
+    "mask_mode": "P (palette-indexed)",
+    "n_files": 46,
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+    "source_contributor": "Leila R. Fletcher",
+    "source_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
+    "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu"
+  }
+}

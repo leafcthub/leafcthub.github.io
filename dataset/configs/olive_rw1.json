@@ -1,0 +1,36 @@
+{
+  "name": "olive_rw1",
+  "image_dir": "/pscratch/sd/w/worasit/datasets/olive_rw1/images",
+  "mask_dir": "/pscratch/sd/w/worasit/datasets/olive_rw1/masks",
+  "num_classes": 5,
+  "ignore_index": 254,
+  "has_bse_label": false,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Vascular_Region",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "0": 3,
+    "55": 3,
+    "85": 1,
+    "95": 1,
+    "170": 0,
+    "180": 2,
+    "255": 4,
+    "225": 254
+  },
+  "_notes": {
+    "olive_segmentation": "Devin",
+    "value_225": "unclassified/border region \u2192 ignore (254)",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+    "source_contributor": "Mina Momayyezi",
+    "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
+    "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
+    "source_contact": "mmomayyezi@ucdavis.edu"
+  }
+}

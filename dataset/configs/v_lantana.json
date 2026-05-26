@@ -1,0 +1,32 @@
+{
+  "name": "v_lantana",
+  "image_dir": "/pscratch/sd/w/worasit/datasets/v_lantana/images",
+  "mask_dir": "/pscratch/sd/w/worasit/datasets/v_lantana/masks",
+  "num_classes": 5,
+  "ignore_index": 254,
+  "has_bse_label": false,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Vascular_Region",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "0": 3,
+    "85": 1,
+    "152": 2,
+    "170": 0,
+    "255": 4
+  },
+  "_notes": {
+    "mask_mode": "L (grayscale)",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+    "source_contributor": "Aleca M. Borsuk",
+    "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
+    "source_contact": "aborsuk@nybg.org",
+    "source_orcid": "https://orcid.org/0000-0002-1696-9647"
+  }
+}
