@@ -2,6 +2,11 @@
 
 Leaf CT Hub is an open-source website for sharing, discovering, and cataloging plant and leaf X-ray micro-CT datasets.
 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)
+![Platform](https://img.shields.io/badge/Platform-GitHub%20Pages-orange.svg)
+![Research](https://img.shields.io/badge/Research-USDA--ARS-navy.svg)
+
 Official website: https://leafcthub.github.io/
 
 The catalog includes dataset metadata, preview images, segmentation masks, annotation classes, contributor attribution, and links to trusted repository records.
@@ -43,12 +48,6 @@ Large raw image and mask stacks are not stored in this repository.
 
 ## Dataset Records
 
-Catalog metadata is stored in:
-
-```text
-data/datasets.json
-```
-
 Each record can include:
 
 - Scientific name, common name, and family
@@ -66,25 +65,10 @@ https://leafcthub.github.io/submit.html
 
 The Leaf CT Hub team reviews submissions, confirms dataset access and attribution, prepares preview images, and updates the catalog.
 
-Admin workflow notes are in:
+## Data Maintainers
 
-```text
-ADMIN_DATASET_UPLOAD.md
-```
-
-## Development
-
-This is a static website built with HTML, CSS, JavaScript, and JSON metadata. It can be run locally with:
-
-```bash
-python3 -m http.server 8010
-```
-
-Then open:
-
-```text
-http://localhost:8010/
-```
+- Dr. Worasit Sangjan, USDA-ARS researcher
+- Dr. Devin A. Rippner, USDA-ARS researcher
 
 ## License
 
