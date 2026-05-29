@@ -50,6 +50,13 @@ function formatDatasetTitle(record) {
 }
 
 function formatCardTitle(record) {
+  if (record.scientific_name && /^(oak|pine|v)_/.test(record.id || "")) {
+    const idPrefix = record.id.split("_")[0];
+    const prefix = idPrefix === "v" ? "viburnum" : idPrefix;
+    const sampleNumber = (record.id.match(/(\d+)$/) || [])[1];
+    const suffix = sampleNumber ? ` ${sampleNumber}` : "";
+    return `${prefix} - ${formatScientificName(record.scientific_name)}${suffix}`;
+  }
   return formatValue(record.id || record.title).replaceAll("_", " ");
 }
 
