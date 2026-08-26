@@ -38,7 +38,7 @@ function addClassOptions(select, values) {
   values.forEach((value) => {
     const option = document.createElement("option");
     option.value = String(value);
-    option.textContent = `${value} mask values`;
+    option.textContent = `${value} label classes`;
     select.append(option);
   });
 }
@@ -260,20 +260,28 @@ async function initHomePage() {
   const total = document.querySelector("[data-total-datasets]");
   const categories = document.querySelector("[data-total-categories]");
   const slices = document.querySelector("[data-total-slices]");
-  if (!featured) {
+  if (!featured && !total && !categories && !slices) {
     return;
   }
   try {
     const records = await loadDatasets();
-    const selected = selectFeaturedDatasets(records);
-    featured.replaceChildren(...selected.map(createDatasetCard));
-    total.textContent = records.length;
-    categories.textContent = uniqueValues(records, "plant_category").length;
+    if (featured) {
+      const selected = selectFeaturedDatasets(records);
+      featured.replaceChildren(...selected.map(createDatasetCard));
+    }
+    if (total) {
+      total.textContent = records.length;
+    }
+    if (categories) {
+      categories.textContent = uniqueValues(records, "plant_category").length;
+    }
     if (slices) {
       slices.textContent = totalAnnotatedSlices(records);
     }
   } catch (error) {
-    featured.innerHTML = `<p class="notice">Featured datasets could not be loaded.</p>`;
+    if (featured) {
+      featured.innerHTML = `<p class="notice">Featured datasets could not be loaded.</p>`;
+    }
     console.error(error);
   }
 }
