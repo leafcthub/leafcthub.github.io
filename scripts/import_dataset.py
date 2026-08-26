@@ -88,12 +88,22 @@ def save_mask_preview(record_id: str, masks: list[Path]) -> str:
     return str(preview_path.relative_to(ROOT))
 
 
-def sorted_label_values(mapping: dict) -> list[str]:
+def sorted_label_values(mapping: dict, ignore_index=None) -> list[str]:
+    """Raw mask pixel values that map to a real semantic class.
+
+    Excludes any raw value whose mapping target is ignore_index, since those
+    are noise/border pixels meant to be excluded from training, not a class.
+    This keeps mask_label_value_count aligned with num_classes.
+    """
     def sort_key(value: str) -> tuple[int, int | str]:
         text = str(value)
         return (0, int(text)) if text.lstrip("-").isdigit() else (1, text)
 
-    return sorted((str(value) for value in mapping.keys()), key=sort_key)
+    active_keys = (
+        key for key, target in mapping.items()
+        if ignore_index is None or target != ignore_index
+    )
+    return sorted((str(key) for key in active_keys), key=sort_key)
 
 
 def build_record(
@@ -106,7 +116,8 @@ def build_record(
     mask_preview_image: str,
 ) -> dict:
     mapping = config.get("mapping") or {}
-    mask_label_values = sorted_label_values(mapping)
+    ignore_index = config.get("ignore_index", metadata.get("ignore_index"))
+    mask_label_values = sorted_label_values(mapping, ignore_index)
     first_image = images[0] if images else None
     file_format = first_image.suffix.lstrip(".").upper().replace("TIFF", "TIF") if first_image else ""
     title = metadata.get("title") or f"{metadata.get('scientific_name', record_id).strip()} leaf X-ray micro-CT dataset ({record_id})"
