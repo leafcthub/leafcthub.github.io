@@ -1,0 +1,41 @@
+{
+  "name": "beilschmiedia_berteroana",
+  "image_dir": "/Users/ws/Documents/GitHub/leafcthub.github.io/dataset/images/beilschmiedia_berteroana/images",
+  "mask_dir": "/Users/ws/Documents/GitHub/leafcthub.github.io/dataset/images/beilschmiedia_berteroana/masks",
+  "num_classes": 6,
+  "ignore_index": 254,
+  "has_bse_label": true,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Bundle_Sheath",
+    "Vascular_Tissue",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "170": 0,
+    "85": 1,
+    "152": 2,
+    "128": 3,
+    "0": 4,
+    "255": 5
+  },
+  "_notes": {
+    "species": "Beilschmiedia berteroana",
+    "specimen": "Beilschmiedia_berteroana, UC Berkeley Botanical Garden, scanned 2016 or 2017",
+    "source": "Guillaume Theroux-Rancourt annotation proposal (Craig and Andrew); used in Theroux-Rancourt et al. 2021 Proceedings B of the Royal Society",
+    "source_contributors": [
+      {
+        "name": "Guillaume Theroux-Rancourt",
+        "email": "gtrancourt@gmail.com",
+        "affiliation": "Department of Plant Sciences, University of California, Davis, CA, USA (affiliation at the time of dataset annotation, ca. 2016-2018)",
+        "current_affiliation_note": "As of the 2026 CNNs-to-Vision-Transformers manuscript, listed at BOKU University, Vienna, Austria and Estonian University of Life Sciences, Tartu, Estonia"
+      }
+    ],
+    "reference": "https://royalsocietypublishing.org/doi/10.1098/rspb.2020.3145",
+    "encoding": "Devin standard",
+    "value_152": "Bundle Sheath Extensions \u2192 Vascular Region (class 2)",
+    "value_128": "Vein \u2192 Vascular Region (class 2)"
+  }
+}
