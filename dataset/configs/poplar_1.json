@@ -1,0 +1,50 @@
+{
+  "name": "poplar_1",
+  "image_dir": "/Users/ws/Documents/GitHub/leafcthub.github.io/dataset/images/poplar_1/images",
+  "mask_dir": "/Users/ws/Documents/GitHub/leafcthub.github.io/dataset/images/poplar_1/masks",
+  "num_classes": 8,
+  "ignore_index": 254,
+  "has_bse_label": true,
+  "class_names": [
+    "Background",
+    "Adaxial_Epidermis",
+    "Abaxial_Epidermis",
+    "Bundle_Sheath",
+    "Vascular_Tissue",
+    "Palisade_Mesophyll",
+    "Spongy_Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "170": 0,
+    "85": 1,
+    "95": 2,
+    "152": 3,
+    "180": 4,
+    "55": 5,
+    "0": 6,
+    "255": 7
+  },
+  "_notes": {
+    "species": "Populus (poplar)",
+    "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+    "source_contributors": [
+      {
+        "name": "Thorsten Knipfer",
+        "email": "thorsten.knipfer@ubc.ca",
+        "affiliation": "Faculty of Land and Food Systems, University of British Columbia, Vancouver, BC, Canada"
+      },
+      {
+        "name": "Mina Momayyezi",
+        "email": "mmomayyezi@ucdavis.edu",
+        "affiliation": "Department of Viticulture and Enology, University of California, Davis, CA, USA"
+      }
+    ],
+    "provenance_note": "Poplar scans from the CLS collaboration between Thorsten Knipfer and Mina Momayyezi; per Knipfer's email (Thu Jun 25, addressed to Lawren, Christine, Elizabeth, Santiago Trueba, Craig, Adam, Dula, Guillaume, Richard Harwood), if these scans are included in the manuscript dataset he should be added as a co-author.",
+    "encoding": "Devin standard, collapsed from full 8-class scheme to unified 5-class base model",
+    "value_85_95": "Adaxial_Epidermis (85) + Abaxial_Epidermis (95) \u2192 Epidermis (class 1)",
+    "value_152_180": "Bundle_Sheath (152) + Vascular_Tissue (180) \u2192 Vascular_Region (class 2)",
+    "value_55_0": "Palisade_Mesophyll (55) + Spongy_Mesophyll (0) \u2192 Mesophyll (class 3)",
+    "full_class_config": "See poplar_cls.json for the native 8-class (adaxial/abaxial epidermis, bundle sheath, vascular tissue, palisade/spongy mesophyll) version of this same data"
+  }
+}

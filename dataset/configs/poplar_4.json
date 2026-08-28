@@ -1,0 +1,51 @@
+{
+  "name": "poplar_4",
+  "image_dir": "/Users/ws/Documents/GitHub/leafcthub.github.io/dataset/images/poplar_4/images",
+  "mask_dir": "/Users/ws/Documents/GitHub/leafcthub.github.io/dataset/images/poplar_4/masks",
+  "num_classes": 7,
+  "ignore_index": 254,
+  "has_bse_label": true,
+  "class_names": [
+    "Background",
+    "Adaxial_Epidermis",
+    "Abaxial_Epidermis",
+    "Bundle_Sheath",
+    "Vascular_Tissue",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "170": 0,
+    "100": 1,
+    "130": 2,
+    "75": 3,
+    "220": 4,
+    "0": 5,
+    "255": 6
+  },
+  "_notes": {
+    "species": "Populus (poplar)",
+    "specimen": "poplar_b5d_2car (slice filenames: Slice 228/277/363/415/482/617.tif)",
+    "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+    "source_contributors": [
+      {
+        "name": "Thorsten Knipfer",
+        "email": "thorsten.knipfer@ubc.ca",
+        "affiliation": "Faculty of Land and Food Systems, University of British Columbia, Vancouver, BC, Canada"
+      },
+      {
+        "name": "Mina Momayyezi",
+        "email": "mmomayyezi@ucdavis.edu",
+        "affiliation": "Department of Viticulture and Enology, University of California, Davis, CA, USA"
+      }
+    ],
+    "provenance_note": "Poplar scans from the CLS collaboration between Thorsten Knipfer and Mina Momayyezi; per Knipfer's email (Thu Jun 25, addressed to Lawren, Christine, Elizabeth, Santiago Trueba, Craig, Adam, Dula, Guillaume, Richard Harwood), if these scans are included in the manuscript dataset he should be added as a co-author.",
+    "encoding": "Same 7-value scheme as poplar_b4t_2car (170/100/130/75/220/0/255), not the Devin-standard scheme used by poplar_1/poplar_b4f_3gil",
+    "mask_format_note": "Original masks were saved palette-indexed (P mode, raw indices {0,35,85,125,155,180,255} via an inverted grayscale palette). Converted to plain 8-bit grayscale (L mode) via PIL's palette-resolving .convert('L') so stored pixel values match the visual/semantic values directly, consistent with every other mask in this dataset. Originals kept in masks/.bak_palette_originals/.",
+    "value_100_130": "Adaxial_Epidermis (100, top band) + Abaxial_Epidermis (130, bottom band) \u2192 Epidermis (class 1), same pattern confirmed for poplar_b4t_2car",
+    "value_75_220": "Bundle_Sheath (75, outer ring around a vein) + Vascular_Tissue (220, inner core of a vein) \u2192 Vascular_Region (class 2), same pattern confirmed for poplar_b4t_2car",
+    "value_0": "Mesophyll (class 3)",
+    "value_255": "Air_Space (class 4)",
+    "mask_check": "Verified converted mask pixel values across all 6 slices = {0, 75, 100, 130, 170, 220, 255}, image size 1011x318"
+  }
+}
