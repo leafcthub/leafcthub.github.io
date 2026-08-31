@@ -139,6 +139,7 @@ def build_record(
         "scanner": metadata.get("scanner", ""),
         "scan_location": metadata.get("scan_location", ""),
         "scan_year": metadata.get("scan_year", ""),
+        "scan_notes": metadata.get("scan_notes", ""),
         "voxel_size": metadata.get("voxel_size", ""),
         "voxel_size_unit": metadata.get("voxel_size_unit", "um"),
         "image_size": image_size(first_image) if first_image else metadata.get("image_size", ""),

@@ -168,6 +168,8 @@ function renderDetail(record) {
         ${metadataRow("Instrument / facility", record.scanner)}
         ${metadataRow("Instrument location", record.scan_location)}
         ${metadataRow("Image size", record.image_size)}
+        ${metadataRow("Voxel / pixel size", record.voxel_size ? formatVoxel(record) : "")}
+        ${metadataRow("Scan notes", record.scan_notes)}
         ${metadataRow("Image/mask pairs", imageMaskPairs)}
         ${metadataRow("File format", record.file_format)}
       </dl>
