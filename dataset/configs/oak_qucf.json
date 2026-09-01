@@ -30,6 +30,12 @@
     "source_contributor": "Morgan Furze",
     "source_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
     "source_assignment_note": "Assigned from provided oak source information for Morgan Furze.",
-    "source_contact": "mfurze@purdue.edu"
+    "source_contact": "mfurze@purdue.edu",
+    "objective": "10x",
+    "pixel_size_um": 0.65,
+    "beam_energy_kev": 23,
+    "scan_mode": "continuous tomography",
+    "sample_mount": "sample placed inside a pipette tip",
+    "imaging_details_source": "Direct communication from Morgan Furze (contributor), August 2026"
   }
 }

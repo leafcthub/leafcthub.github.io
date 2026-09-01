@@ -245,10 +245,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 4\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
-    "voxel_size": "0.65",
+    "voxel_size": "1.6",
     "voxel_size_unit": "um",
     "image_size": "1503 x 501",
     "file_format": "TIF",
@@ -333,7 +333,8 @@
       "255"
     ],
     "active_mask_label_value_count": 5,
-    "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States"
+    "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
+    "scan_notes": "21 keV, continuous tomography mode"
   },
   {
     "id": "arabidopsis2",
@@ -349,7 +350,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -438,7 +439,8 @@
       "255"
     ],
     "active_mask_label_value_count": 5,
-    "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States"
+    "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
+    "scan_notes": "21 keV, continuous tomography mode"
   },
   {
     "id": "arabidopsis3",
@@ -454,7 +456,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -540,7 +542,8 @@
       "255"
     ],
     "active_mask_label_value_count": 4,
-    "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States"
+    "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
+    "scan_notes": "21 keV, continuous tomography mode"
   },
   {
     "id": "beilschmiedia_berteroana",
@@ -2303,7 +2306,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -2347,9 +2350,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1093/aobpla/plaf063",
+    "publication_url": "https://doi.org/10.1093/aobpla/plaf063",
+    "citation": "Momayyezi, M., Prats, K. A., McElrone, A. J., & Furze, M. E. (2025). Biochemical and anatomical leaf characteristics of oak trees contribute to differences in photosynthetic capacity between leaf habits. AoB PLANTS, 17(6). https://doi.org/10.1093/aobpla/plaf063",
     "license": "",
     "contributors": "Morgan E. Furze",
     "contact": "mfurze@purdue.edu",
@@ -2404,7 +2407,8 @@
       "255"
     ],
     "active_mask_label_value_count": 8,
-    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States"
+    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
+    "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning"
   },
   {
     "id": "oak_qucf",
@@ -2420,7 +2424,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -2463,9 +2467,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1093/aobpla/plaf063",
+    "publication_url": "https://doi.org/10.1093/aobpla/plaf063",
+    "citation": "Momayyezi, M., Prats, K. A., McElrone, A. J., & Furze, M. E. (2025). Biochemical and anatomical leaf characteristics of oak trees contribute to differences in photosynthetic capacity between leaf habits. AoB PLANTS, 17(6). https://doi.org/10.1093/aobpla/plaf063",
     "license": "",
     "contributors": "Morgan E. Furze",
     "contact": "mfurze@purdue.edu",
@@ -2519,7 +2523,8 @@
       "255"
     ],
     "active_mask_label_value_count": 8,
-    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States"
+    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
+    "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning"
   },
   {
     "id": "oak_qucr",
@@ -2535,7 +2540,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -2579,9 +2584,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1093/aobpla/plaf063",
+    "publication_url": "https://doi.org/10.1093/aobpla/plaf063",
+    "citation": "Momayyezi, M., Prats, K. A., McElrone, A. J., & Furze, M. E. (2025). Biochemical and anatomical leaf characteristics of oak trees contribute to differences in photosynthetic capacity between leaf habits. AoB PLANTS, 17(6). https://doi.org/10.1093/aobpla/plaf063",
     "license": "",
     "contributors": "Morgan E. Furze",
     "contact": "mfurze@purdue.edu",
@@ -2636,7 +2641,8 @@
       "255"
     ],
     "active_mask_label_value_count": 8,
-    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States"
+    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
+    "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning"
   },
   {
     "id": "oak_quob",
@@ -2652,7 +2658,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -2696,9 +2702,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1093/aobpla/plaf063",
+    "publication_url": "https://doi.org/10.1093/aobpla/plaf063",
+    "citation": "Momayyezi, M., Prats, K. A., McElrone, A. J., & Furze, M. E. (2025). Biochemical and anatomical leaf characteristics of oak trees contribute to differences in photosynthetic capacity between leaf habits. AoB PLANTS, 17(6). https://doi.org/10.1093/aobpla/plaf063",
     "license": "",
     "contributors": "Morgan E. Furze",
     "contact": "mfurze@purdue.edu",
@@ -2753,7 +2759,8 @@
       "255"
     ],
     "active_mask_label_value_count": 8,
-    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States"
+    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
+    "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning"
   },
   {
     "id": "oak_quru",
@@ -2769,7 +2776,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -2812,9 +2819,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1093/aobpla/plaf063",
+    "publication_url": "https://doi.org/10.1093/aobpla/plaf063",
+    "citation": "Momayyezi, M., Prats, K. A., McElrone, A. J., & Furze, M. E. (2025). Biochemical and anatomical leaf characteristics of oak trees contribute to differences in photosynthetic capacity between leaf habits. AoB PLANTS, 17(6). https://doi.org/10.1093/aobpla/plaf063",
     "license": "",
     "contributors": "Morgan E. Furze",
     "contact": "mfurze@purdue.edu",
@@ -2868,7 +2875,8 @@
       "255"
     ],
     "active_mask_label_value_count": 8,
-    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States"
+    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
+    "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning"
   },
   {
     "id": "oak_qusu",
@@ -2884,7 +2892,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -2928,9 +2936,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1093/aobpla/plaf063",
+    "publication_url": "https://doi.org/10.1093/aobpla/plaf063",
+    "citation": "Momayyezi, M., Prats, K. A., McElrone, A. J., & Furze, M. E. (2025). Biochemical and anatomical leaf characteristics of oak trees contribute to differences in photosynthetic capacity between leaf habits. AoB PLANTS, 17(6). https://doi.org/10.1093/aobpla/plaf063",
     "license": "",
     "contributors": "Morgan E. Furze",
     "contact": "mfurze@purdue.edu",
@@ -2985,7 +2993,8 @@
       "255"
     ],
     "active_mask_label_value_count": 8,
-    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States"
+    "contributor_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
+    "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning"
   },
   {
     "id": "olive_d1",
@@ -9683,10 +9692,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, synchrotron beamline, Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.72",
     "voxel_size_unit": "um",
     "image_size": "1548 x 474",
     "file_format": "TIF",
@@ -9726,9 +9735,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1111/nph.20240",
+    "publication_url": "https://doi.org/10.1111/nph.20240",
+    "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
     "license": "",
     "contributors": "Thorsten Knipfer, Mina Momayyezi",
     "contributor_affiliation": "Faculty of Land and Food Systems, University of British Columbia, Vancouver, BC, Canada; Department of Viticulture and Enology, University of California, Davis, CA, USA",
@@ -9793,7 +9802,8 @@
       "180",
       "255"
     ],
-    "active_mask_label_value_count": 8
+    "active_mask_label_value_count": 8,
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
   },
   {
     "id": "poplar_2",
@@ -9809,10 +9819,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, synchrotron beamline, Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.72",
     "voxel_size_unit": "um",
     "image_size": "2340 x 410",
     "file_format": "TIF",
@@ -9850,9 +9860,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1111/nph.20240",
+    "publication_url": "https://doi.org/10.1111/nph.20240",
+    "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
     "license": "",
     "contributors": "Thorsten Knipfer, Mina Momayyezi",
     "contributor_affiliation": "Faculty of Land and Food Systems, University of British Columbia, Vancouver, BC, Canada; Department of Viticulture and Enology, University of California, Davis, CA, USA",
@@ -9917,7 +9927,8 @@
       "180",
       "255"
     ],
-    "active_mask_label_value_count": 7
+    "active_mask_label_value_count": 7,
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
   },
   {
     "id": "poplar_3",
@@ -9933,10 +9944,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, synchrotron beamline, Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.72",
     "voxel_size_unit": "um",
     "image_size": "2034 x 408",
     "file_format": "TIF",
@@ -9974,9 +9985,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1111/nph.20240",
+    "publication_url": "https://doi.org/10.1111/nph.20240",
+    "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
     "license": "",
     "contributors": "Thorsten Knipfer, Mina Momayyezi",
     "contributor_affiliation": "Faculty of Land and Food Systems, University of British Columbia, Vancouver, BC, Canada; Department of Viticulture and Enology, University of California, Davis, CA, USA",
@@ -10041,7 +10052,8 @@
       "220",
       "255"
     ],
-    "active_mask_label_value_count": 7
+    "active_mask_label_value_count": 7,
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
   },
   {
     "id": "poplar_4",
@@ -10057,10 +10069,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, synchrotron beamline, Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.72",
     "voxel_size_unit": "um",
     "image_size": "1011 x 318",
     "file_format": "TIF",
@@ -10098,9 +10110,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1111/nph.20240",
+    "publication_url": "https://doi.org/10.1111/nph.20240",
+    "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
     "license": "",
     "contributors": "Thorsten Knipfer, Mina Momayyezi",
     "contributor_affiliation": "Faculty of Land and Food Systems, University of British Columbia, Vancouver, BC, Canada; Department of Viticulture and Enology, University of California, Davis, CA, USA",
@@ -10166,7 +10178,8 @@
       "220",
       "255"
     ],
-    "active_mask_label_value_count": 7
+    "active_mask_label_value_count": 7,
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
   },
   {
     "id": "poplar_5",
@@ -10182,10 +10195,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, synchrotron beamline, Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.72",
     "voxel_size_unit": "um",
     "image_size": "1779 x 369",
     "file_format": "TIF",
@@ -10223,9 +10236,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1111/nph.20240",
+    "publication_url": "https://doi.org/10.1111/nph.20240",
+    "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
     "license": "",
     "contributors": "Thorsten Knipfer, Mina Momayyezi",
     "contributor_affiliation": "Faculty of Land and Food Systems, University of British Columbia, Vancouver, BC, Canada; Department of Viticulture and Enology, University of California, Davis, CA, USA",
@@ -10290,7 +10303,8 @@
       "220",
       "255"
     ],
-    "active_mask_label_value_count": 7
+    "active_mask_label_value_count": 7,
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
   },
   {
     "id": "tomato",
