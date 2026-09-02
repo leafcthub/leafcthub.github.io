@@ -28,9 +28,8 @@
     "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
-    "source_contributor": "Aleca M. Borsuk",
-    "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
-    "source_contact": "aborsuk@nybg.org",
-    "source_orcid": "https://orcid.org/0000-0002-1696-9647"
+    "source_contributor": "Christine Scoffoni",
+    "source_affiliation": "Associate Professor, Department of Biological Sciences, California State University, Los Angeles, CA, United States",
+    "contributor_correction_note": "Corrected from Aleca M. Borsuk to Christine Scoffoni per contributor confirmation, August 2026"
   }
 }

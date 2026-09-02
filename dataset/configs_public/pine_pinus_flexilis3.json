@@ -1,0 +1,39 @@
+{
+  "name": "pine_pinus_flexilis3",
+  "image_dir": "/pscratch/sd/w/worasit/datasets/pine_pinus_flexilis3/images",
+  "mask_dir": "/pscratch/sd/w/worasit/datasets/pine_pinus_flexilis3/masks",
+  "num_classes": 7,
+  "ignore_index": 254,
+  "has_bse_label": false,
+  "has_resin_ducts": true,
+  "has_transfusion_tissue": true,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Mesophyll",
+    "Resin_Duct",
+    "Air_Space",
+    "Transfusion_Tissue",
+    "Vascular_Bundle"
+  ],
+  "mapping": {
+    "85": 0,
+    "170": 1,
+    "0": 2,
+    "200": 3,
+    "255": 4,
+    "103": 5,
+    "127": 6
+  },
+  "_notes": {
+    "source_contributor": "Santiago Trueba",
+    "source_affiliation": "AMAP Lab, University of Montpellier, IRD, Montpellier, France",
+    "source_contact": "santiago.trueba@ird.fr",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+    "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
+    "doi": "10.1111/nph.17772",
+    "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
+  }
+}

@@ -2,7 +2,7 @@
   "name": "pine_larix_occidentails1",
   "image_dir": "/pscratch/sd/w/worasit/datasets/pine_larix_occidentails1/images",
   "mask_dir": "/pscratch/sd/w/worasit/datasets/pine_larix_occidentails1/masks",
-  "num_classes": 5,
+  "num_classes": 7,
   "ignore_index": 254,
   "has_bse_label": false,
   "has_resin_ducts": true,
@@ -10,18 +10,20 @@
   "class_names": [
     "Background",
     "Epidermis",
-    "Vascular_Region",
     "Mesophyll",
-    "Air_Space"
+    "Resin_Duct",
+    "Air_Space",
+    "Transfusion_Tissue",
+    "Vascular_Bundle"
   ],
   "mapping": {
     "85": 0,
     "170": 1,
-    "103": 2,
-    "127": 2,
-    "0": 3,
+    "0": 2,
+    "200": 3,
     "255": 4,
-    "200": 254
+    "103": 5,
+    "127": 6
   },
   "_notes": {
     "pinus_segmentation": "Santiago_Trueba",

@@ -252,17 +252,7 @@ git commit -m "Add new Leaf CT Hub dataset"
 git push
 ```
 
-If the dataset has configs with more than 5 raw mask values, also update:
-
-```text
-dataset/configs_more_than_5_colors/
-```
-
-Then include it in the commit:
-
-```bash
-git add dataset/configs_more_than_5_colors
-```
+All dataset configs — including ones with more than 5 raw mask values — live together in `dataset/configs/`. There is no separate folder for configs with more raw values; keep the config's `class_names`/`mapping` fully expanded to match the actual raw pixel values whenever the source notes support it, rather than leaving it collapsed to a generic 5-class scheme.
 
 ## Admin Notes
 

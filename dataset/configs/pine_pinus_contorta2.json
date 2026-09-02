@@ -2,7 +2,7 @@
   "name": "pine_pinus_contorta2",
   "image_dir": "/pscratch/sd/w/worasit/datasets/pine_pinus_contorta2/images",
   "mask_dir": "/pscratch/sd/w/worasit/datasets/pine_pinus_contorta2/masks",
-  "num_classes": 5,
+  "num_classes": 6,
   "ignore_index": 254,
   "has_bse_label": false,
   "has_resin_ducts": false,
@@ -10,17 +10,18 @@
   "class_names": [
     "Background",
     "Epidermis",
-    "Vascular_Region",
     "Mesophyll",
-    "Air_Space"
+    "Air_Space",
+    "Transfusion_Tissue",
+    "Vascular_Bundle"
   ],
   "mapping": {
     "85": 0,
     "170": 1,
-    "103": 2,
-    "127": 2,
-    "0": 3,
-    "255": 4
+    "0": 2,
+    "255": 3,
+    "103": 4,
+    "127": 5
   },
   "_notes": {
     "pinus_segmentation": "Santiago_Trueba",

@@ -35,8 +35,7 @@ leafcthub.github.io/
 ├── data/
 │   └── datasets.json
 ├── dataset/
-│   ├── configs/
-│   └── configs_more_than_5_colors/
+│   └── configs/
 ├── scripts/
 │   └── import_dataset.py
 ├── ADMIN_DATASET_UPLOAD.md

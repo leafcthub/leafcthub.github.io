@@ -97,6 +97,16 @@ async function initCatalogPage() {
   });
 }
 
+function citationStatusLabel(status) {
+  if (status === "in_prep") {
+    return "Manuscript in preparation";
+  }
+  if (status === "none_confirmed") {
+    return "No reference paper for this dataset (confirmed with contributor)";
+  }
+  return "";
+}
+
 function metadataRow(label, value) {
   if (!value && value !== 0) {
     return "";
@@ -198,7 +208,7 @@ function renderDetail(record) {
           ${metadataRow("Repository URL", record.repository_url)}
           ${metadataRow("Download URL", record.download_url)}
           ${metadataRow("License", record.license)}
-          ${metadataRow("Citation", record.citation)}
+          ${metadataRow("Citation", record.citation || citationStatusLabel(record.citation_status))}
         </dl>
       </div>
     </section>

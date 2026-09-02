@@ -71,16 +71,15 @@
     "source_mask_count": 30,
     "notes": "encoding: Devin standard; note: Almond control treatment; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "encoding": "Devin standard",
-      "note": "Almond control treatment; Devin-style encoding",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Almond control treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/almond_control.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -187,16 +186,15 @@
     "source_mask_count": 30,
     "notes": "encoding: Devin standard; note: Almond drought treatment; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "encoding": "Devin standard",
-      "note": "Almond drought treatment; Devin-style encoding",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Almond drought treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/almond_drought.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -252,7 +250,7 @@
     "voxel_size_unit": "um",
     "image_size": "1503 x 501",
     "file_format": "TIF",
-    "slice_count": 46,
+    "slice_count": 17,
     "no_of_leaves": "",
     "split": "Train",
     "classes": [
@@ -293,20 +291,26 @@
     "source_config": "dataset/configs/arabidopsis1.json",
     "source_image_folder": "dataset/images/arabidopsis1/images",
     "source_mask_folder": "dataset/images/arabidopsis1/masks",
-    "source_image_count": 46,
-    "source_mask_count": 46,
-    "notes": "Leila Fletcher (SOU); Col-0; P-mode palette masks; Leaves were scanned at the mid-section within 24 h of excision.",
+    "source_image_count": 17,
+    "source_mask_count": 17,
+    "notes": "Leila Fletcher (SOU); Col-0; P-mode palette masks; Leaves were scanned at the mid-section within 24 h of excision. Data included in a manuscript currently in preparation; citation to be added once published.",
     "config_notes": {
       "annotator": "Leila_Fletcher",
       "line": "Col-0 and ARTH-15 mutant",
       "mask_mode": "P (palette-indexed)",
-      "n_files": 46,
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "n_files": 17,
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 4\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "21 keV, continuous tomography mode",
+      "objective": "4x",
+      "pixel_size_um": 1.6,
+      "beam_energy_kev": 21,
+      "scan_mode": "continuous tomography",
+      "imaging_details_source": "Direct communication from Leila R. Fletcher (contributor) \u2014 not attributed to the Scoffoni et al. 2018 paper; Christine Scoffoni (corresponding author of that paper) suggested these images may be included in it, but per contributor's direct account, treating this dataset as uncited for now",
       "source_contributor": "Leila R. Fletcher",
       "source_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
-      "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu"
+      "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu",
+      "file_recount_note": "Recounted after fixing image/mask pairing that had been split across arabidopsis1 and arabidopsis3 folders; total 50 image/mask pairs preserved across both, August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -334,7 +338,8 @@
     ],
     "active_mask_label_value_count": 5,
     "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
-    "scan_notes": "21 keV, continuous tomography mode"
+    "scan_notes": "21 keV, continuous tomography mode",
+    "citation_status": "in_prep"
   },
   {
     "id": "arabidopsis2",
@@ -400,16 +405,21 @@
     "source_mask_folder": "dataset/images/arabidopsis2/masks",
     "source_image_count": 6,
     "source_mask_count": 6,
-    "notes": "Devin Fowler re-annotation subset ('Copy of' files); same specimens as arabidopsis1; Leaves were scanned at the mid-section within 24 h of excision.",
+    "notes": "Devin Fowler re-annotation subset ('Copy of' files); same specimens as arabidopsis1; Leaves were scanned at the mid-section within 24 h of excision. Data included in a manuscript currently in preparation; citation to be added once published.",
     "config_notes": {
       "annotator": "unknown",
       "source": "'Copy of' files \u2014 Devin-style encoding",
       "mask_mode": "L (grayscale)",
       "value_180": "Vascular",
       "n_files": 6,
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "21 keV, continuous tomography mode",
+      "objective": "10x",
+      "pixel_size_um": 0.65,
+      "beam_energy_kev": 21,
+      "scan_mode": "continuous tomography",
+      "imaging_details_source": "Direct communication from Leila R. Fletcher (contributor) \u2014 not attributed to the Scoffoni et al. 2018 paper; Christine Scoffoni (corresponding author of that paper) suggested these images may be included in it, but per contributor's direct account, treating this dataset as uncited for now",
       "source_contributor": "Leila R. Fletcher",
       "source_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
       "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu"
@@ -440,7 +450,8 @@
     ],
     "active_mask_label_value_count": 5,
     "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
-    "scan_notes": "21 keV, continuous tomography mode"
+    "scan_notes": "21 keV, continuous tomography mode",
+    "citation_status": "in_prep"
   },
   {
     "id": "arabidopsis3",
@@ -463,7 +474,7 @@
     "voxel_size_unit": "um",
     "image_size": "1503 x 501",
     "file_format": "TIF",
-    "slice_count": 4,
+    "slice_count": 33,
     "no_of_leaves": "",
     "split": "Train",
     "classes": [
@@ -503,21 +514,27 @@
     "source_config": "dataset/configs/arabidopsis3.json",
     "source_image_folder": "dataset/images/arabidopsis3/images",
     "source_mask_folder": "dataset/images/arabidopsis3/masks",
-    "source_image_count": 4,
-    "source_mask_count": 4,
-    "notes": "Subset without vascular region annotation (4 classes only); Leaves were scanned at the mid-section within 24 h of excision.",
+    "source_image_count": 33,
+    "source_mask_count": 33,
+    "notes": "Subset without vascular region annotation (4 classes only); Leaves were scanned at the mid-section within 24 h of excision. Data included in a manuscript currently in preparation; citation to be added once published.",
     "config_notes": {
       "annotator": "Leila_Fletcher",
       "note": "Slices with no visible vascular tissue \u2014 same encoding as arabidopsis1",
       "mask_mode": "P (palette-indexed)",
-      "n_files": 4,
+      "n_files": 33,
       "num_classes_note": "num_classes=5 is correct for the unified scheme; vascular class (103) simply absent in these slices",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "21 keV, continuous tomography mode",
+      "objective": "10x",
+      "pixel_size_um": 0.65,
+      "beam_energy_kev": 21,
+      "scan_mode": "continuous tomography",
+      "imaging_details_source": "Direct communication from Leila R. Fletcher (contributor) \u2014 not attributed to the Scoffoni et al. 2018 paper; Christine Scoffoni (corresponding author of that paper) suggested these images may be included in it, but per contributor's direct account, treating this dataset as uncited for now",
       "source_contributor": "Leila R. Fletcher",
       "source_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
-      "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu"
+      "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu",
+      "file_recount_note": "Recounted after fixing image/mask pairing that had been split across arabidopsis1 and arabidopsis3 folders; total 50 image/mask pairs preserved across both, August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -543,7 +560,8 @@
     ],
     "active_mask_label_value_count": 4,
     "contributor_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
-    "scan_notes": "21 keV, continuous tomography mode"
+    "scan_notes": "21 keV, continuous tomography mode",
+    "citation_status": "in_prep"
   },
   {
     "id": "beilschmiedia_berteroana",
@@ -559,10 +577,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.64",
     "voxel_size_unit": "um",
     "image_size": "2440 x 648",
     "file_format": "TIF",
@@ -598,9 +616,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1098/rspb.2020.3145",
+    "publication_url": "https://doi.org/10.1098/rspb.2020.3145",
+    "citation": "Th\u00e9roux-Rancourt, G., Roddy, A. B., Earles, J. M., Gilbert, M. E., Zwieniecki, M. A., Boyce, C. K., Tholen, D., McElrone, A. J., Simonin, K. A., & Brodersen, C. R. (2021). Maximum CO2 diffusion inside leaves is limited by the scaling of cell size and genome size. Proceedings of the Royal Society B, 288(1945), 20203145. https://doi.org/10.1098/rspb.2020.3145",
     "license": "",
     "contributors": "Guillaume Th\u00e9roux-Rancourt",
     "contributor_affiliation": "Institute of Agricultural and Environmental Sciences, Estonian University of Life Sciences, Tartu, Estonia",
@@ -656,7 +674,8 @@
       "170",
       "255"
     ],
-    "active_mask_label_value_count": 6
+    "active_mask_label_value_count": 6,
+    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods). Objective/pixel size not yet confirmed per species (paper reports 5x/1.27um, 10x/0.64um, or 40x/0.1625um across the full 86-species dataset, not broken out individually)."
   },
   {
     "id": "calamagrostis_arundinacea",
@@ -672,10 +691,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.64",
     "voxel_size_unit": "um",
     "image_size": "1068 x 270",
     "file_format": "TIF",
@@ -711,9 +730,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1098/rspb.2020.3145",
+    "publication_url": "https://doi.org/10.1098/rspb.2020.3145",
+    "citation": "Th\u00e9roux-Rancourt, G., Roddy, A. B., Earles, J. M., Gilbert, M. E., Zwieniecki, M. A., Boyce, C. K., Tholen, D., McElrone, A. J., Simonin, K. A., & Brodersen, C. R. (2021). Maximum CO2 diffusion inside leaves is limited by the scaling of cell size and genome size. Proceedings of the Royal Society B, 288(1945), 20203145. https://doi.org/10.1098/rspb.2020.3145",
     "license": "",
     "contributors": "Guillaume Th\u00e9roux-Rancourt",
     "contributor_affiliation": "Institute of Agricultural and Environmental Sciences, Estonian University of Life Sciences, Tartu, Estonia",
@@ -769,7 +788,8 @@
       "170",
       "255"
     ],
-    "active_mask_label_value_count": 6
+    "active_mask_label_value_count": 6,
+    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1)."
   },
   {
     "id": "grape_111",
@@ -842,20 +862,14 @@
     "source_mask_count": 8,
     "notes": "LEAFtraits 8-class annotation; tannin idioblasts treated as ignored class; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "source": "LEAFtraits annotation (8 classes \u2192 5 for base model)",
-      "value_175": "Vein \u2192 Vascular Region (class 2)",
-      "value_200": "Bundle-sheath / BSE \u2192 Vascular Region (class 2)",
-      "value_100": "Mesophyll spongy \u2192 Mesophyll (class 3)",
-      "value_125": "Mesophyll palisade \u2192 Mesophyll (class 3)",
-      "value_225": "Tannin idioblasts \u2192 ignored (254) in base model; use has_tannin flag for specialized model",
+      "encoding": "Mina Momayyezi - Lab",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_assignment_note": "Assigned from existing Mina Momayyezi lab note in grouped config; this grape subset uses the distinct LEAFtraits 8-class annotation scheme.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/grape_111.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -959,20 +973,14 @@
     "source_mask_count": 8,
     "notes": "LEAFtraits 8-class annotation; tannin idioblasts treated as ignored class; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "source": "LEAFtraits annotation (8 classes \u2192 5 for base model)",
-      "value_175": "Vein \u2192 Vascular Region (class 2)",
-      "value_200": "Bundle-sheath / BSE \u2192 Vascular Region (class 2)",
-      "value_100": "Mesophyll spongy \u2192 Mesophyll (class 3)",
-      "value_125": "Mesophyll palisade \u2192 Mesophyll (class 3)",
-      "value_225": "Tannin idioblasts \u2192 ignored (254) in base model; use has_tannin flag for specialized model",
+      "encoding": "Mina Momayyezi - Lab",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_assignment_note": "Assigned from existing Mina Momayyezi lab note in grouped config; this grape subset uses the distinct LEAFtraits 8-class annotation scheme.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/grape_112.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -1076,20 +1084,14 @@
     "source_mask_count": 8,
     "notes": "LEAFtraits 8-class annotation; tannin idioblasts treated as ignored class; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "source": "LEAFtraits annotation (8 classes \u2192 5 for base model)",
-      "value_175": "Vein \u2192 Vascular Region (class 2)",
-      "value_200": "Bundle-sheath / BSE \u2192 Vascular Region (class 2)",
-      "value_100": "Mesophyll spongy \u2192 Mesophyll (class 3)",
-      "value_125": "Mesophyll palisade \u2192 Mesophyll (class 3)",
-      "value_225": "Tannin idioblasts \u2192 ignored (254) in base model; use has_tannin flag for specialized model",
+      "encoding": "Mina Momayyezi - Lab",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_assignment_note": "Assigned from existing Mina Momayyezi lab note in grouped config; this grape subset uses the distinct LEAFtraits 8-class annotation scheme.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/grape_113.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -1193,20 +1195,14 @@
     "source_mask_count": 8,
     "notes": "LEAFtraits 8-class annotation; tannin idioblasts treated as ignored class; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "source": "LEAFtraits annotation (8 classes \u2192 5 for base model)",
-      "value_175": "Vein \u2192 Vascular Region (class 2)",
-      "value_200": "Bundle-sheath / BSE \u2192 Vascular Region (class 2)",
-      "value_100": "Mesophyll spongy \u2192 Mesophyll (class 3)",
-      "value_125": "Mesophyll palisade \u2192 Mesophyll (class 3)",
-      "value_225": "Tannin idioblasts \u2192 ignored (254) in base model; use has_tannin flag for specialized model",
+      "encoding": "Mina Momayyezi - Lab",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_assignment_note": "Assigned from existing Mina Momayyezi lab note in grouped config; this grape subset uses the distinct LEAFtraits 8-class annotation scheme.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/grape_76.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -1324,8 +1320,7 @@
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_13_labels/grape_control.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -1432,16 +1427,15 @@
     "source_mask_count": 30,
     "notes": "annotator: Devin; source: devin2-style encoding; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "annotator": "Devin",
-      "source": "devin2-style encoding",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Grape drought treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/grape_drought.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -1548,16 +1542,15 @@
     "source_mask_count": 41,
     "notes": "encoding: Devin standard; note: Grape; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "encoding": "Devin standard",
-      "note": "Grape; Devin-style encoding",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Grape treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/grape_f.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -1664,16 +1657,15 @@
     "source_mask_count": 30,
     "notes": "encoding: Devin standard; note: Grape; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "encoding": "Devin standard",
-      "note": "Grape; Devin-style encoding",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Grape treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/grape_r.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -1793,8 +1785,7 @@
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_13_labels/grape_w.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -1843,10 +1834,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.64",
     "voxel_size_unit": "um",
     "image_size": "623 x 327",
     "file_format": "TIF",
@@ -1880,9 +1871,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1098/rspb.2020.3145",
+    "publication_url": "https://doi.org/10.1098/rspb.2020.3145",
+    "citation": "Th\u00e9roux-Rancourt, G., Roddy, A. B., Earles, J. M., Gilbert, M. E., Zwieniecki, M. A., Boyce, C. K., Tholen, D., McElrone, A. J., Simonin, K. A., & Brodersen, C. R. (2021). Maximum CO2 diffusion inside leaves is limited by the scaling of cell size and genome size. Proceedings of the Royal Society B, 288(1945), 20203145. https://doi.org/10.1098/rspb.2020.3145",
     "license": "",
     "contributors": "Guillaume Th\u00e9roux-Rancourt",
     "contributor_affiliation": "Institute of Agricultural and Environmental Sciences, Estonian University of Life Sciences, Tartu, Estonia",
@@ -1935,7 +1926,8 @@
       "170",
       "255"
     ],
-    "active_mask_label_value_count": 5
+    "active_mask_label_value_count": 5,
+    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1)."
   },
   {
     "id": "lantana_camara",
@@ -1992,8 +1984,8 @@
     "publication_url": "",
     "citation": "",
     "license": "",
-    "contributors": "Aleca M. Borsuk",
-    "contact": "aborsuk@nybg.org",
+    "contributors": "Christine Scoffoni",
+    "contact": "",
     "preview_image": "assets/images/previews/lantana_camara.jpg",
     "preview_alt": "Representative CT slice preview for Lantana camara leaf CT dataset (lantana_camara)",
     "source_config": "dataset/configs/lantana_camara.json",
@@ -2001,7 +1993,7 @@
     "source_mask_folder": "dataset/images/lantana_camara/masks",
     "source_image_count": 154,
     "source_mask_count": 154,
-    "notes": "Aleca M. Borsuk source dataset; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision.",
+    "notes": "Christine Scoffoni source dataset; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision. Data included in a manuscript currently in preparation; citation to be added once published.",
     "config_notes": {
       "annotator": "Devin",
       "dataset": "Lantana_camara",
@@ -2011,10 +2003,9 @@
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
-      "source_contributor": "Aleca M. Borsuk",
-      "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
-      "source_contact": "aborsuk@nybg.org",
-      "source_orcid": "https://orcid.org/0000-0002-1696-9647"
+      "source_contributor": "Christine Scoffoni",
+      "source_affiliation": "Associate Professor, Department of Biological Sciences, California State University, Los Angeles, CA, United States",
+      "contributor_correction_note": "Corrected from Aleca M. Borsuk to Christine Scoffoni per contributor confirmation, August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -2039,7 +2030,8 @@
       "255"
     ],
     "active_mask_label_value_count": 5,
-    "contributor_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States"
+    "contributor_affiliation": "Associate Professor, Department of Biological Sciences, California State University, Los Angeles, CA, United States",
+    "citation_status": "in_prep"
   },
   {
     "id": "lantana_camara2",
@@ -2055,10 +2047,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "2016",
-    "voxel_size": "0.65",
+    "voxel_size": "1.27",
     "voxel_size_unit": "um",
     "image_size": "1216 x 380",
     "file_format": "PNG",
@@ -2105,16 +2097,16 @@
     "source_mask_folder": "dataset/images/lantana_camara2/masks",
     "source_image_count": 8,
     "source_mask_count": 8,
-    "notes": "Leaves are in various conditions, including well-hydrated, bench-dried, and rehydrated leaves (5 minutes, 1 hour, and 12 hours). Images were cropped to show only the mesophyll because the project focused on mesophyll.",
+    "notes": "Leaves are in various conditions, including well-hydrated, bench-dried, and rehydrated leaves (5 minutes, 1 hour, and 12 hours). Images were cropped to show only the mesophyll because the project focused on mesophyll. Data included in a manuscript currently in preparation; citation to be added once published.",
     "config_notes": {
       "annotator": "Jesse_Gomez",
       "dataset": "Lantana_camara",
       "encoding": "Jesse Gomez standard",
       "value_100": "Vascular",
       "value_130": "Epidermis",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Imaged in 2016 at the Lawrence Berkeley National Laboratory.",
+      "scan_notes": "20 keV, ~104 mm sample-to-detector distance; scan folder 20160226_154756_LACA2",
       "source_contributor": "Jesse Gomez",
       "source_affiliation": "Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, United States",
       "source_contact": "jegomez97@ucla.edu",
@@ -2136,7 +2128,15 @@
       ],
       "original_file_name_corrections": {
         "LaCa21_5m_Slide_64.png": "20160227_215053_LACA21_5min_rehy0241.png"
-      }
+      },
+      "class_name_review_needed": "Jesse source notes describe value 100 as Bundle Sheath extensions + veins; config class_names left unchanged for now.",
+      "objective": "5x",
+      "pixel_size_um": 1.27,
+      "beam_energy_kev": 20,
+      "sample_to_detector_distance_mm": 104,
+      "scan_folder": "20160226_154756_LACA2",
+      "scan_date": "2016-02-26",
+      "imaging_details_source": "Direct communication from Jesse Gomez (contributor), August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -2161,7 +2161,9 @@
       "255"
     ],
     "active_mask_label_value_count": 5,
-    "contributor_affiliation": "Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, United States"
+    "contributor_affiliation": "Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, United States",
+    "scan_notes": "20 keV, ~104 mm sample-to-detector distance; scan folder 20160226_154756_LACA2",
+    "citation_status": "in_prep"
   },
   {
     "id": "magnolia_grandiflora",
@@ -2177,10 +2179,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
-    "scan_year": "2016",
-    "voxel_size": "0.65",
+    "scan_year": "2014",
+    "voxel_size": "1.337",
     "voxel_size_unit": "um",
     "image_size": "303 x 608",
     "file_format": "PNG",
@@ -2227,16 +2229,16 @@
     "source_mask_folder": "dataset/images/magnolia_grandiflora/masks",
     "source_image_count": 11,
     "source_mask_count": 11,
-    "notes": "Leaves are in various conditions, including well-hydrated, bench-dried, and rehydrated leaves (5 minutes, 1 hour, and 12 hours). Images were cropped to show only the mesophyll because the project focused on mesophyll.",
+    "notes": "Leaves are in various conditions, including well-hydrated, bench-dried, and rehydrated leaves (5 minutes, 1 hour, and 12 hours). Images were cropped to show only the mesophyll because the project focused on mesophyll. Data included in a manuscript currently in preparation; citation to be added once published.",
     "config_notes": {
       "annotator": "Jesse_Gomez",
       "dataset": "Magnolia_grandiflora",
       "encoding": "Jesse Gomez standard",
       "value_100": "Vascular",
       "value_130": "Epidermis",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Imaged in 2016 at the Lawrence Berkeley National Laboratory.",
+      "scan_notes": "18 keV, ~25 mm sample-to-detector distance; scan folder 20141205_134740_MaGr_4_5x_goodbackground",
       "source_contributor": "Jesse Gomez",
       "source_affiliation": "Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, United States",
       "source_contact": "jegomez97@ucla.edu",
@@ -2265,7 +2267,15 @@
       "original_file_name_corrections": {
         "MaGr2_Slide_278.png": "rec20160226_120229_MAGR20378.png",
         "MaGr8_12h_Slide_385.png": "DUP_rec20160228_011845_MAGR8_12h_rehy0782.tif"
-      }
+      },
+      "class_name_review_needed": "Jesse source notes describe value 100 as Bundle Sheath extensions + veins; config class_names left unchanged for now.",
+      "objective": "5x",
+      "pixel_size_um": 1.337,
+      "beam_energy_kev": 18,
+      "sample_to_detector_distance_mm": 25,
+      "scan_folder": "20141205_134740_MaGr_4_5x_goodbackground",
+      "scan_date": "2014-12-05",
+      "imaging_details_source": "Direct communication from Jesse Gomez (contributor), August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -2290,7 +2300,9 @@
       "255"
     ],
     "active_mask_label_value_count": 5,
-    "contributor_affiliation": "Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, United States"
+    "contributor_affiliation": "Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, United States",
+    "scan_notes": "18 keV, ~25 mm sample-to-detector distance; scan folder 20141205_134740_MaGr_4_5x_goodbackground",
+    "citation_status": "in_prep"
   },
   {
     "id": "oak_quce",
@@ -2367,14 +2379,13 @@
     "config_notes": {
       "oak_segmentation": "Devin",
       "value_254": "pre-labelled ignore pixels already in mask",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
       "source_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
-      "source_assignment_note": "Assigned from provided oak source information for Morgan E. Furze.",
-      "source_contact": "mfurze@purdue.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_9_labels/oak_quce.json"
+      "source_assignment_note": "Assigned from provided oak source information for Morgan Furze.",
+      "source_contact": "mfurze@purdue.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -2482,15 +2493,15 @@
     "source_mask_count": 18,
     "notes": "oak segmentation: Devin; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "oak_segmentation": "Devin",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Oak treatment",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
       "source_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
-      "source_assignment_note": "Assigned from provided oak source information for Morgan E. Furze.",
-      "source_contact": "mfurze@purdue.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/oak_qucf.json"
+      "source_assignment_note": "Assigned from provided oak source information for Morgan Furze.",
+      "source_contact": "mfurze@purdue.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -2599,16 +2610,14 @@
     "source_mask_count": 18,
     "notes": "oak segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "oak_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "encoding": "Mina Momayyezi - Lab",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
       "source_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
-      "source_assignment_note": "Assigned from provided oak source information for Morgan E. Furze.",
-      "source_contact": "mfurze@purdue.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_9_labels/oak_qucr.json"
+      "source_assignment_note": "Assigned from provided oak source information for Morgan Furze.",
+      "source_contact": "mfurze@purdue.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -2719,14 +2728,13 @@
     "config_notes": {
       "oak_segmentation": "Devin",
       "value_225": "unclassified/border region \u2192 ignore (254)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
       "source_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
-      "source_assignment_note": "Assigned from provided oak source information for Morgan E. Furze.",
-      "source_contact": "mfurze@purdue.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_9_labels/oak_quob.json"
+      "source_assignment_note": "Assigned from provided oak source information for Morgan Furze.",
+      "source_contact": "mfurze@purdue.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -2834,15 +2842,15 @@
     "source_mask_count": 18,
     "notes": "oak segmentation: Devin; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "oak_segmentation": "Devin",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Oak treatment",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
       "source_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
-      "source_assignment_note": "Assigned from provided oak source information for Morgan E. Furze.",
-      "source_contact": "mfurze@purdue.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/oak_quru.json"
+      "source_assignment_note": "Assigned from provided oak source information for Morgan Furze.",
+      "source_contact": "mfurze@purdue.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -2953,14 +2961,13 @@
     "config_notes": {
       "oak_segmentation": "Devin",
       "value_225": "unclassified/border region \u2192 ignore (254)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
       "source_affiliation": "Department of Botany and Plant Pathology, Purdue University, West Lafayette, IN, United States",
-      "source_assignment_note": "Assigned from provided oak source information for Morgan E. Furze.",
-      "source_contact": "mfurze@purdue.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_9_labels/oak_qusu.json"
+      "source_assignment_note": "Assigned from provided oak source information for Morgan Furze.",
+      "source_contact": "mfurze@purdue.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3066,16 +3073,15 @@
     "source_mask_count": 6,
     "notes": "Drought treatment (d); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_d1.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3179,17 +3185,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); slice 1: was JPEG-corrupted RGB, recovered by snapping to nearest class; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
-      "slice_1": "was JPEG-corrupted RGB, recovered by snapping to nearest class",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_d2.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3292,15 +3296,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/olive_d3.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3404,16 +3408,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_d4.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3517,16 +3520,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_d5.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3630,16 +3632,15 @@
     "source_mask_count": 10,
     "notes": "Re-watered treatment (rw); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_rw1.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3743,16 +3744,15 @@
     "source_mask_count": 2,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_rw2.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3856,16 +3856,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_rw3.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -3969,16 +3968,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_rw4.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -4082,16 +4080,15 @@
     "source_mask_count": 6,
     "notes": "Well-watered treatment (ww); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_ww1.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -4195,16 +4192,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_ww2.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -4308,16 +4304,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_ww3.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -4421,16 +4416,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_ww4.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -4534,16 +4528,15 @@
     "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "olive_segmentation": "Devin",
-      "value_225": "unclassified/border region \u2192 ignore (254)",
+      "encoding": "Mina Momayyezi - Group",
+      "note": "Olive treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from existing Mina Momayyezi group/lab note in grouped config for olive treatment records.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_8_labels/olive_ww5.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -4690,8 +4683,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_larix_occidentails1.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -4836,8 +4828,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_larix_occidentails2.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -4982,8 +4973,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_araucaria_angustifolia.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -5126,8 +5116,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_6_labels/pine_pinus_banksiana.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -5268,8 +5257,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_6_labels/pine_pinus_contorta2.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -5412,8 +5400,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_densifora.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -5558,8 +5545,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_elliotii1.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -5704,8 +5690,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_elliotii2.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -5850,8 +5835,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_flexilis1.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -5996,8 +5980,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_flexilis3.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -6142,8 +6125,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_glabra.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -6288,8 +6270,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_halepensis.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -6434,8 +6415,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_jeffreyi1.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -6580,8 +6560,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_jeffreyi2.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -6726,8 +6705,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_kwangtungensis.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -6872,8 +6850,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_monticola2.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -7018,8 +6995,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_monticola5.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -7164,8 +7140,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_nigra1.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -7310,8 +7285,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_nigra2.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -7456,8 +7430,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_palustris.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -7602,8 +7575,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_pinaster.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -7746,8 +7718,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_6_labels/pine_pinus_pinea.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -7890,8 +7861,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_ponderosa.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -8036,8 +8006,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_pungens1.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -8182,8 +8151,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_pungens2.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -8328,8 +8296,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_rigida1.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -8474,8 +8441,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_rigida2.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -8620,8 +8586,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_sabiniana.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -8766,8 +8731,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_serotina.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -8912,8 +8876,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_thunbergii.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -9058,8 +9021,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pine_pinus_virginiana.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -9202,8 +9164,7 @@
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "publication_url": "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.17772",
       "doi": "10.1111/nph.17772",
-      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_6_labels/pine_tsuga_mertensiana.json"
+      "citation": "Trueba, S., Th\u00e9roux-Rancourt, G., Earles, J. M., Buckley, T. N., Love, D., Johnson, D. M., & Brodersen, C. (2022). The three-dimensional construction of leaves is coordinated with water use efficiency in conifers. New Phytologist, 233(2), 851\u2013861. https://doi.org/10.1111/nph.17772"
     },
     "manual_review_needed": [
       "repository_url",
@@ -9302,15 +9263,15 @@
     "source_mask_count": 24,
     "notes": "value 95: Epidermis; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "value_95": "Epidermis",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Pistachio",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pistachio.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -9413,15 +9374,15 @@
     "source_mask_count": 30,
     "notes": "encoding: Devin standard (no value 55 \u2014 mesophyll is 0 only); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "encoding": "Devin standard (no value 55 \u2014 mesophyll is 0 only)",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Pistachio control treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pistachio_control.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -9524,15 +9485,15 @@
     "source_mask_count": 30,
     "notes": "encoding: Devin standard (no value 55 \u2014 mesophyll is 0 only); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
-      "encoding": "Devin standard (no value 55 \u2014 mesophyll is 0 only)",
+      "encoding": "Mina Momayyezi - Lab",
+      "note": "Pistachio drought treatment",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
       "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_7_labels/pistachio_drought.json"
+      "source_contact": "mmomayyezi@ucdavis.edu"
     },
     "manual_review_needed": [
       "repository_url",
@@ -9579,10 +9540,10 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
-    "voxel_size": "",
+    "voxel_size": "0.64",
     "voxel_size_unit": "um",
     "image_size": "1280 x 864",
     "file_format": "TIF",
@@ -9618,9 +9579,9 @@
     "repository": "USDA Ag Data Commons",
     "repository_url": "",
     "download_url": "",
-    "doi": "",
-    "publication_url": "",
-    "citation": "",
+    "doi": "10.1098/rspb.2020.3145",
+    "publication_url": "https://doi.org/10.1098/rspb.2020.3145",
+    "citation": "Th\u00e9roux-Rancourt, G., Roddy, A. B., Earles, J. M., Gilbert, M. E., Zwieniecki, M. A., Boyce, C. K., Tholen, D., McElrone, A. J., Simonin, K. A., & Brodersen, C. R. (2021). Maximum CO2 diffusion inside leaves is limited by the scaling of cell size and genome size. Proceedings of the Royal Society B, 288(1945), 20203145. https://doi.org/10.1098/rspb.2020.3145",
     "license": "",
     "contributors": "Guillaume Th\u00e9roux-Rancourt",
     "contributor_affiliation": "Institute of Agricultural and Environmental Sciences, Estonian University of Life Sciences, Tartu, Estonia",
@@ -9676,7 +9637,8 @@
       "170",
       "255"
     ],
-    "active_mask_label_value_count": 6
+    "active_mask_label_value_count": 6,
+    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1)."
   },
   {
     "id": "poplar_1",
@@ -9754,7 +9716,7 @@
     "notes": "Devin-standard 8-class encoding collapsed to 5 base classes. Scans from the Canadian Light Source (CLS) collaboration between Thorsten Knipfer and Mina Momayyezi. Co-authorship note: per Knipfer's email correspondence, if these scans are included in a manuscript dataset he should be added as a co-author.",
     "config_notes": {
       "species": "Populus (poplar)",
-      "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -9772,7 +9734,17 @@
       "value_85_95": "Adaxial_Epidermis (85) + Abaxial_Epidermis (95) \u2192 Epidermis (class 1)",
       "value_152_180": "Bundle_Sheath (152) + Vascular_Tissue (180) \u2192 Vascular_Region (class 2)",
       "value_55_0": "Palisade_Mesophyll (55) + Spongy_Mesophyll (0) \u2192 Mesophyll (class 3)",
-      "full_class_config": "See poplar_cls.json for the native 8-class (adaxial/abaxial epidermis, bundle sheath, vascular tissue, palisade/spongy mesophyll) version of this same data"
+      "full_class_config": "See poplar_cls.json for the native 8-class (adaxial/abaxial epidermis, bundle sheath, vascular tissue, palisade/spongy mesophyll) version of this same data",
+      "facility_beamline": "Canadian Light Source, Biomedical Imaging and Therapy - Bending Magnet (BMIT-BM 05B1)",
+      "objective": "10x",
+      "pixel_size_um": 0.72,
+      "beam_mean_energy_kev": 20,
+      "beam_filter": "0.400 mm aluminum filter, white beam",
+      "detector": "PCO Edge 5.5 sCMOS with LSO:Tb scintillator (10 um)",
+      "field_of_view_mm": "1.85 x 1.56",
+      "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
+      "doi": "10.1111/nph.20240",
+      "imaging_details_source": "Direct communication from Thorsten Knipfer (contributor), quoting the referenced paper's Methods, August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -9880,7 +9852,7 @@
     "config_notes": {
       "species": "Populus (poplar)",
       "specimen": "poplar_b4f_3gil (slice filenames: Slice 96/188/271/360/447/531.tif)",
-      "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -9899,7 +9871,17 @@
       "value_152_180": "Bundle_Sheath (152) + Vascular_Tissue (180) \u2192 Vascular_Region (class 2)",
       "value_0": "Mesophyll (class 3) \u2014 annotated as a single undifferentiated mesophyll class, not split into palisade/spongy for this specimen",
       "mask_check": "Verified mask pixel values across all 6 slices = {0, 85, 95, 152, 170, 180, 255}. 55 (Palisade_Mesophyll) is intentionally omitted from the mapping, not just unused: this specimen's annotator labeled a single Mesophyll class (value 0) on purpose, unlike poplar_1/poplar_2 which distinguish palisade (55) from spongy (0)",
-      "full_class_config": "poplar_1/poplar_2 use the full native 8-class scheme (Background, Adaxial_Epidermis, Abaxial_Epidermis, Bundle_Sheath, Vascular_Tissue, Palisade_Mesophyll, Spongy_Mesophyll, Air_Space); this specimen was deliberately annotated with a reduced 7-value scheme (single Mesophyll, no palisade/spongy split). Not kept as a separate file, see this file's mapping notes for the full breakdown"
+      "full_class_config": "poplar_1/poplar_2 use the full native 8-class scheme (Background, Adaxial_Epidermis, Abaxial_Epidermis, Bundle_Sheath, Vascular_Tissue, Palisade_Mesophyll, Spongy_Mesophyll, Air_Space); this specimen was deliberately annotated with a reduced 7-value scheme (single Mesophyll, no palisade/spongy split). Not kept as a separate file, see this file's mapping notes for the full breakdown",
+      "facility_beamline": "Canadian Light Source, Biomedical Imaging and Therapy - Bending Magnet (BMIT-BM 05B1)",
+      "objective": "10x",
+      "pixel_size_um": 0.72,
+      "beam_mean_energy_kev": 20,
+      "beam_filter": "0.400 mm aluminum filter, white beam",
+      "detector": "PCO Edge 5.5 sCMOS with LSO:Tb scintillator (10 um)",
+      "field_of_view_mm": "1.85 x 1.56",
+      "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
+      "doi": "10.1111/nph.20240",
+      "imaging_details_source": "Direct communication from Thorsten Knipfer (contributor), quoting the referenced paper's Methods, August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -10005,7 +9987,7 @@
     "config_notes": {
       "species": "Populus (poplar)",
       "specimen": "poplar_b4t_2car (slice filenames: Slice 20/96/190/286/316/417.tif)",
-      "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -10024,7 +10006,17 @@
       "value_75_220": "Bundle_Sheath (75, outer ring around a vein) + Vascular_Tissue (220, inner core of a vein) \u2192 Vascular_Region (class 2); user-confirmed from an annotated vein cross-section crop (220 = inside, 75 = boundary outside)",
       "value_0": "Mesophyll (class 3); user-confirmed (initially guessed as Air_Space, corrected by user)",
       "value_255": "Air_Space (class 4); user-confirmed (initially guessed as Mesophyll, corrected by user)",
-      "mask_check": "Verified mask pixel values across all 6 slices = {0, 75, 100, 130, 170, 220, 255}, image size 2034x408 (L mode)"
+      "mask_check": "Verified mask pixel values across all 6 slices = {0, 75, 100, 130, 170, 220, 255}, image size 2034x408 (L mode)",
+      "facility_beamline": "Canadian Light Source, Biomedical Imaging and Therapy - Bending Magnet (BMIT-BM 05B1)",
+      "objective": "10x",
+      "pixel_size_um": 0.72,
+      "beam_mean_energy_kev": 20,
+      "beam_filter": "0.400 mm aluminum filter, white beam",
+      "detector": "PCO Edge 5.5 sCMOS with LSO:Tb scintillator (10 um)",
+      "field_of_view_mm": "1.85 x 1.56",
+      "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
+      "doi": "10.1111/nph.20240",
+      "imaging_details_source": "Direct communication from Thorsten Knipfer (contributor), quoting the referenced paper's Methods, August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -10130,7 +10122,7 @@
     "config_notes": {
       "species": "Populus (poplar)",
       "specimen": "poplar_b5d_2car (slice filenames: Slice 228/277/363/415/482/617.tif)",
-      "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -10150,7 +10142,17 @@
       "value_75_220": "Bundle_Sheath (75, outer ring around a vein) + Vascular_Tissue (220, inner core of a vein) \u2192 Vascular_Region (class 2), same pattern confirmed for poplar_b4t_2car",
       "value_0": "Mesophyll (class 3)",
       "value_255": "Air_Space (class 4)",
-      "mask_check": "Verified converted mask pixel values across all 6 slices = {0, 75, 100, 130, 170, 220, 255}, image size 1011x318"
+      "mask_check": "Verified converted mask pixel values across all 6 slices = {0, 75, 100, 130, 170, 220, 255}, image size 1011x318",
+      "facility_beamline": "Canadian Light Source, Biomedical Imaging and Therapy - Bending Magnet (BMIT-BM 05B1)",
+      "objective": "10x",
+      "pixel_size_um": 0.72,
+      "beam_mean_energy_kev": 20,
+      "beam_filter": "0.400 mm aluminum filter, white beam",
+      "detector": "PCO Edge 5.5 sCMOS with LSO:Tb scintillator (10 um)",
+      "field_of_view_mm": "1.85 x 1.56",
+      "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
+      "doi": "10.1111/nph.20240",
+      "imaging_details_source": "Direct communication from Thorsten Knipfer (contributor), quoting the referenced paper's Methods, August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -10256,7 +10258,7 @@
     "config_notes": {
       "species": "Populus (poplar)",
       "specimen": "poplar_b5t_5car, 24 slices across 4 distinct image sizes (673x312, 1188x330, 1362x375, 1779x369; 6 slices each) \u2014 likely multiple sub-samples/crops grouped under one specimen folder",
-      "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -10275,7 +10277,17 @@
       "value_75_220": "Bundle_Sheath (75, outer ring around a vein) + Vascular_Tissue (220, inner core of a vein) \u2192 Vascular_Region (class 2)",
       "value_0": "Mesophyll (class 3)",
       "value_255": "Air_Space (class 4)",
-      "mask_check": "Verified all 24 mask slices, mode L. Union of pixel values = {0, 75, 100, 130, 170, 220, 255}; some individual slices lack 75 (no vein visible in that cross-section), which is expected"
+      "mask_check": "Verified all 24 mask slices, mode L. Union of pixel values = {0, 75, 100, 130, 170, 220, 255}; some individual slices lack 75 (no vein visible in that cross-section), which is expected",
+      "facility_beamline": "Canadian Light Source, Biomedical Imaging and Therapy - Bending Magnet (BMIT-BM 05B1)",
+      "objective": "10x",
+      "pixel_size_um": 0.72,
+      "beam_mean_energy_kev": 20,
+      "beam_filter": "0.400 mm aluminum filter, white beam",
+      "detector": "PCO Edge 5.5 sCMOS with LSO:Tb scintillator (10 um)",
+      "field_of_view_mm": "1.85 x 1.56",
+      "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
+      "doi": "10.1111/nph.20240",
+      "imaging_details_source": "Direct communication from Thorsten Knipfer (contributor), quoting the referenced paper's Methods, August 2026"
     },
     "manual_review_needed": [
       "repository_url",
@@ -10473,9 +10485,9 @@
     "notes": "A. Brunner annotation; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -10576,9 +10588,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -10679,9 +10691,9 @@
     "notes": "value 86: Epidermis (slight shift from 85); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "value_86": "Epidermis (slight shift from 85)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -10782,9 +10794,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -10885,9 +10897,9 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -10988,9 +11000,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11091,9 +11103,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11194,9 +11206,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11297,9 +11309,9 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11400,9 +11412,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11503,9 +11515,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11606,9 +11618,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11709,9 +11721,9 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11812,9 +11824,9 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -11915,9 +11927,9 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -12018,9 +12030,9 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -12121,9 +12133,9 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+      "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
       "source_affiliation": "Laboratory for Integrative Biodiversity Research, The New York Botanical Garden, Bronx, NY, United States",
       "source_contact": "aborsuk@nybg.org",
@@ -12229,8 +12241,7 @@
       "value_220": "Vascular (alternative value, merged with 152/BSE \u2192 class 2)",
       "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
-      "annotation_classes_source": "dataset/configs_more_than_5_colors/5_classes_6_labels/walnut.json"
+      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision."
     },
     "manual_review_needed": [
       "repository_url",
@@ -12325,7 +12336,7 @@
     "source_mask_folder": "dataset/images/wheat/masks",
     "source_image_count": 6,
     "source_mask_count": 6,
-    "notes": "Wheat leaves were captured on the Micro-CT beamline at the Australian Synchrotron using 18X white beam (40 keV); pixel size 0.361 um.",
+    "notes": "Wheat leaves were captured on the Micro-CT beamline at the Australian Synchrotron using 18X white beam (40 keV); pixel size 0.361 um. Contributor (Richard Harwood) confirmed dataset details and confirmed no reference paper exists for this data.",
     "config_notes": {
       "Wheat": "Richard_Harwood",
       "scanner": "Micro-CT beamline at the Australian Synchrotron",
@@ -12341,8 +12352,7 @@
     "manual_review_needed": [
       "repository_url",
       "doi",
-      "license",
-      "citation"
+      "license"
     ],
     "mask_preview_image": "assets/images/masks/wheat.jpg",
     "mask_preview_alt": "Representative grayscale segmentation mask preview for Triticum aestivum leaf CT dataset (wheat)",
@@ -12362,6 +12372,8 @@
       "255"
     ],
     "active_mask_label_value_count": 5,
-    "contributor_affiliation": "Sydney Microscopy and Microanalysis, The University of Sydney, Sydney, NSW, Australia"
+    "contributor_affiliation": "Sydney Microscopy and Microanalysis, The University of Sydney, Sydney, NSW, Australia",
+    "scan_notes": "Captured at 18X magnification using white beam, 40 keV",
+    "citation_status": "none_confirmed"
   }
 ]

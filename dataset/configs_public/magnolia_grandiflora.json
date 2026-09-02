@@ -1,0 +1,42 @@
+{
+  "name": "magnolia_grandiflora",
+  "image_dir": "/pscratch/sd/w/worasit/datasets/magnolia_grandiflora/images",
+  "mask_dir": "/pscratch/sd/w/worasit/datasets/magnolia_grandiflora/masks",
+  "num_classes": 5,
+  "ignore_index": 254,
+  "has_bse_label": false,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Bundle_Sheath_Extensions_and_Veins",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "0": 4,
+    "100": 2,
+    "130": 1,
+    "170": 0,
+    "255": 3
+  },
+  "_notes": {
+    "annotator": "Jesse_Gomez",
+    "encoding": "Jesse Gomez standard",
+    "value_100": "Vascular",
+    "value_130": "Epidermis",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_notes": "18 keV, ~25 mm sample-to-detector distance; scan folder 20141205_134740_MaGr_4_5x_goodbackground",
+    "source_contributor": "Jesse Gomez",
+    "source_affiliation": "Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, United States",
+    "source_contact": "jegomez97@ucla.edu",
+    "scan_year": "2016",
+    "note": "Leaves are in various conditions, including well-hydrated, bench-dried, and rehydrated leaves (5 minutes, 1 hour, and 12 hours). Images were cropped to show only the mesophyll because the project focused on mesophyll.",
+    "objective": "5x",
+    "pixel_size_um": 1.337,
+    "beam_energy_kev": 18,
+    "sample_to_detector_distance_mm": 25,
+    "scan_folder": "20141205_134740_MaGr_4_5x_goodbackground",
+    "scan_date": "2014-12-05"
+  }
+}

@@ -23,17 +23,18 @@
     "annotator": "Leila_Fletcher",
     "line": "Col-0 and ARTH-15 mutant",
     "mask_mode": "P (palette-indexed)",
-    "n_files": 46,
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "n_files": 17,
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 4\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
-    "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
+    "scan_notes": "21 keV, continuous tomography mode",
     "objective": "4x",
     "pixel_size_um": 1.6,
     "beam_energy_kev": 21,
     "scan_mode": "continuous tomography",
-    "imaging_details_source": "Direct communication from Leila R. Fletcher (contributor), August 2026 — not yet matched to a specific publication",
+    "imaging_details_source": "Direct communication from Leila R. Fletcher (contributor) \u2014 not attributed to the Scoffoni et al. 2018 paper; Christine Scoffoni (corresponding author of that paper) suggested these images may be included in it, but per contributor's direct account, treating this dataset as uncited for now",
     "source_contributor": "Leila R. Fletcher",
     "source_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
-    "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu"
+    "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu",
+    "file_recount_note": "Recounted after fixing image/mask pairing that had been split across arabidopsis1 and arabidopsis3 folders; total 50 image/mask pairs preserved across both, August 2026"
   }
 }

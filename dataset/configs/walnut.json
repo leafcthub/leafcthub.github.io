@@ -2,23 +2,24 @@
   "name": "walnut",
   "image_dir": "/pscratch/sd/w/worasit/datasets/walnut/images",
   "mask_dir": "/pscratch/sd/w/worasit/datasets/walnut/masks",
-  "num_classes": 5,
+  "num_classes": 6,
   "ignore_index": 254,
   "has_bse_label": true,
   "class_names": [
     "Background",
     "Epidermis",
-    "Vascular_Region",
+    "Bundle_Sheath",
+    "Vascular_Tissue",
     "Mesophyll",
     "Air_Space"
   ],
   "mapping": {
-    "0": 3,
+    "170": 0,
     "85": 1,
     "152": 2,
-    "170": 0,
-    "220": 2,
-    "255": 4
+    "220": 3,
+    "0": 4,
+    "255": 5
   },
   "_notes": {
     "annotator": "Devin",

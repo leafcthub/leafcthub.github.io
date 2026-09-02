@@ -1,0 +1,58 @@
+{
+  "name": "poplar_3",
+  "image_dir": "/Users/ws/Documents/GitHub/leafcthub.github.io/dataset/images/poplar_3/images",
+  "mask_dir": "/Users/ws/Documents/GitHub/leafcthub.github.io/dataset/images/poplar_3/masks",
+  "num_classes": 7,
+  "ignore_index": 254,
+  "has_bse_label": true,
+  "class_names": [
+    "Background",
+    "Adaxial_Epidermis",
+    "Abaxial_Epidermis",
+    "Bundle_Sheath",
+    "Vascular_Tissue",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "170": 0,
+    "100": 1,
+    "130": 2,
+    "75": 3,
+    "220": 4,
+    "0": 5,
+    "255": 6
+  },
+  "_notes": {
+    "species": "Populus (poplar)",
+    "specimen": "poplar_b4t_2car (slice filenames: Slice 20/96/190/286/316/417.tif)",
+    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+    "source_contributors": [
+      {
+        "name": "Thorsten Knipfer",
+        "email": "thorsten.knipfer@ubc.ca",
+        "affiliation": "Faculty of Land and Food Systems, University of British Columbia, Vancouver, BC, Canada"
+      },
+      {
+        "name": "Mina Momayyezi",
+        "email": "mmomayyezi@ucdavis.edu",
+        "affiliation": "Department of Viticulture and Enology, University of California, Davis, CA, USA"
+      }
+    ],
+    "encoding": "Distinct 7-value scheme for this specimen, not the Devin-standard scheme used by poplar_1/poplar_b4f_3gil; values confirmed against mask geometry and user-provided crop, not a written legend",
+    "value_100_130": "Adaxial_Epidermis (100, top band) + Abaxial_Epidermis (130, bottom band) \u2192 Epidermis (class 1); user-confirmed as two separate top/bottom bands",
+    "value_75_220": "Bundle_Sheath (75, outer ring around a vein) + Vascular_Tissue (220, inner core of a vein) \u2192 Vascular_Region (class 2); user-confirmed from an annotated vein cross-section crop (220 = inside, 75 = boundary outside)",
+    "value_0": "Mesophyll (class 3); user-confirmed (initially guessed as Air_Space, corrected by user)",
+    "value_255": "Air_Space (class 4); user-confirmed (initially guessed as Mesophyll, corrected by user)",
+    "mask_check": "Verified mask pixel values across all 6 slices = {0, 75, 100, 130, 170, 220, 255}, image size 2034x408 (L mode)",
+    "facility_beamline": "Canadian Light Source, Biomedical Imaging and Therapy - Bending Magnet (BMIT-BM 05B1)",
+    "objective": "10x",
+    "pixel_size_um": 0.72,
+    "beam_energy_kev": 20,
+    "beam_filter": "0.400 mm aluminum filter, white beam",
+    "detector": "PCO Edge 5.5 sCMOS with LSO:Tb scintillator (10 um)",
+    "field_of_view_mm": "1.85 x 1.56",
+    "citation": "Momayyezi, M., Chu, C., Stobbs, J. A., Soolanayakanahally, R. Y., Guy, R. D., McElrone, A. J., & Knipfer, T. (2025). Mapping of drought-induced changes in tissue characteristics across the leaf profile of Populus balsamifera. New Phytologist, 245(2), 534-545. https://doi.org/10.1111/nph.20240",
+    "doi": "10.1111/nph.20240"
+  }
+}

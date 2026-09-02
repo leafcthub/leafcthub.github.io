@@ -8,7 +8,7 @@
   "class_names": [
     "Background",
     "Epidermis",
-    "Vascular_Region",
+    "Bundle_Sheath_Extensions_and_Veins",
     "Mesophyll",
     "Air_Space"
   ],
@@ -25,9 +25,9 @@
     "encoding": "Jesse Gomez standard",
     "value_100": "Vascular",
     "value_130": "Epidermis",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
-    "scan_notes": "Imaged in 2016 at the Lawrence Berkeley National Laboratory.",
+    "scan_notes": "18 keV, ~25 mm sample-to-detector distance; scan folder 20141205_134740_MaGr_4_5x_goodbackground",
     "source_contributor": "Jesse Gomez",
     "source_affiliation": "Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, United States",
     "source_contact": "jegomez97@ucla.edu",
@@ -57,6 +57,13 @@
       "MaGr2_Slide_278.png": "rec20160226_120229_MAGR20378.png",
       "MaGr8_12h_Slide_385.png": "DUP_rec20160228_011845_MAGR8_12h_rehy0782.tif"
     },
-    "class_name_review_needed": "Jesse source notes describe value 100 as Bundle Sheath extensions + veins; config class_names left unchanged for now."
+    "objective": "5x",
+    "pixel_size_um": 1.337,
+    "beam_energy_kev": 18,
+    "sample_to_detector_distance_mm": 25,
+    "scan_folder": "20141205_134740_MaGr_4_5x_goodbackground",
+    "scan_date": "2014-12-05",
+    "imaging_details_source": "Direct communication from Jesse Gomez (contributor), August 2026",
+    "class_name_resolution": "Renamed to Bundle_Sheath_Extensions_and_Veins per Jesse Gomez's source notes, resolving earlier review flag"
   }
 }

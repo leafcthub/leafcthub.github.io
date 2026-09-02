@@ -26,7 +26,7 @@
   "_notes": {
     "species": "Populus (poplar)",
     "specimen": "poplar_b5t_5car, 24 slices across 4 distinct image sizes (673x312, 1188x330, 1362x375, 1779x369; 6 slices each) \u2014 likely multiple sub-samples/crops grouped under one specimen folder",
-    "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "source_contributors": [
       {
         "name": "Thorsten Knipfer",

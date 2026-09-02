@@ -1,0 +1,39 @@
+{
+  "num_classes": 5,
+  "ignore_index": 254,
+  "has_bse_label": false,
+  "class_names": [
+    "Background",
+    "Epidermis",
+    "Vascular_Region",
+    "Mesophyll",
+    "Air_Space"
+  ],
+  "name": "arabidopsis2",
+  "image_dir": "/pscratch/sd/w/worasit/datasets/arabidopsis2/images",
+  "mask_dir": "/pscratch/sd/w/worasit/datasets/arabidopsis2/masks",
+  "mapping": {
+    "0": 3,
+    "85": 1,
+    "170": 0,
+    "180": 2,
+    "255": 4
+  },
+  "_notes": {
+    "annotator": "unknown",
+    "source": "'Copy of' files \u2014 Devin-style encoding",
+    "mask_mode": "L (grayscale)",
+    "value_180": "Vascular",
+    "n_files": 6,
+    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_notes": "21 keV, continuous tomography mode",
+    "objective": "10x",
+    "pixel_size_um": 0.65,
+    "beam_energy_kev": 21,
+    "scan_mode": "continuous tomography",
+    "source_contributor": "Leila R. Fletcher",
+    "source_affiliation": "Department of Biology, Southern Oregon University, Ashland, OR, United States",
+    "source_contact": "fletcher.leila@gmail.com; fletcherl@sou.edu"
+  }
+}

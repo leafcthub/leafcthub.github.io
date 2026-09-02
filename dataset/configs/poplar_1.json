@@ -27,7 +27,7 @@
   },
   "_notes": {
     "species": "Populus (poplar)",
-    "scanner": "X-ray \u03bcCT, Canadian Light Source (CLS), synchrotron beamline",
+    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "source_contributors": [
       {
         "name": "Thorsten Knipfer",
