@@ -241,18 +241,26 @@ Check:
 - Mask values and semantic classes look reasonable.
 - The dataset detail page opens.
 
+## Publishing the Shared Config Copy
+
+`dataset/configs/` is the internal working folder — it is gitignored and never pushed to GitHub. It can hold admin-only notes (internal file paths, TODOs, unfiltered contributor correspondence) that should not go out with the shared data.
+
+Before committing a new or updated dataset, generate its public copy in `dataset/configs_public/<id>.json`: same `class_names`/`mapping`/`num_classes`/`ignore_index` as the internal config, but with `_notes` trimmed to only what's meaningful to an external data user (attribution, imaging setup, citation, per-value pixel meanings) — drop internal-only bookkeeping (filesystem paths, TODO/review flags, session changelog notes). This is the folder that actually ships in the repo.
+
+All dataset configs — including ones with more than 5 raw mask values — live together in one folder each (no separate folder for configs with more raw values). Keep `class_names`/`mapping` fully expanded to match the actual raw pixel values whenever the source notes support it, rather than leaving it collapsed to a generic 5-class scheme.
+
 ## Final GitHub Update
 
 After checking locally:
 
 ```bash
 git status
-git add data/datasets.json dataset/images dataset/configs assets/images/previews assets/images/masks
+git add data/datasets.json dataset/images dataset/configs_public assets/images/previews assets/images/masks
 git commit -m "Add new Leaf CT Hub dataset"
 git push
 ```
 
-All dataset configs — including ones with more than 5 raw mask values — live together in `dataset/configs/`. There is no separate folder for configs with more raw values; keep the config's `class_names`/`mapping` fully expanded to match the actual raw pixel values whenever the source notes support it, rather than leaving it collapsed to a generic 5-class scheme.
+`dataset/configs/` and `dataset/images/` are both gitignored and never staged — only their public/lightweight counterparts (`dataset/configs_public/`, preview images) go into the commit.
 
 ## Admin Notes
 

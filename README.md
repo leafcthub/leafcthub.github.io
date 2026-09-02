@@ -35,7 +35,7 @@ leafcthub.github.io/
 ├── data/
 │   └── datasets.json
 ├── dataset/
-│   └── configs/
+│   └── configs_public/
 ├── scripts/
 │   └── import_dataset.py
 ├── ADMIN_DATASET_UPLOAD.md

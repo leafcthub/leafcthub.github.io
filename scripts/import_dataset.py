@@ -16,6 +16,11 @@ The script copies files into the same structure used by this website:
   assets/images/previews/<id>.jpg
   assets/images/masks/<id>.jpg
   data/datasets.json
+
+dataset/images/ and dataset/configs/ are gitignored working folders (internal
+notes, admin bookkeeping). Before committing, generate the shared copy by
+hand in dataset/configs_public/<id>.json with unfiltered admin notes trimmed
+out -- that folder, not dataset/configs/, is what actually gets pushed.
 """
 
 from __future__ import annotations

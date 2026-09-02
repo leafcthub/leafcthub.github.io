@@ -141,6 +141,9 @@ PROJECT_MEMORY.md
 
 # Local source image stacks for catalog generation; not published by the static site.
 dataset/images/
+
+# Internal/full config files with unfiltered admin notes; only dataset/configs_public/ is shared.
+dataset/configs/
 .DS_Store
 .DS_Store
 .DS_Store
