@@ -12,6 +12,22 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+function showToast(message) {
+  const existing = document.querySelector(".toast");
+  if (existing) {
+    existing.remove();
+  }
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.textContent = message;
+  document.body.append(toast);
+  requestAnimationFrame(() => toast.classList.add("toast--visible"));
+  setTimeout(() => {
+    toast.classList.remove("toast--visible");
+    setTimeout(() => toast.remove(), 300);
+  }, 3200);
+}
+
 async function loadDatasets() {
   const response = await fetch("data/datasets.json");
   if (!response.ok) {

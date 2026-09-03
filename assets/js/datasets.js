@@ -227,6 +227,7 @@ function renderDetail(record) {
   if (downloadLink) {
     downloadLink.addEventListener("click", () => {
       trackEvent(`/download-click/${downloadLink.dataset.trackDownload}`, `Download click: ${downloadLink.dataset.trackDownload}`);
+      showToast("Download started — check your new tab.");
     });
   }
 }
