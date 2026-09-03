@@ -10,7 +10,7 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
-THUMB_SIZE = 260  # longest side, px
+THUMB_SIZE = 420  # longest side, px
 QUALITY = 72
 
 

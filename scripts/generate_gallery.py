@@ -40,6 +40,15 @@ def image_files(folder: Path) -> list[Path]:
     )
 
 
+def find_images_dir(species_dir: Path) -> Path:
+    """Accepts either an 'images' or 'raws' subfolder name for the raw slices."""
+    for name in ("images", "raws"):
+        candidate = species_dir / name
+        if candidate.is_dir():
+            return candidate
+    return species_dir / "images"
+
+
 def update_catalog(record_id: str, gallery: list[dict]) -> bool:
     records = json.load(open(CATALOG_PATH))
     updated = False
@@ -70,7 +79,7 @@ def main() -> None:
 
     for species_dir in species_dirs:
         record_id = species_dir.name
-        images = image_files(species_dir / "images")
+        images = image_files(find_images_dir(species_dir))
         masks = image_files(species_dir / "masks")
         if not images or not masks:
             print(f"[skip] {record_id}: missing images or masks", flush=True)

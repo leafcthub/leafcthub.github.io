@@ -149,7 +149,9 @@ function renderDetail(record) {
         <h1>${record.scientific_name ? formatScientificName(record.scientific_name) : toTitleCase(record.id)}</h1>
         ${record.description ? `<p>${record.description}</p>` : ""}
         <div class="action-row">
-          ${externalLink(record.repository_url, "View in Ag Data Commons")}
+          ${record.gallery && record.gallery.length
+            ? `<a class="button" href="gallery.html?id=${encodeURIComponent(record.id)}">View Gallery</a>`
+            : `<span class="button button--disabled" aria-disabled="true">View Gallery</span>`}
           ${externalLink(record.download_url || record.repository_url, "Download dataset", "button button--secondary")}
         </div>
       </div>
@@ -213,15 +215,14 @@ function renderDetail(record) {
       </div>
     </section>
 
-    ${renderGallerySection(record)}
   `;
 }
 
-function renderGallerySection(record) {
+function renderGalleryPage(record) {
+  const root = document.querySelector("[data-gallery-page]");
   const gallery = record.gallery || [];
-  if (!gallery.length) {
-    return "";
-  }
+  const title = record.scientific_name ? formatScientificName(record.scientific_name) : toTitleCase(record.id);
+  document.title = `Gallery \u2013 ${formatValue(title).replaceAll("_", " ")} | Leaf CT Hub`;
   const pairs = gallery
     .map(
       (pair, index) => `
@@ -238,15 +239,16 @@ function renderGallerySection(record) {
     `,
     )
     .join("");
-  return `
+  root.innerHTML = `
     <section class="section">
+      <a class="back-link" href="dataset.html?id=${encodeURIComponent(record.id)}">Back to dataset</a>
       <div class="section-heading">
-        <p class="eyebrow">Full Slice Review</p>
-        <h2>Raw / Mask Gallery (${gallery.length} pairs)</h2>
+        <p class="eyebrow">${formatValue(record.plant_category)}</p>
+        <h1>Gallery</h1>
         <p class="body-copy">
-          Every slice in this dataset, paired with its segmentation mask, so you can review the
-          full set before downloading. Download the complete full-resolution images and masks
-          from the repository link above.
+          ${gallery.length} slice${gallery.length === 1 ? "" : "s"} \u00b7 preview only.
+          Full-resolution images, masks, and the config file:
+          ${externalLink(record.repository_url, "Ag Data Commons")}
         </p>
       </div>
       <div class="gallery-grid">
@@ -254,6 +256,32 @@ function renderGallerySection(record) {
       </div>
     </section>
   `;
+}
+
+async function initGalleryPage() {
+  const root = document.querySelector("[data-gallery-page]");
+  if (!root) {
+    return;
+  }
+  const id = new URLSearchParams(window.location.search).get("id");
+  try {
+    const records = await loadDatasets();
+    const record = records.find((item) => item.id === id);
+    if (!record || !(record.gallery || []).length) {
+      root.innerHTML = `
+        <section class="section">
+          <h1>Gallery not available</h1>
+          <p class="body-copy">No slice gallery is available for this dataset yet.</p>
+          <a class="button" href="datasets.html">Browse datasets</a>
+        </section>
+      `;
+      return;
+    }
+    renderGalleryPage(record);
+  } catch (error) {
+    root.innerHTML = `<p class="notice">The gallery could not be loaded.</p>`;
+    console.error(error);
+  }
 }
 
 async function initDetailPage() {
@@ -342,3 +370,4 @@ async function initHomePage() {
 initCatalogPage();
 initDetailPage();
 initHomePage();
+initGalleryPage();
