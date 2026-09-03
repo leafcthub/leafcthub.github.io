@@ -857,27 +857,12 @@ select:focus {
   }
 }
 
-.gallery-tabs {
-  display: flex;
-  gap: 8px;
-  margin-top: 20px;
+.gallery-block {
+  margin-top: 32px;
 }
 
-.gallery-tab {
-  padding: 8px 18px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--ink);
-  font: inherit;
-  font-size: 0.85rem;
-  cursor: pointer;
-}
-
-.gallery-tab.is-active {
-  background: var(--green-dark);
-  border-color: var(--green-dark);
-  color: var(--surface);
+.gallery-block__heading {
+  margin: 0 0 4px;
 }
 
 .gallery-grid {

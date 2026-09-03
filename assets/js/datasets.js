@@ -218,12 +218,13 @@ function renderDetail(record) {
   `;
 }
 
-function galleryPanel(kind, gallery) {
+function galleryBlock(kind, gallery) {
+  const heading = kind === "raw" ? "Raw" : "Mask";
+  const label = kind === "raw" ? "Raw slice" : "Segmentation mask for slice";
   const items = gallery
     .map((pair, index) => {
       const n = String(index + 1).padStart(3, "0");
       const src = kind === "raw" ? pair.raw : pair.mask;
-      const label = kind === "raw" ? "Raw slice" : "Segmentation mask for slice";
       return `
         <figure class="gallery-item">
           <img src="${src}" alt="${label} ${index + 1} of ${gallery.length}" loading="lazy">
@@ -232,7 +233,12 @@ function galleryPanel(kind, gallery) {
       `;
     })
     .join("");
-  return `<div class="gallery-grid" data-gallery-panel="${kind}"${kind === "mask" ? " hidden" : ""}>${items}</div>`;
+  return `
+    <div class="gallery-block">
+      <h2 class="gallery-block__heading">${heading}</h2>
+      <div class="gallery-grid">${items}</div>
+    </div>
+  `;
 }
 
 function renderGalleryPage(record) {
@@ -252,27 +258,10 @@ function renderGalleryPage(record) {
           ${externalLink(record.repository_url, "Ag Data Commons")}
         </p>
       </div>
-      <div class="gallery-tabs" role="tablist">
-        <button type="button" class="gallery-tab is-active" data-gallery-tab="raw" role="tab" aria-selected="true">Raw (${gallery.length})</button>
-        <button type="button" class="gallery-tab" data-gallery-tab="mask" role="tab" aria-selected="false">Mask (${gallery.length})</button>
-      </div>
-      ${galleryPanel("raw", gallery)}
-      ${galleryPanel("mask", gallery)}
+      ${galleryBlock("raw", gallery)}
+      ${galleryBlock("mask", gallery)}
     </section>
   `;
-
-  root.querySelectorAll("[data-gallery-tab]").forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const kind = tab.dataset.galleryTab;
-      root.querySelectorAll("[data-gallery-tab]").forEach((t) => {
-        t.classList.toggle("is-active", t === tab);
-        t.setAttribute("aria-selected", String(t === tab));
-      });
-      root.querySelectorAll("[data-gallery-panel]").forEach((panel) => {
-        panel.hidden = panel.dataset.galleryPanel !== kind;
-      });
-    });
-  });
 }
 
 async function initGalleryPage() {
