@@ -1154,7 +1154,38 @@
       "255"
     ],
     "active_mask_label_value_count": 6,
-    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods). Objective/pixel size not yet confirmed per species (paper reports 5x/1.27um, 10x/0.64um, or 40x/0.1625um across the full 86-species dataset, not broken out individually)."
+    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods). Objective/pixel size not yet confirmed per species (paper reports 5x/1.27um, 10x/0.64um, or 40x/0.1625um across the full 86-species dataset, not broken out individually).",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/beilschmiedia_berteroana/raw/0001.jpg",
+        "mask": "assets/images/gallery/beilschmiedia_berteroana/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/beilschmiedia_berteroana/raw/0002.jpg",
+        "mask": "assets/images/gallery/beilschmiedia_berteroana/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/beilschmiedia_berteroana/raw/0003.jpg",
+        "mask": "assets/images/gallery/beilschmiedia_berteroana/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/beilschmiedia_berteroana/raw/0004.jpg",
+        "mask": "assets/images/gallery/beilschmiedia_berteroana/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/beilschmiedia_berteroana/raw/0005.jpg",
+        "mask": "assets/images/gallery/beilschmiedia_berteroana/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/beilschmiedia_berteroana/raw/0006.jpg",
+        "mask": "assets/images/gallery/beilschmiedia_berteroana/mask/0006.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/beilschmiedia_berteroana/raw/0007.jpg",
+        "mask": "assets/images/gallery/beilschmiedia_berteroana/mask/0007.jpg"
+      }
+    ],
+    "gallery_count": 7
   },
   {
     "id": "calamagrostis_arundinacea",
@@ -1268,7 +1299,34 @@
       "255"
     ],
     "active_mask_label_value_count": 6,
-    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1)."
+    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1).",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/calamagrostis_arundinacea/raw/0001.jpg",
+        "mask": "assets/images/gallery/calamagrostis_arundinacea/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/calamagrostis_arundinacea/raw/0002.jpg",
+        "mask": "assets/images/gallery/calamagrostis_arundinacea/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/calamagrostis_arundinacea/raw/0003.jpg",
+        "mask": "assets/images/gallery/calamagrostis_arundinacea/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/calamagrostis_arundinacea/raw/0004.jpg",
+        "mask": "assets/images/gallery/calamagrostis_arundinacea/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/calamagrostis_arundinacea/raw/0005.jpg",
+        "mask": "assets/images/gallery/calamagrostis_arundinacea/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/calamagrostis_arundinacea/raw/0006.jpg",
+        "mask": "assets/images/gallery/calamagrostis_arundinacea/mask/0006.jpg"
+      }
+    ],
+    "gallery_count": 6
   },
   {
     "id": "grape_111",
@@ -3205,7 +3263,54 @@
       "255"
     ],
     "active_mask_label_value_count": 5,
-    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1)."
+    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1).",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0001.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0002.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0003.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0004.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0005.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0006.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0006.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0007.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0007.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0008.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0008.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0009.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0009.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0010.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0010.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/koelreuteria_paniculata/raw/0011.jpg",
+        "mask": "assets/images/gallery/koelreuteria_paniculata/mask/0011.jpg"
+      }
+    ],
+    "gallery_count": 11
   },
   {
     "id": "lantana_camara",
@@ -13618,7 +13723,42 @@
       "255"
     ],
     "active_mask_label_value_count": 6,
-    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1)."
+    "scan_notes": "21-25 keV, continuous tomography mode, 1025 projections; reconstructed with TomoPy (per published Methods and Table S1).",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/pleopeltis_guttata/raw/0001.jpg",
+        "mask": "assets/images/gallery/pleopeltis_guttata/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/pleopeltis_guttata/raw/0002.jpg",
+        "mask": "assets/images/gallery/pleopeltis_guttata/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/pleopeltis_guttata/raw/0003.jpg",
+        "mask": "assets/images/gallery/pleopeltis_guttata/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/pleopeltis_guttata/raw/0004.jpg",
+        "mask": "assets/images/gallery/pleopeltis_guttata/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/pleopeltis_guttata/raw/0005.jpg",
+        "mask": "assets/images/gallery/pleopeltis_guttata/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/pleopeltis_guttata/raw/0006.jpg",
+        "mask": "assets/images/gallery/pleopeltis_guttata/mask/0006.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/pleopeltis_guttata/raw/0007.jpg",
+        "mask": "assets/images/gallery/pleopeltis_guttata/mask/0007.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/pleopeltis_guttata/raw/0008.jpg",
+        "mask": "assets/images/gallery/pleopeltis_guttata/mask/0008.jpg"
+      }
+    ],
+    "gallery_count": 8
   },
   {
     "id": "poplar_1",
@@ -13755,7 +13895,34 @@
       "255"
     ],
     "active_mask_label_value_count": 8,
-    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/poplar_1/raw/0001.jpg",
+        "mask": "assets/images/gallery/poplar_1/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_1/raw/0002.jpg",
+        "mask": "assets/images/gallery/poplar_1/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_1/raw/0003.jpg",
+        "mask": "assets/images/gallery/poplar_1/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_1/raw/0004.jpg",
+        "mask": "assets/images/gallery/poplar_1/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_1/raw/0005.jpg",
+        "mask": "assets/images/gallery/poplar_1/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_1/raw/0006.jpg",
+        "mask": "assets/images/gallery/poplar_1/mask/0006.jpg"
+      }
+    ],
+    "gallery_count": 6
   },
   {
     "id": "poplar_2",
@@ -13890,7 +14057,34 @@
       "255"
     ],
     "active_mask_label_value_count": 7,
-    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/poplar_2/raw/0001.jpg",
+        "mask": "assets/images/gallery/poplar_2/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_2/raw/0002.jpg",
+        "mask": "assets/images/gallery/poplar_2/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_2/raw/0003.jpg",
+        "mask": "assets/images/gallery/poplar_2/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_2/raw/0004.jpg",
+        "mask": "assets/images/gallery/poplar_2/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_2/raw/0005.jpg",
+        "mask": "assets/images/gallery/poplar_2/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_2/raw/0006.jpg",
+        "mask": "assets/images/gallery/poplar_2/mask/0006.jpg"
+      }
+    ],
+    "gallery_count": 6
   },
   {
     "id": "poplar_3",
@@ -14025,7 +14219,34 @@
       "255"
     ],
     "active_mask_label_value_count": 7,
-    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/poplar_3/raw/0001.jpg",
+        "mask": "assets/images/gallery/poplar_3/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_3/raw/0002.jpg",
+        "mask": "assets/images/gallery/poplar_3/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_3/raw/0003.jpg",
+        "mask": "assets/images/gallery/poplar_3/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_3/raw/0004.jpg",
+        "mask": "assets/images/gallery/poplar_3/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_3/raw/0005.jpg",
+        "mask": "assets/images/gallery/poplar_3/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_3/raw/0006.jpg",
+        "mask": "assets/images/gallery/poplar_3/mask/0006.jpg"
+      }
+    ],
+    "gallery_count": 6
   },
   {
     "id": "poplar_4",
@@ -14161,7 +14382,34 @@
       "255"
     ],
     "active_mask_label_value_count": 7,
-    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/poplar_4/raw/0001.jpg",
+        "mask": "assets/images/gallery/poplar_4/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_4/raw/0002.jpg",
+        "mask": "assets/images/gallery/poplar_4/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_4/raw/0003.jpg",
+        "mask": "assets/images/gallery/poplar_4/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_4/raw/0004.jpg",
+        "mask": "assets/images/gallery/poplar_4/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_4/raw/0005.jpg",
+        "mask": "assets/images/gallery/poplar_4/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_4/raw/0006.jpg",
+        "mask": "assets/images/gallery/poplar_4/mask/0006.jpg"
+      }
+    ],
+    "gallery_count": 6
   },
   {
     "id": "poplar_5",
@@ -14296,7 +14544,106 @@
       "255"
     ],
     "active_mask_label_value_count": 7,
-    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm"
+    "scan_notes": "Aluminum-filtered (0.400 mm) white beam, mean photon energy 20 keV; PCO Edge 5.5 sCMOS detector with LSO:Tb scintillator (10 \u03bcm); field of view 1.85 \u00d7 1.56 mm",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0001.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0002.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0003.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0004.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0005.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0006.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0006.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0007.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0007.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0008.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0008.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0009.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0009.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0010.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0010.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0011.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0011.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0012.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0012.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0013.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0013.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0014.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0014.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0015.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0015.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0016.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0016.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0017.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0017.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0018.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0018.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0019.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0019.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0020.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0020.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0021.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0021.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0022.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0022.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0023.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0023.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/poplar_5/raw/0024.jpg",
+        "mask": "assets/images/gallery/poplar_5/mask/0024.jpg"
+      }
+    ],
+    "gallery_count": 24
   },
   {
     "id": "tomato",
