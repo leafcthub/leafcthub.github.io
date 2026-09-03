@@ -151,3 +151,5 @@ dataset/.DS_Store
 assets/.DS_Store
 assets/.DS_Store
 dataset/.DS_Store
+__pycache__/
+_to_delete/
