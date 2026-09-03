@@ -218,27 +218,28 @@ function renderDetail(record) {
   `;
 }
 
+function galleryPanel(kind, gallery) {
+  const items = gallery
+    .map((pair, index) => {
+      const n = String(index + 1).padStart(3, "0");
+      const src = kind === "raw" ? pair.raw : pair.mask;
+      const label = kind === "raw" ? "Raw slice" : "Segmentation mask for slice";
+      return `
+        <figure class="gallery-item">
+          <img src="${src}" alt="${label} ${index + 1} of ${gallery.length}" loading="lazy">
+          <small>Slice ${n}</small>
+        </figure>
+      `;
+    })
+    .join("");
+  return `<div class="gallery-grid" data-gallery-panel="${kind}"${kind === "mask" ? " hidden" : ""}>${items}</div>`;
+}
+
 function renderGalleryPage(record) {
   const root = document.querySelector("[data-gallery-page]");
   const gallery = record.gallery || [];
   const title = record.scientific_name ? formatScientificName(record.scientific_name) : toTitleCase(record.id);
   document.title = `Gallery \u2013 ${formatValue(title).replaceAll("_", " ")} | Leaf CT Hub`;
-  const pairs = gallery
-    .map(
-      (pair, index) => `
-      <figure class="gallery-pair">
-        <span>
-          <img src="${pair.raw}" alt="Raw slice ${index + 1} of ${gallery.length}" loading="lazy">
-          <small>Raw</small>
-        </span>
-        <span>
-          <img src="${pair.mask}" alt="Segmentation mask for slice ${index + 1} of ${gallery.length}" loading="lazy">
-          <small>Mask</small>
-        </span>
-      </figure>
-    `,
-    )
-    .join("");
   root.innerHTML = `
     <section class="section">
       <a class="back-link" href="dataset.html?id=${encodeURIComponent(record.id)}">Back to dataset</a>
@@ -251,11 +252,27 @@ function renderGalleryPage(record) {
           ${externalLink(record.repository_url, "Ag Data Commons")}
         </p>
       </div>
-      <div class="gallery-grid">
-        ${pairs}
+      <div class="gallery-tabs" role="tablist">
+        <button type="button" class="gallery-tab is-active" data-gallery-tab="raw" role="tab" aria-selected="true">Raw (${gallery.length})</button>
+        <button type="button" class="gallery-tab" data-gallery-tab="mask" role="tab" aria-selected="false">Mask (${gallery.length})</button>
       </div>
+      ${galleryPanel("raw", gallery)}
+      ${galleryPanel("mask", gallery)}
     </section>
   `;
+
+  root.querySelectorAll("[data-gallery-tab]").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const kind = tab.dataset.galleryTab;
+      root.querySelectorAll("[data-gallery-tab]").forEach((t) => {
+        t.classList.toggle("is-active", t === tab);
+        t.setAttribute("aria-selected", String(t === tab));
+      });
+      root.querySelectorAll("[data-gallery-panel]").forEach((panel) => {
+        panel.hidden = panel.dataset.galleryPanel !== kind;
+      });
+    });
+  });
 }
 
 async function initGalleryPage() {
