@@ -43,7 +43,7 @@ if (submissionForm) {
       "",
       submissionValue(formData, "contact") || "Not provided",
     ].join("\n");
-    const issueUrl = new URL("https://github.com/WorasitSangjan/WebDatabase_Leaf-CT-Hub/issues/new");
+    const issueUrl = new URL("https://github.com/leafcthub/leafcthub.github.io/issues/new");
     issueUrl.searchParams.set("title", `Dataset submission: ${title}`);
     issueUrl.searchParams.set("body", body);
     window.open(issueUrl.toString(), "_blank", "noopener");

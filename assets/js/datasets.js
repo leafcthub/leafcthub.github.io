@@ -127,11 +127,17 @@ function maskValueSummary(record) {
   return `${values.length} values: ${values.join(", ")}`;
 }
 
-function externalLink(url, label, className = "button") {
+function externalLink(url, label, className = "button", extraAttrs = "") {
   if (!url) {
     return `<span class="${className} button--disabled" aria-disabled="true">${label}</span>`;
   }
-  return `<a class="${className}" href="${url}" target="_blank" rel="noopener">${label}</a>`;
+  return `<a class="${className}" href="${url}" target="_blank" rel="noopener"${extraAttrs}>${label}</a>`;
+}
+
+function trackEvent(path, title) {
+  if (window.goatcounter && typeof window.goatcounter.count === "function") {
+    window.goatcounter.count({ path, title, event: true });
+  }
 }
 
 function renderDetail(record) {
@@ -152,7 +158,7 @@ function renderDetail(record) {
           ${record.gallery && record.gallery.length
             ? `<a class="button" href="gallery.html?id=${encodeURIComponent(record.id)}">View Gallery</a>`
             : `<span class="button button--disabled" aria-disabled="true">View Gallery</span>`}
-          ${externalLink(record.download_url || record.repository_url, "Download dataset", "button button--secondary")}
+          ${externalLink(record.download_url || record.repository_url, "Download dataset", "button button--secondary", ` data-track-download="${record.id}"`)}
         </div>
       </div>
       <figure class="detail-hero__image-pair">
@@ -216,6 +222,13 @@ function renderDetail(record) {
     </section>
 
   `;
+
+  const downloadLink = root.querySelector("[data-track-download]");
+  if (downloadLink) {
+    downloadLink.addEventListener("click", () => {
+      trackEvent(`/download-click/${downloadLink.dataset.trackDownload}`, `Download click: ${downloadLink.dataset.trackDownload}`);
+    });
+  }
 }
 
 function galleryBlock(kind, gallery) {

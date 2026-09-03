@@ -25,7 +25,7 @@
           <h1>Leaf X-ray micro-CT Datasets</h1>
           <p>
             Leaf CT Hub is an open catalog for discovering and reusing plant X-ray micro-CT datasets.
-            The hub provides preview images, segmentation labels, metadata, and repository links
+            The hub provides preview images, segmentation labels, metadata, and download link
             to support leaf anatomy, phenotyping, and image segmentation research.
           </p>
         </div>
@@ -38,13 +38,15 @@
         </div>
         <div class="how-it-works__content">
           <p class="body-copy">
-            Leaf CT Hub provides a searchable catalog of dataset records. Large image files and
-            segmentation labels are stored in DOI-backed repositories such as USDA Ag Data Commons,
-            while this website provides metadata, preview images, citations, and direct access links.
+            Search, filter, and preview any dataset directly on this site. Each record links to
+            its permanent, DOI-backed home on USDA Ag Data Commons for full-resolution downloads.
+          </p>
+          <p class="body-copy">
+            Have your own leaf X-ray micro-CT dataset? Submit it to be added to the catalog.
           </p>
           <div class="action-row">
             <a class="button" href="datasets.html">Browse datasets</a>
-            <a class="button button--secondary" href="submit.html">Contribute data</a>
+            <a class="button button--secondary" href="submit.html">Submit data</a>
           </div>
         </div>
       </section>
@@ -82,20 +84,18 @@
             <h2>Companion Tools for Leaf CT Segmentation</h2>
           </div>
           <p class="body-copy">
-            The catalog is paired with open resources for testing the segmentation app, reviewing
-            the web app source code, and following the training workflow used to develop leaf CT
-            segmentation models.
+            The catalog pairs with a companion segmentation app, so you can go from browsing a
+            dataset to testing the underlying model on your own images.
           </p>
         </div>
         <div class="info-panel">
           <h2>Leaf CT Segmentation App</h2>
           <p>
-            Access the hosted segmentation app, inspect the web application source code, or review
-            the training workflow used to build the segmentation model.
+            Access the hosted segmentation app, or review the training workflow used to build
+            the segmentation model.
           </p>
           <div class="action-row tool-actions">
             <a class="button" href="https://huggingface.co/spaces/WorasitSangjan/Leaf-CT-Segmentation" target="_blank" rel="noopener">Open Segmentation App</a>
-            <a class="button button--secondary" href="https://github.com/WorasitSangjan/WebApp-Leaf-microCT-Segmentation" target="_blank" rel="noopener">View web app repo</a>
             <a class="button button--secondary" href="https://github.com/WorasitSangjan/Training-Leaf-microCT-Segmentation" target="_blank" rel="noopener">View training pipeline repo</a>
           </div>
         </div>
@@ -104,11 +104,12 @@
 
     <footer class="site-footer">
       <span class="site-footer__brand">Leaf CT Hub</span>
-      <span class="site-footer__note">Website code is MIT licensed. Dataset media remain with contributors; see records for attribution and reuse terms. <a href="https://github.com/WorasitSangjan/WebDatabase-Leaf-CT-Hub" target="_blank" rel="noopener">Contribute on GitHub</a>.</span>
+      <span class="site-footer__note">Website code (MIT licensed, <a href="https://github.com/leafcthub/leafcthub.github.io" target="_blank" rel="noopener">on GitHub</a>) &mdash; dataset media remain with contributors; see records for reuse terms. No cookies; privacy-friendly analytics only.</span>
       <span class="site-footer__year">&copy; <span data-year></span></span>
     </footer>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/datasets.js"></script>
+    <script data-goatcounter="https://leafcthub.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>

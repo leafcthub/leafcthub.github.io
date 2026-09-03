@@ -99,13 +99,6 @@ function detailUrl(id) {
   return `dataset.html?id=${encodeURIComponent(id)}`;
 }
 
-function cardRepositoryLink(record) {
-  if (!record.repository_url) {
-    return `<span class="button button--secondary button--disabled" aria-disabled="true">View repository</span>`;
-  }
-  return `<a class="button button--secondary" href="${record.repository_url}" target="_blank" rel="noopener">View repository</a>`;
-}
-
 function createDatasetCard(record) {
   const card = document.createElement("article");
   card.className = "dataset-card";
@@ -134,7 +127,6 @@ function createDatasetCard(record) {
       </div>
       <div class="card-actions">
         <a class="button" href="${detailUrl(record.id)}">View record</a>
-        ${cardRepositoryLink(record)}
       </div>
     </div>
   `;
