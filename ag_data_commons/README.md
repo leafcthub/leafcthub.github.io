@@ -1,36 +1,36 @@
 # Plan: Publishing the Leaf CT Hub dataset to USDA Ag Data Commons
 
 Goal: every species/sample page on the site gets a working "View in Ag Data Commons"
-link that points to *that record's own* dataset, not one generic link for everything.
+link that points to the dataset's real files, plus an on-site gallery (see
+`ADMIN_DATASET_UPLOAD.md` -> "Reviewable Slice Gallery") so visitors can review every
+slice without needing Ag Data Commons's own file browser.
 
-## Recommended structure: one item per species/sample, grouped in one Collection
+## Actual structure: one combined Ag Data Commons item, one zip per species
 
-Ag Data Commons runs on the Figshare for Institutions platform. On Figshare,
-an **item** (their name for a single dataset record) gets its own DOI when
-published, and a **Collection** can group many items under one umbrella DOI
-without giving up each item's individual DOI.
+Ag Data Commons runs on the Figshare for Institutions platform, which caps how many
+individual files a single item can hold (hit at 333 loose files with only 3 species
+uploaded). Because the full collection is on the order of ~3,000 raw+mask files, the
+101-separate-items plan below this note was superseded by a simpler approach:
 
-So the plan is:
+1. **One Ag Data Commons item for the entire collection** (92 species already staged
+   in `dataset_various/`; the other 9 -- poplar_1..5, beilschmiedia_berteroana,
+   calamagrostis_arundinacea, koelreuteria_paniculata, pleopeltis_guttata -- exist on
+   the site already but weren't in that folder, so their source images/masks still
+   need to be located before they can be uploaded too).
+2. **Each species uploaded as its own `<id>.zip`** (`images/`, `masks/`, `config.json`
+   at the top level), not as loose files -- this keeps the item's file count small
+   regardless of how many species/slices are inside each zip.
+3. The item is published once (or kept in draft while species are added), getting one
+   DOI for the whole collection. As more species are added after publishing, each
+   upload creates a new version under that same DOI -- normal and expected.
+4. Website side (already wired, no code changes needed): fill in `repository_url`
+   (item page URL) and `download_url` (that species' zip's direct file link) per
+   record in `data/datasets.json` via the tracker + script below.
+   `assets/js/datasets.js` already renders the button as a live link once those
+   fields are non-empty.
 
-1. Create **one Ag Data Commons item per catalog record** (101 total — 92 are
-   already staged in `dataset_various/`, the other 9 — poplar_1..5,
-   beilschmiedia_berteroana, calamagrostis_arundinacea, koelreuteria_paniculata,
-   pleopeltis_guttata — exist on the site already but weren't in that folder,
-   so their source images/masks need to be located before they can be
-   uploaded too).
-   - Each item = that species' `images/` + `masks/` + its config JSON
-     (README/data dictionary describing the class mapping) as a zipped upload
-     or individual files.
-   - Each item gets published → gets its own DOI/URL.
-2. Create **one Collection** ("Leaf CT Hub: multi-species leaf micro-CT
-   segmentation dataset" or similar) and add all 101 items to it. The
-   Collection DOI is what goes in the manuscript's Data Availability
-   Statement; the individual item DOIs are what the website links to.
-3. Website side (already wired, no code changes needed): fill in
-   `repository_url` (item page URL) and `download_url` (direct file link,
-   if Ag Data Commons/Figshare gives one) per record in `data/datasets.json`,
-   then commit + push. `assets/js/datasets.js` already renders the button as
-   a live link once those fields are non-empty.
+The original per-species-item-plus-Collection idea is kept below for reference, in
+case the file-count limit is ever raised and per-species DOIs become worth revisiting.
 
 ## Before uploading: provenance / licensing to confirm
 

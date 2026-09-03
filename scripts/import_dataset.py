@@ -15,6 +15,8 @@ The script copies files into the same structure used by this website:
   dataset/configs/<id>.json
   assets/images/previews/<id>.jpg
   assets/images/masks/<id>.jpg
+  assets/images/gallery/<id>/raw/####.jpg   (every slice, for the reviewable gallery)
+  assets/images/gallery/<id>/mask/####.jpg  (every slice, for the reviewable gallery)
   data/datasets.json
 
 dataset/images/ and dataset/configs/ are gitignored working folders (internal
@@ -31,6 +33,8 @@ import shutil
 from pathlib import Path
 
 from PIL import Image, ImageOps
+
+from _gallery import build_gallery
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -119,6 +123,7 @@ def build_record(
     masks: list[Path],
     preview_image: str,
     mask_preview_image: str,
+    gallery: list[dict],
 ) -> dict:
     mapping = config.get("mapping") or {}
     ignore_index = config.get("ignore_index", metadata.get("ignore_index"))
@@ -181,6 +186,8 @@ def build_record(
         "preview_alt": f"Representative X-ray micro-CT slice preview for {title}",
         "mask_preview_image": mask_preview_image,
         "mask_preview_alt": f"Representative grayscale segmentation mask preview for {title}",
+        "gallery": gallery,
+        "gallery_count": len(gallery),
         "source_config": f"dataset/configs/{record_id}.json",
         "source_image_folder": f"dataset/images/{record_id}/images",
         "source_mask_folder": f"dataset/images/{record_id}/masks",
@@ -241,7 +248,10 @@ def main() -> None:
     masks = image_files(target_masks)
     preview_image = save_raw_preview(record_id, images)
     mask_preview_image = save_mask_preview(record_id, masks)
-    record = build_record(record_id, metadata, config, images, masks, preview_image, mask_preview_image)
+    gallery = build_gallery(ROOT, record_id, images, masks)
+    record = build_record(
+        record_id, metadata, config, images, masks, preview_image, mask_preview_image, gallery,
+    )
     update_catalog(record)
 
     print(f"Imported {record_id}")
@@ -249,6 +259,7 @@ def main() -> None:
     print(f"Masks: {len(masks)}")
     print(f"Preview: {preview_image}")
     print(f"Mask preview: {mask_preview_image}")
+    print(f"Gallery pairs: {len(gallery)}")
 
 
 if __name__ == "__main__":

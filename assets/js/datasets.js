@@ -212,6 +212,47 @@ function renderDetail(record) {
         </dl>
       </div>
     </section>
+
+    ${renderGallerySection(record)}
+  `;
+}
+
+function renderGallerySection(record) {
+  const gallery = record.gallery || [];
+  if (!gallery.length) {
+    return "";
+  }
+  const pairs = gallery
+    .map(
+      (pair, index) => `
+      <figure class="gallery-pair">
+        <span>
+          <img src="${pair.raw}" alt="Raw slice ${index + 1} of ${gallery.length}" loading="lazy">
+          <small>Raw</small>
+        </span>
+        <span>
+          <img src="${pair.mask}" alt="Segmentation mask for slice ${index + 1} of ${gallery.length}" loading="lazy">
+          <small>Mask</small>
+        </span>
+      </figure>
+    `,
+    )
+    .join("");
+  return `
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Full Slice Review</p>
+        <h2>Raw / Mask Gallery (${gallery.length} pairs)</h2>
+        <p class="body-copy">
+          Every slice in this dataset, paired with its segmentation mask, so you can review the
+          full set before downloading. Download the complete full-resolution images and masks
+          from the repository link above.
+        </p>
+      </div>
+      <div class="gallery-grid">
+        ${pairs}
+      </div>
+    </section>
   `;
 }
 

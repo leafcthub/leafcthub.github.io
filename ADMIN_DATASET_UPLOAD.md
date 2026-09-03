@@ -204,6 +204,8 @@ dataset/images/<id>/masks/
 dataset/configs/<id>.json
 assets/images/previews/<id>.jpg
 assets/images/masks/<id>.jpg
+assets/images/gallery/<id>/raw/0001.jpg, 0002.jpg, ...
+assets/images/gallery/<id>/mask/0001.jpg, 0002.jpg, ...
 data/datasets.json
 ```
 
@@ -213,10 +215,34 @@ The script also:
 - Counts mask files.
 - Detects image size.
 - Records image/mask pair counts.
-- Creates the raw X-ray micro-CT preview image.
-- Creates the grayscale mask preview image.
-- Adds the new record to `data/datasets.json`.
+- Creates the raw X-ray micro-CT preview image (one representative slice, shown in the hero).
+- Creates the grayscale mask preview image (one representative slice, shown in the hero).
+- Generates a full paired raw/mask thumbnail gallery, one pair per slice, so a visitor can
+  review every slice on the dataset page before downloading -- see
+  "Reviewable Slice Gallery" below.
+- Adds the new record to `data/datasets.json`, including the `gallery` field.
 - Records raw mask values from the config mapping.
+
+### Reviewable Slice Gallery
+
+Every slice gets a small (260px, a few KB) raw/mask thumbnail pair, stored under
+`assets/images/gallery/<id>/` and listed in the record's `gallery` field in
+`data/datasets.json`. The dataset detail page renders these as a paired grid so
+visitors can browse the full dataset without downloading it first. This is generated
+automatically by `import_dataset.py` for a new dataset -- no extra step needed.
+
+To (re)generate galleries for many species at once (e.g. after re-processing a batch
+of source data), use the shared batch script instead:
+
+```bash
+python3 scripts/generate_gallery.py --source /path/to/dataset_various/images
+python3 scripts/generate_gallery.py --source /path/to/dataset_various/images --only arabidopsis1 arabidopsis2
+```
+
+Both scripts share the same thumbnail logic (`scripts/_gallery.py`), so output is
+identical either way. Full-resolution originals are never stored in this repo --
+only these small preview thumbnails. The full-resolution images/masks stay in the
+Ag Data Commons deposit; see "Depositing to USDA Ag Data Commons" below.
 
 ## Check the Website Locally
 
@@ -255,12 +281,49 @@ After checking locally:
 
 ```bash
 git status
-git add data/datasets.json dataset/images dataset/configs_public assets/images/previews assets/images/masks
+git add data/datasets.json dataset/images dataset/configs_public assets/images/previews assets/images/masks assets/images/gallery
 git commit -m "Add new Leaf CT Hub dataset"
 git push
 ```
 
 `dataset/configs/` and `dataset/images/` are both gitignored and never staged — only their public/lightweight counterparts (`dataset/configs_public/`, preview images) go into the commit.
+
+## Depositing to USDA Ag Data Commons
+
+The website only ever holds metadata and small preview/gallery thumbnails (see above).
+The actual full-resolution images and masks that visitors download live in a separate
+USDA Ag Data Commons deposit, referenced by each record's `repository_url` /
+`download_url` fields.
+
+Current approach: **one combined Ag Data Commons item for the whole collection**,
+with each species/sample uploaded as its own `<id>.zip` (containing `images/`, `masks/`,
+and its `config.json`). Zipping per species avoids Figshare/Ag Data Commons's per-item
+file-count cap (hit at 333 loose files with only 3 species uploaded) -- the platform's
+own file browser isn't the review experience for this data anyway; that job now belongs
+to the on-site Reviewable Slice Gallery above.
+
+Steps for a new species once it's been imported to the site (per the steps above):
+
+1. Build that species' zip the same way the existing ones were built (`images/`, `masks/`,
+   `config.json` at the top level of the zip, named `<id>.zip`).
+2. Upload the zip to the existing Ag Data Commons item via the web UI. If the item is
+   already published, this creates a new version -- expected as the collection grows.
+3. Once the file is live, copy its download URL into that species' row in
+   `ag_data_commons/submission_tracker.csv` (`ads_repository_url` / `ads_download_url`),
+   and set `ads_status`.
+4. Run:
+   ```bash
+   python3 ag_data_commons/update_repository_links.py --dry-run   # preview
+   python3 ag_data_commons/update_repository_links.py             # apply
+   ```
+   This copies the filled-in URLs into `data/datasets.json` for matching `id`s only --
+   safe to run incrementally as more species go up.
+5. Commit and push `data/datasets.json` and the tracker CSV together with any site-side
+   changes from the same session.
+
+See `ag_data_commons/README.md` for the full background and provenance notes (several
+species' raw images were contributed by outside labs and need attribution/permission
+confirmed before their zip goes up).
 
 ## Admin Notes
 
