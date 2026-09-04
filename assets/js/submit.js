@@ -12,19 +12,19 @@ if (submissionForm) {
   submissionForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const formData = new FormData(submissionForm);
-    const title = submissionValue(formData, "dataset_title") || "New Leaf X-ray micro-CT dataset submission";
+    const scientificName = submissionValue(formData, "scientific_name");
+    const title = scientificName ? `${scientificName} leaf CT dataset` : "New Leaf X-ray micro-CT dataset submission";
     const body = [
       "## Dataset submission",
       "",
-      metadataLine("Dataset title", title),
-      metadataLine("Scientific name", submissionValue(formData, "scientific_name")),
+      metadataLine("Scientific name", scientificName),
       metadataLine("Common name", submissionValue(formData, "common_name")),
-      metadataLine("Family", submissionValue(formData, "family")),
-      metadataLine("Imaging modality", submissionValue(formData, "imaging_modality")),
+      metadataLine("Treatment / condition", submissionValue(formData, "treatment")),
+      metadataLine("Imaging modality", "X-ray micro-CT"),
       metadataLine("Instrument / facility", submissionValue(formData, "instrument_facility")),
       metadataLine("Instrument location", submissionValue(formData, "instrument_location")),
       metadataLine("Image size", submissionValue(formData, "image_size")),
-      metadataLine("Image/mask pairs", submissionValue(formData, "image_mask_pairs")),
+      metadataLine("Voxel / pixel size", submissionValue(formData, "voxel_size")),
       metadataLine("File format", submissionValue(formData, "file_format")),
       metadataLine("Image/mask provider", submissionValue(formData, "provider")),
       metadataLine("Provider affiliation", submissionValue(formData, "provider_affiliation")),
@@ -39,7 +39,7 @@ if (submissionForm) {
       "",
       submissionValue(formData, "processing_notes") || "Not provided",
       "",
-      "## Contact",
+      "## Contact email",
       "",
       submissionValue(formData, "contact") || "Not provided",
     ].join("\n");

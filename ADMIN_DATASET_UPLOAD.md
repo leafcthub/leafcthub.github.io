@@ -12,14 +12,12 @@ The website does not directly accept large file uploads. Large X-ray micro-CT im
 
 1. Open the new GitHub issue created from the Submit page.
 2. Check that the contributor provided:
-   - Dataset title
    - Scientific name
    - Common name, if available
-   - Family
-   - Imaging modality
+   - Treatment / condition, if available
    - Instrument/facility and instrument location, if available
-   - Image size, image/mask pair count, and file format
-   - Dataset/repository link
+   - Image size, voxel/pixel size, and file format
+   - Dataset/repository link, if available (often blank at submission time -- files usually reach the admin via email or a shared drive link first, and a public repository link only exists after the Ag Data Commons upload step)
    - Paper DOI or publication link, if available
    - Image/mask provider and affiliation, if available
    - Segmentation label information
@@ -123,20 +121,19 @@ Create a small `metadata.json` file from the submitted GitHub issue.
 Use this mapping from the Submit page:
 
 ```text
-Dataset title                  -> title
 Scientific name                -> scientific_name
 Common name                    -> common_name
-Family                         -> family
-Imaging modality               -> ct_modality
+Treatment / condition          -> treatment
 Instrument / facility          -> scanner
 Instrument location            -> scan_location
 Image size                     -> image_size
+Voxel / pixel size             -> voxel_size
 File format                    -> file_format
 Image/mask provider            -> contributors
 Provider affiliation           -> contributor_affiliation
 Dataset or repository link     -> repository_url
 Paper DOI or publication link  -> doi and/or publication_url, then create citation
-Contact                        -> contact
+Contact email                  -> contact
 Notes for processing           -> notes
 ```
 

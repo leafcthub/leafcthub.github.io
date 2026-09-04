@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About | Leaf CT Hub</title>
+    <title>Website Summary | Leaf CT Hub</title>
     <meta name="description" content="Summary, credits, and reuse notes for Leaf CT Hub.">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -21,12 +21,11 @@
 
     <main>
       <section class="page-header">
-        <p class="eyebrow">About</p>
         <h1>Leaf CT Hub website summary</h1>
         <p>
-          Leaf CT Hub is a static catalog for plant and leaf X-ray micro-CT datasets,
-          segmentation annotations, preview images, repository links, and companion
-          segmentation resources.
+          Leaf CT Hub is a static catalog for leaf X-ray micro-CT datasets, covering
+          both raw and annotated images. Each record shows preview images and links
+          to companion segmentation resources.
         </p>
       </section>
 
@@ -51,15 +50,15 @@
         <div class="about-grid">
           <div class="info-panel">
             <h2>Catalog</h2>
-            <p>Searchable dataset records with species, family, common name, imaging equipment, image size, file format, provider credit, source links, and citations when available.</p>
+            <p>Searchable dataset records with species, common name, imaging equipment, image size, file format, provider credit, and citations when available.</p>
           </div>
           <div class="info-panel">
             <h2>Previews</h2>
-            <p>Lightweight raw-image and grayscale mask previews let users inspect representative anatomy and segmentation labels before opening the source repository.</p>
+            <p>Lightweight raw-image and grayscale mask previews let visitors inspect representative anatomy and segmentation labels without downloading the full dataset.</p>
           </div>
           <div class="info-panel">
             <h2>Segmentation</h2>
-            <p>Dataset records include annotation classes and mask-value summaries. The website also links to the hosted Leaf CT Segmentation App and related source repositories.</p>
+            <p>Each dataset record lists its annotation classes. Separately, the site also links out to the hosted Leaf CT Segmentation App and related training-pipeline repositories.</p>
           </div>
         </div>
       </section>
@@ -68,19 +67,20 @@
         <div>
           <div class="section-heading">
             <p class="eyebrow">Data Access</p>
-            <h2>Browse here, download from trusted repositories</h2>
+            <h2>Browse here, download as it becomes available</h2>
           </div>
           <p class="body-copy">
-            Leaf CT Hub stores lightweight metadata, preview images, and configuration files.
-            Large image stacks and masks remain in DOI-backed or trusted external repositories.
+            Leaf CT Hub stores lightweight metadata and preview images for every dataset record.
+            Full-resolution image stacks and masks are hosted on USDA Ag Data Commons; each
+            record's download link lets you download the data directly from this site.
           </p>
         </div>
         <div class="info-panel">
           <h2>Reuse Note</h2>
           <p>
-            Website code is MIT licensed. Dataset images, masks, annotations, and source files
-            remain with their contributors or repositories. See each dataset record for attribution,
-            source links, and reuse terms.
+            Website code is MIT licensed. Dataset images, masks, and annotations remain with
+            their original contributors. Each record shows a citation, along with license
+            and reuse terms from its Ag Data Commons deposit.
           </p>
         </div>
       </section>
@@ -96,23 +96,10 @@
             GitHub Pages-based resource for organizing plant X-ray micro-CT dataset metadata
             and segmentation resources.
           </p>
-          <div class="action-row">
-            <a class="button" href="https://github.com/leafcthub/leafcthub.github.io" target="_blank" rel="noopener">Contribute on GitHub</a>
-            <a class="button button--secondary" href="submit.html">Submit data</a>
-          </div>
         </div>
         <div class="info-panel">
           <h2>Dataset contributors</h2>
-          <ul class="credit-list">
-            <li>Aleca M. Borsuk</li>
-            <li>Christopher D. Muir</li>
-            <li>Jesse Gomez</li>
-            <li>Leila R. Fletcher</li>
-            <li>Mina Momayyezi</li>
-            <li>Morgan E. Furze</li>
-            <li>Richard Harwood</li>
-            <li>Santiago Trueba</li>
-          </ul>
+          <ul class="credit-list" data-contributor-list></ul>
         </div>
       </section>
     </main>

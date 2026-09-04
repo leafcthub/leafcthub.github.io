@@ -25,6 +25,11 @@ function uniqueValues(records, key) {
   });
 }
 
+function uniqueContributors(records) {
+  const names = records.flatMap((record) => String(record.contributors || "").split(","));
+  return [...new Set(names.map((name) => name.trim()).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+}
+
 function addOptions(select, values) {
   values.forEach((value) => {
     const option = document.createElement("option");
@@ -127,11 +132,12 @@ function maskValueSummary(record) {
   return `${values.length} values: ${values.join(", ")}`;
 }
 
-function externalLink(url, label, className = "button", extraAttrs = "") {
+function externalLink(url, label, className = "button", extraAttrs = "", newTab = true) {
   if (!url) {
     return `<span class="${className} button--disabled" aria-disabled="true">${label}</span>`;
   }
-  return `<a class="${className}" href="${url}" target="_blank" rel="noopener"${extraAttrs}>${label}</a>`;
+  const target = newTab ? ' target="_blank" rel="noopener"' : "";
+  return `<a class="${className}" href="${url}"${target}${extraAttrs}>${label}</a>`;
 }
 
 function trackEvent(path, title) {
@@ -158,7 +164,7 @@ function renderDetail(record) {
           ${record.gallery && record.gallery.length
             ? `<a class="button" href="gallery.html?id=${encodeURIComponent(record.id)}">View Gallery</a>`
             : `<span class="button button--disabled" aria-disabled="true">View Gallery</span>`}
-          ${externalLink(record.download_url || record.repository_url, "Download dataset", "button button--secondary", ` data-track-download="${record.id}"`)}
+          ${externalLink(record.download_url || record.repository_url, "Download dataset", "button button--secondary", ` data-track-download="${record.id}" download`, false)}
         </div>
       </div>
       <figure class="detail-hero__image-pair">
@@ -179,17 +185,23 @@ function renderDetail(record) {
         <h2>Catalog Record</h2>
       </div>
       <dl class="metadata-grid">
-        ${metadataRow("Scientific name", formatScientificName(record.scientific_name))}
-        ${metadataRow("Common name", record.common_name)}
-        ${metadataRow("Family", record.family)}
-        ${metadataRow("Imaging modality", record.ct_modality)}
-        ${metadataRow("Instrument / facility", record.scanner)}
-        ${metadataRow("Instrument location", record.scan_location)}
-        ${metadataRow("Image size", record.image_size)}
-        ${metadataRow("Voxel / pixel size", record.voxel_size ? formatVoxel(record) : "")}
-        ${metadataRow("Scan notes", record.scan_notes)}
-        ${metadataRow("Image/mask pairs", imageMaskPairs)}
-        ${metadataRow("File format", record.file_format)}
+        <div class="metadata-row metadata-row--2">
+          ${metadataRow("Common name", record.common_name)}
+          ${metadataRow("Scientific name", formatScientificName(record.scientific_name))}
+        </div>
+        <div class="metadata-row metadata-row--3">
+          ${metadataRow("Image/mask pairs", imageMaskPairs)}
+          ${metadataRow("Image size", record.image_size)}
+          ${metadataRow("File format", record.file_format)}
+        </div>
+        <div class="metadata-row metadata-row--2">
+          ${metadataRow("Instrument / facility", record.scanner)}
+          ${metadataRow("Instrument location", record.scan_location)}
+        </div>
+        <div class="metadata-row metadata-row--2">
+          ${metadataRow("Voxel / pixel size", record.voxel_size ? formatVoxel(record) : "")}
+          ${metadataRow("Scan notes", record.scan_notes)}
+        </div>
       </dl>
     </section>
 
@@ -213,8 +225,6 @@ function renderDetail(record) {
           ${metadataRow("Provider affiliation", record.contributor_affiliation)}
           ${metadataRow("Contact", record.contact)}
           ${metadataRow("Repository", record.repository)}
-          ${metadataRow("Repository URL", record.repository_url)}
-          ${metadataRow("Download URL", record.download_url)}
           ${metadataRow("License", record.license)}
           ${metadataRow("Citation", record.citation || citationStatusLabel(record.citation_status))}
         </dl>
@@ -227,7 +237,7 @@ function renderDetail(record) {
   if (downloadLink) {
     downloadLink.addEventListener("click", () => {
       trackEvent(`/download-click/${downloadLink.dataset.trackDownload}`, `Download click: ${downloadLink.dataset.trackDownload}`);
-      showToast("Download started — check your new tab.");
+      showToast("Downloading dataset...");
     });
   }
 }
@@ -361,7 +371,8 @@ async function initHomePage() {
   const total = document.querySelector("[data-total-datasets]");
   const categories = document.querySelector("[data-total-categories]");
   const slices = document.querySelector("[data-total-slices]");
-  if (!featured && !total && !categories && !slices) {
+  const contributorList = document.querySelector("[data-contributor-list]");
+  if (!featured && !total && !categories && !slices && !contributorList) {
     return;
   }
   try {
@@ -378,6 +389,15 @@ async function initHomePage() {
     }
     if (slices) {
       slices.textContent = totalAnnotatedSlices(records);
+    }
+    if (contributorList) {
+      contributorList.replaceChildren(
+        ...uniqueContributors(records).map((name) => {
+          const li = document.createElement("li");
+          li.textContent = name;
+          return li;
+        }),
+      );
     }
   } catch (error) {
     if (featured) {
