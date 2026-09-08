@@ -91,6 +91,8 @@ Use the same pattern for all equipment fields:
 
 - `scanner`: instrument or beamline plus facility name
 - `scan_location`: city, state/region, and country only
+- `beam_energy_kev`: X-ray beam energy in keV, when the contributor or scan log states it.
+- `objective`: the actual magnification (e.g. "10x"), when stated -- a different, unrelated scan property from beam energy. Leave both blank rather than guessing.
 
 Examples:
 

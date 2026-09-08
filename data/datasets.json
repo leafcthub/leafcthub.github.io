@@ -238,8 +238,8 @@
     "gallery_count": 30
   },
   {
-    "id": "almond_drought",
-    "title": "Prunus dulcis drought leaf CT dataset (almond_drought)",
+    "id": "almond_drought1",
+    "title": "Prunus dulcis leaf X-ray micro-CT dataset (almond_drought1)",
     "plant_category": "Almond",
     "scientific_name": "Prunus dulcis",
     "common_name": "Almond",
@@ -254,11 +254,14 @@
     "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
+    "scan_notes": "",
     "voxel_size": "",
     "voxel_size_unit": "um",
+    "beam_energy_kev": "",
+    "objective": "",
     "image_size": "1653 x 420",
     "file_format": "TIF",
-    "slice_count": 30,
+    "slice_count": 18,
     "no_of_leaves": "",
     "split": "Train",
     "classes": [
@@ -272,7 +275,7 @@
       "Air_Space"
     ],
     "annotation_type": "",
-    "annotation_classes_source_text": "Annotation classes from grouped config: Background, Adaxial_Epidermis, Abaxial_Epidermis, Bundle_Sheath, Vascular_Tissue, Palisade_Mesophyll, Spongy_Mesophyll, Air_Space",
+    "annotation_classes_source_text": "",
     "num_classes": 8,
     "ignore_index": 254,
     "label_mapping": {
@@ -286,7 +289,7 @@
       "255": 7
     },
     "annotation_features": {
-      "has_bse_label": false,
+      "has_bse_label": true,
       "has_tannin": false,
       "has_resin_ducts": false,
       "has_transfusion_tissue": false
@@ -299,35 +302,116 @@
     "citation": "",
     "license": "",
     "contributors": "Mina Momayyezi",
+    "contributor_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
     "contact": "mmomayyezi@ucdavis.edu",
-    "preview_image": "assets/images/previews/almond_drought.jpg",
-    "preview_alt": "Representative CT slice preview for Prunus dulcis drought leaf CT dataset (almond_drought)",
-    "source_config": "dataset/configs/almond_drought.json",
-    "source_image_folder": "dataset/images/almond_drought/images",
-    "source_mask_folder": "dataset/images/almond_drought/masks",
-    "source_image_count": 30,
-    "source_mask_count": 30,
-    "notes": "encoding: Devin standard; note: Almond drought treatment; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision.",
+    "preview_image": "assets/images/previews/almond_drought1.jpg",
+    "preview_alt": "Representative X-ray micro-CT slice preview for Prunus dulcis leaf X-ray micro-CT dataset (almond_drought1)",
+    "mask_preview_image": "assets/images/masks/almond_drought1.jpg",
+    "mask_preview_alt": "Representative grayscale segmentation mask preview for Prunus dulcis leaf X-ray micro-CT dataset (almond_drought1)",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0001.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0002.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0003.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0004.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0005.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0006.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0006.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0007.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0007.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0008.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0008.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0009.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0009.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0010.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0010.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0011.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0011.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0012.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0012.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0013.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0013.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0014.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0014.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0015.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0015.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0016.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0016.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0017.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0017.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_drought1/raw/0018.jpg",
+        "mask": "assets/images/gallery/almond_drought1/mask/0018.jpg"
+      }
+    ],
+    "gallery_count": 18,
+    "source_config": "dataset/configs/almond_drought1.json",
+    "source_image_folder": "dataset/images/almond_drought1/images",
+    "source_mask_folder": "dataset/images/almond_drought1/masks",
+    "source_image_count": 18,
+    "source_mask_count": 18,
+    "notes": "Split from the combined almond_drought scan into two separate samples by true image size (this sample: 1653 x 420, slices 1-6 and 13-24 of the original combined set).",
     "config_notes": {
-      "encoding": "Mina Momayyezi - Lab",
-      "note": "Almond drought treatment",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
-      "scan_location": "Berkeley, CA, United States",
-      "scan_notes": "Leaves were scanned at the mid-section within 24 h of excision.",
       "source_contributor": "Mina Momayyezi",
       "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
-      "source_assignment_note": "Assigned from provided almond, grape, and pistachio source information; record uses the matching Devin-style 5-class annotation scheme.",
-      "source_contact": "mmomayyezi@ucdavis.edu"
+      "source_contact": "mmomayyezi@ucdavis.edu",
+      "source_orcid": "",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scan_location": "Berkeley, CA, United States",
+      "objective": "",
+      "pixel_size_um": "",
+      "beam_energy_kev": "",
+      "scan_mode": "",
+      "citation": "",
+      "doi": "",
+      "publication_url": "",
+      "note": "encoding: Devin standard; note: Almond drought treatment; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision."
     },
     "manual_review_needed": [
       "repository_url",
-      "download_url",
       "doi",
       "license",
+      "scanner",
       "citation"
     ],
-    "mask_preview_image": "assets/images/masks/almond_drought.jpg",
-    "mask_preview_alt": "Representative grayscale segmentation mask preview for Prunus dulcis drought leaf CT dataset (almond_drought)",
     "mask_label_values": [
       "0",
       "55",
@@ -349,134 +433,186 @@
       "180",
       "255"
     ],
-    "active_mask_label_value_count": 8,
+    "active_mask_label_value_count": 8
+  },
+  {
+    "id": "almond_drought2",
+    "title": "Prunus dulcis leaf X-ray micro-CT dataset (almond_drought2)",
+    "plant_category": "Almond",
+    "scientific_name": "Prunus dulcis",
+    "common_name": "Almond",
+    "family": "Rosaceae",
+    "plant_group": "Angiosperm",
+    "species": "Prunus dulcis",
+    "cultivar_or_accession": "",
+    "treatment": "Drought",
+    "tissue_or_anatomical_region": "Leaf",
+    "description": "",
+    "ct_modality": "X-ray micro-CT",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_year": "",
+    "scan_notes": "",
+    "voxel_size": "",
+    "voxel_size_unit": "um",
+    "beam_energy_kev": "",
+    "objective": "",
+    "image_size": "628 x 398",
+    "file_format": "TIF",
+    "slice_count": 12,
+    "no_of_leaves": "",
+    "split": "Train",
+    "classes": [
+      "Background",
+      "Adaxial_Epidermis",
+      "Abaxial_Epidermis",
+      "Bundle_Sheath",
+      "Vascular_Tissue",
+      "Palisade_Mesophyll",
+      "Spongy_Mesophyll",
+      "Air_Space"
+    ],
+    "annotation_type": "",
+    "annotation_classes_source_text": "",
+    "num_classes": 8,
+    "ignore_index": 254,
+    "label_mapping": {
+      "170": 0,
+      "85": 1,
+      "95": 2,
+      "152": 3,
+      "180": 4,
+      "55": 5,
+      "0": 6,
+      "255": 7
+    },
+    "annotation_features": {
+      "has_bse_label": true,
+      "has_tannin": false,
+      "has_resin_ducts": false,
+      "has_transfusion_tissue": false
+    },
+    "repository": "USDA Ag Data Commons",
+    "repository_url": "",
+    "download_url": "",
+    "doi": "",
+    "publication_url": "",
+    "citation": "",
+    "license": "",
+    "contributors": "Mina Momayyezi",
     "contributor_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
+    "contact": "mmomayyezi@ucdavis.edu",
+    "preview_image": "assets/images/previews/almond_drought2.jpg",
+    "preview_alt": "Representative X-ray micro-CT slice preview for Prunus dulcis leaf X-ray micro-CT dataset (almond_drought2)",
+    "mask_preview_image": "assets/images/masks/almond_drought2.jpg",
+    "mask_preview_alt": "Representative grayscale segmentation mask preview for Prunus dulcis leaf X-ray micro-CT dataset (almond_drought2)",
     "gallery": [
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0001.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0001.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0001.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0001.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0002.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0002.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0002.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0002.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0003.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0003.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0003.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0003.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0004.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0004.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0004.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0004.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0005.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0005.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0005.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0005.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0006.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0006.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0006.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0006.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0007.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0007.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0007.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0007.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0008.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0008.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0008.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0008.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0009.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0009.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0009.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0009.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0010.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0010.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0010.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0010.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0011.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0011.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0011.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0011.jpg"
       },
       {
-        "raw": "assets/images/gallery/almond_drought/raw/0012.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0012.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0013.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0013.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0014.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0014.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0015.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0015.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0016.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0016.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0017.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0017.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0018.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0018.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0019.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0019.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0020.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0020.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0021.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0021.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0022.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0022.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0023.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0023.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0024.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0024.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0025.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0025.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0026.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0026.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0027.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0027.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0028.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0028.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0029.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0029.jpg"
-      },
-      {
-        "raw": "assets/images/gallery/almond_drought/raw/0030.jpg",
-        "mask": "assets/images/gallery/almond_drought/mask/0030.jpg"
+        "raw": "assets/images/gallery/almond_drought2/raw/0012.jpg",
+        "mask": "assets/images/gallery/almond_drought2/mask/0012.jpg"
       }
     ],
-    "gallery_count": 30
+    "gallery_count": 12,
+    "source_config": "dataset/configs/almond_drought2.json",
+    "source_image_folder": "dataset/images/almond_drought2/images",
+    "source_mask_folder": "dataset/images/almond_drought2/masks",
+    "source_image_count": 12,
+    "source_mask_count": 12,
+    "notes": "Split from the combined almond_drought scan into two separate samples by true image size (this sample: 628 x 398, slices 7-12 and 25-30 of the original combined set).",
+    "config_notes": {
+      "source_contributor": "Mina Momayyezi",
+      "source_affiliation": "Department of Plant Sciences, University of California, Davis, Davis, CA, United States",
+      "source_contact": "mmomayyezi@ucdavis.edu",
+      "source_orcid": "",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scan_location": "Berkeley, CA, United States",
+      "objective": "",
+      "pixel_size_um": "",
+      "beam_energy_kev": "",
+      "scan_mode": "",
+      "citation": "",
+      "doi": "",
+      "publication_url": "",
+      "note": "encoding: Devin standard; note: Almond drought treatment; Devin-style encoding; Leaves were scanned at the mid-section within 24 h of excision."
+    },
+    "manual_review_needed": [
+      "repository_url",
+      "doi",
+      "license",
+      "scanner",
+      "citation"
+    ],
+    "mask_label_values": [
+      "0",
+      "55",
+      "85",
+      "95",
+      "152",
+      "170",
+      "180",
+      "255"
+    ],
+    "mask_label_value_count": 8,
+    "active_mask_label_values": [
+      "0",
+      "55",
+      "85",
+      "95",
+      "152",
+      "170",
+      "180",
+      "255"
+    ],
+    "active_mask_label_value_count": 8
   },
   {
     "id": "arabidopsis1",
+    "objective": "4x",
+    "beam_energy_kev": "21",
     "title": "Arabidopsis thaliana Col-0 leaf CT dataset (arabidopsis1)",
     "plant_category": "Arabidopsis",
     "scientific_name": "Arabidopsis thaliana Col-0",
@@ -489,7 +625,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 4\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "1.6",
@@ -545,12 +681,12 @@
       "line": "Col-0 and ARTH-15 mutant",
       "mask_mode": "P (palette-indexed)",
       "n_files": 17,
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 4\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "21 keV, continuous tomography mode",
       "objective": "4x",
       "pixel_size_um": 1.6,
-      "beam_energy_kev": 21,
+      "beam_energy_kev": "21",
       "scan_mode": "continuous tomography",
       "imaging_details_source": "Direct communication from Leila R. Fletcher (contributor) \u2014 not attributed to the Scoffoni et al. 2018 paper; Christine Scoffoni (corresponding author of that paper) suggested these images may be included in it, but per contributor's direct account, treating this dataset as uncited for now",
       "source_contributor": "Leila R. Fletcher",
@@ -660,6 +796,8 @@
   },
   {
     "id": "arabidopsis2",
+    "objective": "10x",
+    "beam_energy_kev": "21",
     "title": "Arabidopsis thaliana Col-0 leaf CT dataset (arabidopsis2)",
     "plant_category": "Arabidopsis",
     "scientific_name": "Arabidopsis thaliana Col-0",
@@ -672,7 +810,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -729,12 +867,12 @@
       "mask_mode": "L (grayscale)",
       "value_180": "Vascular",
       "n_files": 6,
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "21 keV, continuous tomography mode",
       "objective": "10x",
       "pixel_size_um": 0.65,
-      "beam_energy_kev": 21,
+      "beam_energy_kev": "21",
       "scan_mode": "continuous tomography",
       "imaging_details_source": "Direct communication from Leila R. Fletcher (contributor) \u2014 not attributed to the Scoffoni et al. 2018 paper; Christine Scoffoni (corresponding author of that paper) suggested these images may be included in it, but per contributor's direct account, treating this dataset as uncited for now",
       "source_contributor": "Leila R. Fletcher",
@@ -799,6 +937,8 @@
   },
   {
     "id": "arabidopsis3",
+    "objective": "10x",
+    "beam_energy_kev": "21",
     "title": "Arabidopsis thaliana Col-0 leaf CT dataset (arabidopsis3)",
     "plant_category": "Arabidopsis",
     "scientific_name": "Arabidopsis thaliana Col-0",
@@ -811,7 +951,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -867,12 +1007,12 @@
       "mask_mode": "P (palette-indexed)",
       "n_files": 33,
       "num_classes_note": "num_classes=5 is correct for the unified scheme; vascular class (103) simply absent in these slices",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "21 keV, continuous tomography mode",
       "objective": "10x",
       "pixel_size_um": 0.65,
-      "beam_energy_kev": 21,
+      "beam_energy_kev": "21",
       "scan_mode": "continuous tomography",
       "imaging_details_source": "Direct communication from Leila R. Fletcher (contributor) \u2014 not attributed to the Scoffoni et al. 2018 paper; Christine Scoffoni (corresponding author of that paper) suggested these images may be included in it, but per contributor's direct account, treating this dataset as uncited for now",
       "source_contributor": "Leila R. Fletcher",
@@ -1044,6 +1184,8 @@
   },
   {
     "id": "beilschmiedia_berteroana",
+    "beam_energy_kev": "21-25",
+    "objective": "10x",
     "title": "Beilschmiedia berteroana leaf CT dataset (beilschmiedia_berteroana)",
     "plant_category": "Beilschmiedia",
     "scientific_name": "Beilschmiedia berteroana",
@@ -1056,7 +1198,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.64",
@@ -1189,6 +1331,8 @@
   },
   {
     "id": "calamagrostis_arundinacea",
+    "beam_energy_kev": "21-25",
+    "objective": "10x",
     "title": "Calamagrostis arundinacea leaf CT dataset (calamagrostis_arundinacea)",
     "plant_category": "Calamagrostis",
     "scientific_name": "Calamagrostis arundinacea",
@@ -1201,7 +1345,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.64",
@@ -3158,6 +3302,8 @@
   },
   {
     "id": "koelreuteria_paniculata",
+    "beam_energy_kev": "21-25",
+    "objective": "10x",
     "title": "Koelreuteria paniculata leaf CT dataset (koelreuteria_paniculata)",
     "plant_category": "Koelreuteria",
     "scientific_name": "Koelreuteria paniculata",
@@ -3170,7 +3316,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.64",
@@ -4037,6 +4183,8 @@
   },
   {
     "id": "lantana_camara2",
+    "objective": "5x",
+    "beam_energy_kev": "20",
     "title": "Lantana camara leaf CT dataset (lantana_camara2)",
     "plant_category": "Lantana",
     "scientific_name": "Lantana camara",
@@ -4049,7 +4197,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "2016",
     "voxel_size": "1.27",
@@ -4106,7 +4254,7 @@
       "encoding": "Jesse Gomez standard",
       "value_100": "Vascular",
       "value_130": "Epidermis",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "20 keV, ~104 mm sample-to-detector distance; scan folder 20160226_154756_LACA2",
       "source_contributor": "Jesse Gomez",
@@ -4134,7 +4282,7 @@
       "class_name_review_needed": "Jesse source notes describe value 100 as Bundle Sheath extensions + veins; config class_names left unchanged for now.",
       "objective": "5x",
       "pixel_size_um": 1.27,
-      "beam_energy_kev": 20,
+      "beam_energy_kev": "20",
       "sample_to_detector_distance_mm": 104,
       "scan_folder": "20160226_154756_LACA2",
       "scan_date": "2016-02-26",
@@ -4204,6 +4352,8 @@
   },
   {
     "id": "magnolia_grandiflora",
+    "objective": "5x",
+    "beam_energy_kev": "18",
     "title": "Magnolia grandiflora leaf CT dataset (magnolia_grandiflora)",
     "plant_category": "Magnolia",
     "scientific_name": "Magnolia grandiflora",
@@ -4216,7 +4366,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "2014",
     "voxel_size": "1.337",
@@ -4273,7 +4423,7 @@
       "encoding": "Jesse Gomez standard",
       "value_100": "Vascular",
       "value_130": "Epidermis",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 5\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "18 keV, ~25 mm sample-to-detector distance; scan folder 20141205_134740_MaGr_4_5x_goodbackground",
       "source_contributor": "Jesse Gomez",
@@ -4308,7 +4458,7 @@
       "class_name_review_needed": "Jesse source notes describe value 100 as Bundle Sheath extensions + veins; config class_names left unchanged for now.",
       "objective": "5x",
       "pixel_size_um": 1.337,
-      "beam_energy_kev": 18,
+      "beam_energy_kev": "18",
       "sample_to_detector_distance_mm": 25,
       "scan_folder": "20141205_134740_MaGr_4_5x_goodbackground",
       "scan_date": "2014-12-05",
@@ -4390,6 +4540,8 @@
   },
   {
     "id": "oak_quce",
+    "objective": "10x",
+    "beam_energy_kev": "23",
     "title": "Quercus cerris leaf CT dataset (oak_quce)",
     "plant_category": "Oak",
     "scientific_name": "Quercus cerris",
@@ -4402,7 +4554,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -4463,7 +4615,7 @@
     "config_notes": {
       "oak_segmentation": "Devin",
       "value_254": "pre-labelled ignore pixels already in mask",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
@@ -4582,6 +4734,8 @@
   },
   {
     "id": "oak_qucf",
+    "objective": "10x",
+    "beam_energy_kev": "23",
     "title": "Quercus crassifolia leaf CT dataset (oak_qucf)",
     "plant_category": "Oak",
     "scientific_name": "Quercus crassifolia",
@@ -4594,7 +4748,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -4654,7 +4808,7 @@
     "config_notes": {
       "encoding": "Mina Momayyezi - Lab",
       "note": "Oak treatment",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
@@ -4773,6 +4927,8 @@
   },
   {
     "id": "oak_qucr",
+    "objective": "10x",
+    "beam_energy_kev": "23",
     "title": "Quercus crassipes leaf CT dataset (oak_qucr)",
     "plant_category": "Oak",
     "scientific_name": "Quercus crassipes",
@@ -4785,7 +4941,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -4845,7 +5001,7 @@
     "notes": "oak segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "encoding": "Mina Momayyezi - Lab",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
@@ -4964,6 +5120,8 @@
   },
   {
     "id": "oak_quob",
+    "objective": "10x",
+    "beam_energy_kev": "23",
     "title": "Quercus obtusata leaf CT dataset (oak_quob)",
     "plant_category": "Oak",
     "scientific_name": "Quercus obtusata",
@@ -4976,7 +5134,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -5037,7 +5195,7 @@
     "config_notes": {
       "oak_segmentation": "Devin",
       "value_225": "unclassified/border region \u2192 ignore (254)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
@@ -5156,6 +5314,8 @@
   },
   {
     "id": "oak_quru",
+    "objective": "10x",
+    "beam_energy_kev": "23",
     "title": "Quercus rugosa leaf CT dataset (oak_quru)",
     "plant_category": "Oak",
     "scientific_name": "Quercus rugosa",
@@ -5168,7 +5328,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -5228,7 +5388,7 @@
     "config_notes": {
       "encoding": "Mina Momayyezi - Lab",
       "note": "Oak treatment",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
@@ -5347,6 +5507,8 @@
   },
   {
     "id": "oak_qusu",
+    "objective": "10x",
+    "beam_energy_kev": "23",
     "title": "Quercus suber leaf CT dataset (oak_qusu)",
     "plant_category": "Oak",
     "scientific_name": "Quercus suber",
@@ -5359,7 +5521,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.65",
@@ -5420,7 +5582,7 @@
     "config_notes": {
       "oak_segmentation": "Devin",
       "value_225": "unclassified/border region \u2192 ignore (254)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "23 keV, continuous tomography mode; samples placed inside a pipette tip for scanning",
       "source_contributor": "Morgan E. Furze",
@@ -13613,6 +13775,8 @@
   },
   {
     "id": "pleopeltis_guttata",
+    "beam_energy_kev": "21-25",
+    "objective": "10x",
     "title": "Pleopeltis guttata leaf CT dataset (pleopeltis_guttata)",
     "plant_category": "Pleopeltis",
     "scientific_name": "Pleopeltis guttata",
@@ -13625,7 +13789,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.64",
@@ -13762,6 +13926,8 @@
   },
   {
     "id": "poplar_1",
+    "objective": "10x",
+    "beam_energy_kev": "20",
     "title": "Populus sp. leaf CT dataset (poplar_1)",
     "plant_category": "Poplar",
     "scientific_name": "Populus sp.",
@@ -13774,7 +13940,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
     "voxel_size": "0.72",
@@ -13836,7 +14002,7 @@
     "notes": "Devin-standard 8-class encoding collapsed to 5 base classes. Scans from the Canadian Light Source (CLS) collaboration between Thorsten Knipfer and Mina Momayyezi. Co-authorship note: per Knipfer's email correspondence, if these scans are included in a manuscript dataset he should be added as a co-author.",
     "config_notes": {
       "species": "Populus (poplar)",
-      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+      "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -13926,6 +14092,8 @@
   },
   {
     "id": "poplar_2",
+    "objective": "10x",
+    "beam_energy_kev": "20",
     "title": "Populus sp. leaf CT dataset (poplar_2)",
     "plant_category": "Poplar",
     "scientific_name": "Populus sp.",
@@ -13938,7 +14106,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
     "voxel_size": "0.72",
@@ -13999,7 +14167,7 @@
     "config_notes": {
       "species": "Populus (poplar)",
       "specimen": "poplar_b4f_3gil (slice filenames: Slice 96/188/271/360/447/531.tif)",
-      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+      "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -14088,6 +14256,8 @@
   },
   {
     "id": "poplar_3",
+    "objective": "10x",
+    "beam_energy_kev": "20",
     "title": "Populus sp. leaf CT dataset (poplar_3)",
     "plant_category": "Poplar",
     "scientific_name": "Populus sp.",
@@ -14100,7 +14270,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
     "voxel_size": "0.72",
@@ -14161,7 +14331,7 @@
     "config_notes": {
       "species": "Populus (poplar)",
       "specimen": "poplar_b4t_2car (slice filenames: Slice 20/96/190/286/316/417.tif)",
-      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+      "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -14250,6 +14420,8 @@
   },
   {
     "id": "poplar_4",
+    "objective": "10x",
+    "beam_energy_kev": "20",
     "title": "Populus sp. leaf CT dataset (poplar_4)",
     "plant_category": "Poplar",
     "scientific_name": "Populus sp.",
@@ -14262,7 +14434,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
     "voxel_size": "0.72",
@@ -14323,7 +14495,7 @@
     "config_notes": {
       "species": "Populus (poplar)",
       "specimen": "poplar_b5d_2car (slice filenames: Slice 228/277/363/415/482/617.tif)",
-      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+      "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -14413,6 +14585,8 @@
   },
   {
     "id": "poplar_5",
+    "objective": "10x",
+    "beam_energy_kev": "20",
     "title": "Populus sp. leaf CT dataset (poplar_5)",
     "plant_category": "Poplar",
     "scientific_name": "Populus sp.",
@@ -14425,7 +14599,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+    "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
     "scan_location": "Saskatoon, SK, Canada",
     "scan_year": "",
     "voxel_size": "0.72",
@@ -14486,7 +14660,7 @@
     "config_notes": {
       "species": "Populus (poplar)",
       "specimen": "poplar_b5t_5car, 24 slices across 4 distinct image sizes (673x312, 1188x330, 1362x375, 1779x369; 6 slices each) \u2014 likely multiple sub-samples/crops grouped under one specimen folder",
-      "scanner": "X-ray \u03bcCT, 10\u00d7 objective, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
+      "scanner": "X-ray \u03bcCT, Biomedical Imaging and Therapy \u2013 Bending Magnet beamline (BMIT-BM 05B1), Canadian Light Source",
       "source_contributors": [
         {
           "name": "Thorsten Knipfer",
@@ -14918,6 +15092,8 @@
   },
   {
     "id": "v_carlsii",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum carlsii leaf CT dataset (v_carlsii)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum carlsii",
@@ -14930,7 +15106,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -14983,7 +15159,7 @@
     "notes": "A. Brunner annotation; Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -15048,6 +15224,8 @@
   },
   {
     "id": "v_cinnamo",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum cinnamomifolium leaf CT dataset (v_cinnamo)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum cinnamomifolium",
@@ -15060,7 +15238,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -15113,7 +15291,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -15178,6 +15356,8 @@
   },
   {
     "id": "v_davidii",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum davidii leaf CT dataset (v_davidii)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum davidii",
@@ -15190,7 +15370,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -15243,7 +15423,7 @@
     "notes": "value 86: Epidermis (slight shift from 85); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "value_86": "Epidermis (slight shift from 85)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -15308,6 +15488,8 @@
   },
   {
     "id": "v_davidii2",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum davidii leaf CT dataset (v_davidii2)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum davidii",
@@ -15320,7 +15502,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -15373,7 +15555,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -15438,6 +15620,8 @@
   },
   {
     "id": "v_dentatum",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum dentatum leaf CT dataset (v_dentatum)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum dentatum",
@@ -15450,7 +15634,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -15503,7 +15687,7 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -15568,6 +15752,8 @@
   },
   {
     "id": "v_dentatum2",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum dentatum leaf CT dataset (v_dentatum2)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum dentatum",
@@ -15580,7 +15766,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -15633,7 +15819,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -15698,6 +15884,8 @@
   },
   {
     "id": "v_furcatum",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum furcatum leaf CT dataset (v_furcatum)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum furcatum",
@@ -15710,7 +15898,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -15763,7 +15951,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -15828,6 +16016,8 @@
   },
   {
     "id": "v_hartwegii",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum hartwegii leaf CT dataset (v_hartwegii)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum hartwegii",
@@ -15840,7 +16030,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -15893,7 +16083,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -15958,6 +16148,8 @@
   },
   {
     "id": "v_japonicum",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum japonicum leaf CT dataset (v_japonicum)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum japonicum",
@@ -15970,7 +16162,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -16023,7 +16215,7 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -16088,6 +16280,8 @@
   },
   {
     "id": "v_jucundum",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum jucundum leaf CT dataset (v_jucundum)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum jucundum",
@@ -16100,7 +16294,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -16153,7 +16347,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -16218,6 +16412,8 @@
   },
   {
     "id": "v_jucundum2",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum jucundum leaf CT dataset (v_jucundum2)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum jucundum",
@@ -16230,7 +16426,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -16283,7 +16479,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -16348,6 +16544,8 @@
   },
   {
     "id": "v_jucundum3",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum jucundum leaf CT dataset (v_jucundum3)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum jucundum",
@@ -16360,7 +16558,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -16413,7 +16611,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -16478,6 +16676,8 @@
   },
   {
     "id": "v_lantana",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum lantana leaf CT dataset (v_lantana)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum lantana",
@@ -16490,7 +16690,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -16543,7 +16743,7 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -16608,6 +16808,8 @@
   },
   {
     "id": "v_lautum",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum lautum leaf CT dataset (v_lautum)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum lautum",
@@ -16620,7 +16822,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -16673,7 +16875,7 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -16738,6 +16940,8 @@
   },
   {
     "id": "v_lautum3",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum lautum leaf CT dataset (v_lautum3)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum lautum",
@@ -16750,7 +16954,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -16803,7 +17007,7 @@
     "notes": "mask mode: P (palette-indexed); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "P (palette-indexed)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -16868,6 +17072,8 @@
   },
   {
     "id": "v_propinquum",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum propinquum leaf CT dataset (v_propinquum)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum propinquum",
@@ -16880,7 +17086,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -16933,7 +17139,7 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -16998,6 +17204,8 @@
   },
   {
     "id": "v_tinus",
+    "objective": "10x",
+    "beam_energy_kev": "22",
     "title": "Viburnum tinus leaf CT dataset (v_tinus)",
     "plant_category": "Viburnum",
     "scientific_name": "Viburnum tinus",
@@ -17010,7 +17218,7 @@
     "tissue_or_anatomical_region": "Leaf",
     "description": "",
     "ct_modality": "X-ray micro-CT",
-    "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
     "scan_location": "Berkeley, CA, United States",
     "scan_year": "",
     "voxel_size": "0.642",
@@ -17063,7 +17271,7 @@
     "notes": "mask mode: L (grayscale); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "mask_mode": "L (grayscale)",
-      "scanner": "X-ray \u03bcCT beamline (8.3.2), 10\u00d7 objective, at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
       "scan_location": "Berkeley, CA, United States",
       "scan_notes": "22 keV, continuous tomography mode, 1,025 projections, ~15 min/scan; reconstructed with TomoPy",
       "source_contributor": "Aleca M. Borsuk",
@@ -17458,6 +17666,8 @@
   },
   {
     "id": "wheat",
+    "objective": "18x",
+    "beam_energy_kev": "40",
     "title": "Triticum aestivum leaf CT dataset (wheat)",
     "plant_category": "Wheat",
     "scientific_name": "Triticum aestivum",

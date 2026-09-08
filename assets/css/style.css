@@ -400,6 +400,10 @@ main {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.metadata-row--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 dt {
   color: var(--muted);
   font-size: 0.82rem;
@@ -805,7 +809,8 @@ select:focus {
     grid-template-columns: 1fr;
   }
 
-  .metadata-row--3 {
+  .metadata-row--3,
+  .metadata-row--4 {
     grid-template-columns: repeat(2, 1fr);
   }
 

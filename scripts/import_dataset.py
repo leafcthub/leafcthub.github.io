@@ -152,6 +152,8 @@ def build_record(
         "scan_notes": metadata.get("scan_notes", ""),
         "voxel_size": metadata.get("voxel_size", ""),
         "voxel_size_unit": metadata.get("voxel_size_unit", "um"),
+        "beam_energy_kev": metadata.get("beam_energy_kev", ""),
+        "objective": metadata.get("objective", ""),
         "image_size": image_size(first_image) if first_image else metadata.get("image_size", ""),
         "file_format": file_format,
         "slice_count": len(images),

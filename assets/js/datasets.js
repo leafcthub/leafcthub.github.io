@@ -189,18 +189,17 @@ function renderDetail(record) {
           ${metadataRow("Common name", record.common_name)}
           ${metadataRow("Scientific name", formatScientificName(record.scientific_name))}
         </div>
-        <div class="metadata-row metadata-row--3">
+        <div class="metadata-row metadata-row--4">
           ${metadataRow("Image/mask pairs", imageMaskPairs)}
           ${metadataRow("Image size", record.image_size)}
+          ${metadataRow("Voxel / pixel size", record.voxel_size ? formatVoxel(record) : "")}
           ${metadataRow("File format", record.file_format)}
         </div>
-        <div class="metadata-row metadata-row--2">
+        <div class="metadata-row metadata-row--4">
           ${metadataRow("Instrument / facility", record.scanner)}
+          ${metadataRow("Beam energy", record.beam_energy_kev ? `${record.beam_energy_kev} keV` : "")}
+          ${metadataRow("Objective", record.objective)}
           ${metadataRow("Instrument location", record.scan_location)}
-        </div>
-        <div class="metadata-row metadata-row--2">
-          ${metadataRow("Voxel / pixel size", record.voxel_size ? formatVoxel(record) : "")}
-          ${metadataRow("Scan notes", record.scan_notes)}
         </div>
       </dl>
     </section>
