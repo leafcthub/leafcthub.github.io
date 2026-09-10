@@ -61,7 +61,15 @@
               <span>Instrument / facility</span>
               <input name="instrument_facility" type="text" placeholder="X-ray μCT beamline, Advanced Light Source">
             </label>
-            <label class="submission-form__wide">
+            <label>
+              <span>Beam energy</span>
+              <input name="beam_energy_kev" type="text" placeholder="20 keV">
+            </label>
+            <label>
+              <span>Objective</span>
+              <input name="objective" type="text" placeholder="10x">
+            </label>
+            <label>
               <span>Instrument location</span>
               <input name="instrument_location" type="text" placeholder="Berkeley, CA, United States">
             </label>
@@ -89,9 +97,37 @@
 
           <fieldset class="submission-form__block">
             <legend class="eyebrow">Segmentation</legend>
+            <div class="submission-form__wide">
+              <span class="submission-form__label">Annotation classes</span>
+              <p class="submission-form__hint">Check each class your masks include, and enter the exact pixel value (0-255) your mask files use for it. This lets us build the class mapping automatically -- no need to describe it separately.</p>
+              <div class="class-grid">
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Background" checked> Background</label><input type="number" name="pixel_value__Background" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Air_Space" checked> Air space</label><input type="number" name="pixel_value__Air_Space" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Epidermis"> Epidermis</label><input type="number" name="pixel_value__Epidermis" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Adaxial_Epidermis"> Adaxial epidermis</label><input type="number" name="pixel_value__Adaxial_Epidermis" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Abaxial_Epidermis"> Abaxial epidermis</label><input type="number" name="pixel_value__Abaxial_Epidermis" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Mesophyll"> Mesophyll</label><input type="number" name="pixel_value__Mesophyll" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Palisade_Mesophyll"> Palisade mesophyll</label><input type="number" name="pixel_value__Palisade_Mesophyll" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Spongy_Mesophyll"> Spongy mesophyll</label><input type="number" name="pixel_value__Spongy_Mesophyll" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Region"> Vascular region</label><input type="number" name="pixel_value__Vascular_Region" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Tissue"> Vascular tissue</label><input type="number" name="pixel_value__Vascular_Tissue" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Bundle"> Vascular bundle</label><input type="number" name="pixel_value__Vascular_Bundle" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Bundle_Sheath"> Bundle sheath</label><input type="number" name="pixel_value__Bundle_Sheath" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Resin_Duct"> Resin duct</label><input type="number" name="pixel_value__Resin_Duct" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Transfusion_Tissue"> Transfusion tissue</label><input type="number" name="pixel_value__Transfusion_Tissue" min="0" max="255" placeholder="value"></div>
+              </div>
+            </div>
+            <label>
+              <span>Other class not listed above</span>
+              <input name="segmentation_labels_other" type="text" placeholder="Class name">
+            </label>
+            <label>
+              <span>...its pixel value</span>
+              <input name="segmentation_labels_other_value" type="number" min="0" max="255" placeholder="value">
+            </label>
             <label class="submission-form__wide">
-              <span>Annotation classes</span>
-              <textarea name="segmentation_labels" rows="4" placeholder="Background, epidermis, vascular region, mesophyll, air space"></textarea>
+              <span>Ignore / border pixel value</span>
+              <input name="ignore_index" type="number" min="0" max="255" placeholder="e.g. 254, if your masks use one">
             </label>
           </fieldset>
 

@@ -2,25 +2,43 @@
 
 This guide explains how a Leaf CT Hub admin reviews a submitted dataset, stores it in the project dataset structure, generates previews, and updates the website catalog.
 
+## New Admin Setup
+
+Everything below only needs:
+
+1. **GitHub push access to this repo** -- enough to work on `submission/<id>` branches and merge pull requests. Ask the repo owner to add you as a collaborator.
+2. **Git and Python 3** installed locally.
+3. **One dependency:** from the repo root, run `pip install -r requirements.txt` (installs Pillow, the only package `scripts/import_dataset.py` needs).
+4. This file, read once.
+
+You do **not** need: Ag Data Commons account credentials, GoatCounter analytics access, or any repo secrets -- the automated draft-PR workflow runs on GitHub's own built-in token, not a personal one. Depositing to Ag Data Commons ("Depositing to USDA Ag Data Commons" below) is a separate, later step that can stay restricted to whoever holds that account; you can do everything else in this guide without it.
+
 ## Overview
 
-Contributors submit dataset information through the website form. The form creates a GitHub issue with metadata and links to the dataset. Admins review the issue, download the dataset, upload/store it in the team storage workflow, and then run the import command below to update the web catalog.
+Contributors submit dataset information through the website form. The form creates a GitHub issue with metadata and links to the dataset. The moment that issue opens, `.github/workflows/dataset-submission.yml` automatically parses it and opens a pull request containing a draft `incoming/<id>/metadata.json` and, when the contributor gave a pixel value for every class they checked, a complete `config.json` too -- see Admin Step 1. From there, an admin reviews the draft, downloads the dataset, upload/stores it in the team storage workflow, and runs the import command below to update the web catalog before merging that PR.
 
 The website does not directly accept large file uploads. Large X-ray micro-CT image stacks and masks should be stored in trusted storage first.
 
+Datasets added directly by an admin (bulk imports, data sourced outside the submit form) skip the PR step entirely -- start at Admin Step 2 and commit straight to `main` at the end (see "Final GitHub Update").
+
 ## Admin Steps
 
-1. Open the new GitHub issue created from the Submit page.
+1. **Check the automatic draft PR.** `.github/workflows/dataset-submission.yml` already parsed the issue into `incoming/<id>/metadata.json`, and `config.json` too if the contributor gave a pixel value for every class they checked, on a `submission/<id>` branch -- and commented a checklist on both the issue and the PR. Read that checklist -- it flags exactly what's still missing. Before doing anything else:
+   - The suggested `id` is only a guess from the scientific name -- rename it to match this catalog's style (e.g. `almond_drought`, `v_carlsii`) if it doesn't, especially if two submissions would slugify to the same id.
+   - It never downloaded any files (a public-repo Action fetching arbitrary contributor-supplied URLs is a real abuse vector for little benefit) and never touched `data/datasets.json` -- both are still entirely on you.
+   - `family`, `plant_category`, `plant_group`, `license`, `doi`/`publication_url`/`citation` are always left blank -- these need admin judgment and are never guessed.
+   - `config.json`, when present, was built from the contributor's self-reported pixel values -- spot-check it against the actual mask files before trusting it, and check the checklist for any class the contributor left a value blank on (those are dropped from the draft entirely, not guessed).
+   - No PR (or it looks wrong)? Open the issue directly and work from that instead -- the automation is a convenience, not a requirement.
 2. Check that the contributor provided:
    - Scientific name
    - Common name, if available
    - Treatment / condition, if available
-   - Instrument/facility and instrument location, if available
+   - Instrument/facility, beam energy, objective, and instrument location, if available
    - Image size, voxel/pixel size, and file format
    - Dataset/repository link, if available (often blank at submission time -- files usually reach the admin via email or a shared drive link first, and a public repository link only exists after the Ag Data Commons upload step)
    - Paper DOI or publication link, if available
    - Image/mask provider and affiliation, if available
-   - Segmentation label information
+   - Segmentation classes with their pixel values, and an ignore/border value if their masks use one
    - Notes about folder structure or mask encoding
 3. Download the dataset from the provided link.
 4. Review the dataset locally:
@@ -29,12 +47,12 @@ The website does not directly accept large file uploads. Large X-ray micro-CT im
    - Confirm image and mask filenames match or can be paired.
    - Confirm the config file describes class names and label mapping.
 5. Upload/store the reviewed dataset in the team’s standard storage location.
-6. Prepare a local import folder.
+6. Finish building the local import folder. If a draft PR exists from Step 1, check out its branch (`git checkout submission/<id>`) and keep working in `incoming/<id>/` -- `metadata.json`, and often `config.json` too, are already started. Otherwise create both from scratch.
 
-Example local structure:
+Example folder structure:
 
 ```text
-new_dataset/
+incoming/<id>/            (or new_dataset/ if there's no draft PR)
 ├── images/
 │   ├── slice_001.tif
 │   ├── slice_002.tif
@@ -49,7 +67,7 @@ new_dataset/
 
 ## Required Config File
 
-The import script expects a config JSON file with class names and mask-value mapping.
+The import script expects a config JSON file with class names and mask-value mapping. If the submission came through the form with a pixel value given for every class, this already exists as `incoming/<id>/config.json` from Admin Step 1 -- spot-check it against the real mask files rather than trusting it blindly (it's built from the contributor's self-reported numbers). Build it by hand only when there's no draft, or the draft is incomplete.
 
 Example:
 
@@ -127,6 +145,8 @@ Scientific name                -> scientific_name
 Common name                    -> common_name
 Treatment / condition          -> treatment
 Instrument / facility          -> scanner
+Beam energy                    -> beam_energy_kev
+Objective                      -> objective
 Instrument location            -> scan_location
 Image size                     -> image_size
 Voxel / pixel size             -> voxel_size
@@ -286,6 +306,9 @@ git push
 ```
 
 `dataset/configs/` and `dataset/images/` are both gitignored and never staged — only their public/lightweight counterparts (`dataset/configs_public/`, preview images) go into the commit.
+
+- **Working from an automatic draft PR (Admin Step 1):** push this commit to that same `submission/<id>` branch instead of `main`, then merge the PR on GitHub once everything checks out. The merge is what actually publishes it.
+- **No PR — bulk or manually sourced import:** push straight to `main` as shown above.
 
 ## Depositing to USDA Ag Data Commons
 

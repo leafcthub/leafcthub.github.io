@@ -1,0 +1,99 @@
+name: Draft dataset submission
+
+# When a contributor's "Create submission issue" button opens a new issue,
+# this drafts a metadata.json (and config.json, if a pixel value was given for
+# every class) from it and opens a PR for the admin to review. It never
+# downloads external files, never runs the import script, and never auto-
+# merges anything -- see ADMIN_DATASET_UPLOAD.md for what still needs manual
+# admin attention.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  draft-submission:
+    if: startsWith(github.event.issue.title, 'Dataset submission:')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Write issue body to file
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            fs.writeFileSync('issue_body.txt', context.payload.issue.body || '');
+
+      - name: Draft metadata.json and config.json
+        id: draft
+        run: |
+          python3 scripts/parse_submission_issue.py \
+            --body-file issue_body.txt \
+            --out-dir /tmp/draft \
+            | tee /tmp/parse_output.txt
+
+          SLUG=$(grep 'Suggested id' /tmp/parse_output.txt | sed 's/.*: //')
+          if [ -z "$SLUG" ] || [ "$SLUG" = "(none -- no scientific name found)" ]; then
+            SLUG="issue-${{ github.event.issue.number }}"
+          fi
+          mkdir -p "incoming/$SLUG"
+          mv /tmp/draft/* "incoming/$SLUG/"
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+
+          CONFIG_STATUS="no -- build it from the actual mask files"
+          if [ -f "incoming/$SLUG/config.json" ]; then
+            CONFIG_STATUS="yes, from submitted pixel values -- spot-check it before trusting it"
+          fi
+          echo "config_status=$CONFIG_STATUS" >> "$GITHUB_OUTPUT"
+
+          {
+            echo "checklist<<EOF"
+            grep '^  - ' /tmp/parse_output.txt || true
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Open pull request
+        id: pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: submission/${{ steps.draft.outputs.slug }}
+          commit-message: "Draft submission: ${{ steps.draft.outputs.slug }}"
+          title: "New dataset submission: ${{ steps.draft.outputs.slug }}"
+          body: |
+            Auto-drafted from #${{ github.event.issue.number }} (${{ github.event.issue.title }}).
+
+            This is a **starting point only** -- nothing here is published or imported yet.
+            config.json auto-drafted: ${{ steps.draft.outputs.config_status }}
+
+            Still needs admin attention:
+            ${{ steps.draft.outputs.checklist }}
+
+            Nothing runs automatically from here. Once config.json looks right, download the
+            real images/masks locally and run `scripts/import_dataset.py` against them yourself
+            -- that generates the previews/gallery and updates `data/datasets.json`. Push the
+            result to this branch and merge when it checks out. See ADMIN_DATASET_UPLOAD.md.
+          labels: dataset-submission
+
+      - name: Comment on the issue
+        if: steps.pr.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Drafted metadata and (where possible) a config.json from this submission: #${{ steps.pr.outputs.pull-request-number }}. An admin still needs to review it, add the actual image/mask files, and confirm licensing before anything is published.`,
+            });
