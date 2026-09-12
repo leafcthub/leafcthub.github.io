@@ -99,7 +99,7 @@
             <legend class="eyebrow">Segmentation</legend>
             <div class="submission-form__wide">
               <span class="submission-form__label">Annotation classes</span>
-              <p class="submission-form__hint">Check each class your masks include, and enter the exact pixel value (0-255) your mask files use for it. This lets us build the class mapping automatically -- no need to describe it separately.</p>
+              <p class="submission-form__hint">Check each class your masks include, and enter the exact pixel value (0-255) your mask files use for it.</p>
               <div class="class-grid">
                 <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Background" checked> Background</label><input type="number" name="pixel_value__Background" min="0" max="255" placeholder="value"></div>
                 <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Air_Space" checked> Air space</label><input type="number" name="pixel_value__Air_Space" min="0" max="255" placeholder="value"></div>
@@ -122,7 +122,7 @@
               <input name="segmentation_labels_other" type="text" placeholder="Class name">
             </label>
             <label>
-              <span>...its pixel value</span>
+              <span>Pixel value</span>
               <input name="segmentation_labels_other_value" type="number" min="0" max="255" placeholder="value">
             </label>
             <label class="submission-form__wide">
