@@ -1,7 +1,5 @@
 {
   "name": "almond_control",
-  "image_dir": "/pscratch/sd/w/worasit/datasets/almond_control/images",
-  "mask_dir": "/pscratch/sd/w/worasit/datasets/almond_control/masks",
   "num_classes": 8,
   "ignore_index": 254,
   "has_bse_label": true,

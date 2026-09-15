@@ -1,7 +1,5 @@
 {
   "name": "v_jucundum",
-  "image_dir": "/pscratch/sd/w/worasit/datasets/v_jucundum/images",
-  "mask_dir": "/pscratch/sd/w/worasit/datasets/v_jucundum/masks",
   "num_classes": 5,
   "ignore_index": 254,
   "has_bse_label": false,

@@ -1,7 +1,5 @@
 {
   "name": "olive_rw2",
-  "image_dir": "/pscratch/sd/w/worasit/datasets/olive_rw2/images",
-  "mask_dir": "/pscratch/sd/w/worasit/datasets/olive_rw2/masks",
   "num_classes": 7,
   "ignore_index": 254,
   "has_bse_label": false,

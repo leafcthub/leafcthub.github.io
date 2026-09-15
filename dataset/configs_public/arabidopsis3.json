@@ -10,8 +10,6 @@
     "Air_Space"
   ],
   "name": "arabidopsis3",
-  "image_dir": "/pscratch/sd/w/worasit/datasets/arabidopsis3/images",
-  "mask_dir": "/pscratch/sd/w/worasit/datasets/arabidopsis3/masks",
   "mapping": {
     "0": 4,
     "85": 0,

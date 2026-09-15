@@ -1,7 +1,5 @@
 {
   "name": "pine_pinus_thunbergii",
-  "image_dir": "/pscratch/sd/w/worasit/datasets/pine_pinus_thunbergii/images",
-  "mask_dir": "/pscratch/sd/w/worasit/datasets/pine_pinus_thunbergii/masks",
   "num_classes": 7,
   "ignore_index": 254,
   "has_bse_label": false,

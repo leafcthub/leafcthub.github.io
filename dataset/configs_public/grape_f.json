@@ -1,7 +1,5 @@
 {
   "name": "grape_f",
-  "image_dir": "/pscratch/sd/w/worasit/datasets/grape_f/images",
-  "mask_dir": "/pscratch/sd/w/worasit/datasets/grape_f/masks",
   "num_classes": 8,
   "ignore_index": 254,
   "has_bse_label": true,

@@ -1,7 +1,5 @@
 {
   "name": "grape_76",
-  "image_dir": "/pscratch/sd/w/worasit/datasets/grape_76/images",
-  "mask_dir": "/pscratch/sd/w/worasit/datasets/grape_76/masks",
   "num_classes": 7,
   "ignore_index": 254,
   "has_bse_label": true,

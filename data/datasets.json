@@ -14821,6 +14821,8 @@
   },
   {
     "id": "tomato",
+    "beam_energy_kev": "22",
+    "objective": "10x",
     "title": "Solanum lycopersicum leaf CT dataset (tomato)",
     "plant_category": "Tomato",
     "scientific_name": "Solanum lycopersicum",
@@ -14916,7 +14918,7 @@
       "255"
     ],
     "active_mask_label_value_count": 5,
-    "contributor_affiliation": "Department of Botany, University of Wisconsin, Madison, WI, United States",
+    "contributor_affiliation": "Department of Biology, University of Wisconsin, Madison, WI, United States",
     "source_notes": "ORCID: 0000-0003-2555-3878",
     "gallery": [
       {

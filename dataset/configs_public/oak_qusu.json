@@ -1,7 +1,5 @@
 {
   "name": "oak_qusu",
-  "image_dir": "/pscratch/sd/w/worasit/datasets/oak_qusu/images",
-  "mask_dir": "/pscratch/sd/w/worasit/datasets/oak_qusu/masks",
   "num_classes": 8,
   "ignore_index": 254,
   "has_bse_label": true,
