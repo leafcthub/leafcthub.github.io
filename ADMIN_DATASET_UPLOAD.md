@@ -314,8 +314,12 @@ git push
 
 The website only ever holds metadata and small preview/gallery thumbnails (see above).
 The actual full-resolution images and masks that visitors download live in a separate
-USDA Ag Data Commons deposit, referenced by each record's `repository_url` /
-`download_url` fields.
+USDA Ag Data Commons deposit. Ag Data Commons is used purely as storage here -- there's
+no separate landing page distinct from the file's direct download link -- so one URL
+gets written into both the `repository_url` and `download_url` fields of the record;
+those two site fields power two different buttons (the detail page's "Download dataset"
+and the gallery page's "Download from Ag Data Commons") but currently always point to
+the same place.
 
 Current approach: **one combined Ag Data Commons item for the whole collection**,
 with each species/sample uploaded as its own `<id>.zip` (containing `images/`, `masks/`,
@@ -331,8 +335,7 @@ Steps for a new species once it's been imported to the site (per the steps above
 2. Upload the zip to the existing Ag Data Commons item via the web UI. If the item is
    already published, this creates a new version -- expected as the collection grows.
 3. Once the file is live, copy its download URL into that species' row in
-   `ag_data_commons/submission_tracker.csv` (`ads_repository_url` / `ads_download_url`),
-   and set `ads_status`.
+   `ag_data_commons/submission_tracker.csv` (`ads_download_url`), and set `ads_status`.
 4. Run:
    ```bash
    python3 ag_data_commons/update_repository_links.py --dry-run   # preview
