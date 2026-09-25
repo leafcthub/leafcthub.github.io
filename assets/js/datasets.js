@@ -277,14 +277,22 @@ function renderGalleryPage(record) {
         <h1>Gallery</h1>
         <p class="body-copy">
           ${gallery.length} slice${gallery.length === 1 ? "" : "s"} \u00b7 preview only.
-          Full-resolution images, masks, and the config file:
-          ${externalLink(record.repository_url, "Ag Data Commons")}
+          Full-resolution images, masks, and the config file are available as a zip:
+          ${externalLink(record.repository_url, "Download from Ag Data Commons", "button", ` data-track-download="${record.id}" download`, false)}
         </p>
       </div>
       ${galleryBlock("raw", gallery)}
       ${galleryBlock("mask", gallery)}
     </section>
   `;
+
+  const downloadLink = root.querySelector("[data-track-download]");
+  if (downloadLink) {
+    downloadLink.addEventListener("click", () => {
+      trackEvent(`/download-click/${downloadLink.dataset.trackDownload}`, `Download click: ${downloadLink.dataset.trackDownload}`);
+      showToast("Downloading dataset...");
+    });
+  }
 }
 
 async function initGalleryPage() {
