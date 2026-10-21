@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html">Leaf CT Hub</a>
       <nav class="site-nav" aria-label="Primary navigation">
@@ -19,37 +20,70 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <section class="page-header">
         <h1>Leaf X-ray micro-CT Dataset Catalog</h1>
         <p>Search datasets by species, catalog category, segmentation labels, and source notes.</p>
       </section>
 
-      <section class="catalog-toolbar" aria-label="Dataset filters">
-        <label>
+      <form class="catalog-toolbar" aria-label="Dataset filters" data-catalog-form>
+        <label class="catalog-toolbar__search">
           <span>Search</span>
-          <input data-search type="search" placeholder="Search species, category, notes, or labels">
+          <input data-search type="search" placeholder="Search species, plant, notes, or labels">
         </label>
         <label>
-          <span>Catalog category</span>
+          <span>Plant</span>
           <select data-category-filter>
-            <option value="all">All categories</option>
+            <option value="all">All plants</option>
           </select>
         </label>
         <label>
-          <span>Label classes</span>
-          <select data-class-filter>
-            <option value="all">All label classes</option>
+          <span>Includes class</span>
+          <select data-class-name-filter>
+            <option value="all">Any class</option>
           </select>
         </label>
-      </section>
+        <details class="catalog-more" data-more-filters>
+          <summary>More filters and sorting <span data-more-count></span></summary>
+          <div class="catalog-more__grid">
+            <label>
+              <span>Plant group</span>
+              <select data-group-filter>
+                <option value="all">All groups</option>
+              </select>
+            </label>
+            <label>
+              <span>Number of classes</span>
+              <select data-class-filter>
+                <option value="all">Any number</option>
+              </select>
+            </label>
+            <label>
+              <span>Sort by</span>
+              <select data-sort>
+                <option value="default">Catalog order</option>
+                <option value="name">Name, A to Z</option>
+                <option value="slices">Most slices</option>
+                <option value="classes">Most classes</option>
+              </select>
+            </label>
+          </div>
+        </details>
+        <div class="active-filters" data-active-filters hidden></div>
+      </form>
 
       <section class="section section--tight">
-        <div class="catalog-summary">
-          <strong data-result-count>0 datasets</strong>
-          <span>matching current filters</span>
+        <h2 class="visually-hidden">Results</h2>
+        <div class="catalog-results-bar">
+          <div class="catalog-summary" role="status" aria-live="polite">
+            <strong data-result-count tabindex="-1">0 datasets</strong>
+            <span>matching current filters</span>
+          </div>
         </div>
-        <p class="notice" data-empty-state hidden>No datasets match those filters.</p>
+        <div class="notice" data-empty-state hidden>
+          <p>No datasets match those filters. Try a broader search or remove a filter.</p>
+          <button class="button button--secondary" type="button" data-clear-filters>Clear filters</button>
+        </div>
         <div class="dataset-grid" data-dataset-grid></div>
       </section>
     </main>
