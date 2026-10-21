@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html">Leaf CT Hub</a>
       <nav class="site-nav" aria-label="Primary navigation">
@@ -19,8 +20,8 @@
       </nav>
     </header>
 
-    <main>
-      <section class="hero hero--solo">
+    <main id="main">
+      <section class="hero">
         <div class="hero__content">
           <h1>Leaf X-ray micro-CT Datasets</h1>
           <p>
@@ -28,51 +29,64 @@
             The hub provides preview images, segmentation labels, metadata, and download link
             to support leaf anatomy, phenotyping, and image segmentation research.
           </p>
-        </div>
-      </section>
-
-      <section class="section how-it-works">
-        <div class="section-heading">
-          <p class="eyebrow">How It Works</p>
-          <h2>Browse here, download from trusted repositories</h2>
-        </div>
-        <div class="how-it-works__content">
-          <p class="body-copy">
-            Search, filter, and preview any dataset directly on this site. Each record links to
-            its permanent, DOI-backed home on USDA Ag Data Commons for full-resolution downloads.
-          </p>
-          <p class="body-copy">
-            Have your own leaf X-ray micro-CT dataset? Submit it to be added to the catalog.
-          </p>
           <div class="action-row">
             <a class="button" href="datasets.html">Browse datasets</a>
             <a class="button button--secondary" href="submit.html">Submit data</a>
+          </div>
+        </div>
+        <figure class="hero__figure">
+          <div class="hero__pair">
+            <span>
+              <img src="assets/images/previews/pine_larix_occidentails1.jpg" alt="Representative CT slice of a western larch (Larix occidentalis) needle cross-section" width="900" height="520" decoding="async">
+              <small>Raw</small>
+            </span>
+            <span>
+              <img src="assets/images/masks/pine_larix_occidentails1.jpg" alt="Grayscale segmentation mask of the same larch needle slice, one gray value per tissue class" width="900" height="520" decoding="async">
+              <small>Mask</small>
+            </span>
+          </div>
+          <figcaption>
+            <span class="hero__caption-title"><em class="scientific-name">Larix occidentalis</em> needle, 7 labeled classes</span>
+            <ul class="hero__legend" aria-label="Annotation classes in this example">
+              <li>Background</li>
+              <li>Epidermis</li>
+              <li>Mesophyll</li>
+              <li>Resin duct</li>
+              <li>Air space</li>
+              <li>Transfusion tissue</li>
+              <li>Vascular bundle</li>
+            </ul>
+            <a class="hero__caption-link" href="dataset.html?id=pine_larix_occidentails1">View this record</a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="catalog-overview" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Catalog overview</h2>
+        <p class="body-copy">What the catalog holds today, counted from the dataset records.</p>
+        <div class="stats-band">
+          <div>
+            <strong data-total-datasets>&mdash;</strong>
+            <span>dataset records</span>
+            <small>each one a dataset you can open and download</small>
+          </div>
+          <div>
+            <strong data-total-categories>&mdash;</strong>
+            <span>plant categories</span>
+            <small>plants and plant groups covered</small>
+          </div>
+          <div>
+            <strong data-total-slices>&mdash;</strong>
+            <span>annotated slices</span>
+            <small>CT slices that come with a segmentation mask</small>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="section-heading">
-          <p class="eyebrow">Catalog Summary</p>
-          <section class="stats-band" aria-label="Catalog summary">
-            <div>
-              <strong data-total-datasets>92</strong>
-              <span>dataset records</span>
-            </div>
-            <div>
-              <strong data-total-categories>13</strong>
-              <span>catalog categories</span>
-            </div>
-            <div>
-              <strong data-total-slices>1147</strong>
-              <span>annotated slices</span>
-            </div>
-          </section>
           <h2>Representative Dataset Records</h2>
-          <p class="body-copy">
-            Representative records show the type of metadata, preview images, labels, and repository
-            links included in the catalog.
-          </p>
+          <p class="body-copy body-copy--oneline">Representative records show the type of metadata, preview images, labels, and repository links included in the catalog.</p>
         </div>
         <div class="dataset-grid dataset-grid--featured" data-featured-datasets></div>
       </section>
