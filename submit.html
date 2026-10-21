@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html">Leaf CT Hub</a>
       <nav class="site-nav" aria-label="Primary navigation">
@@ -19,7 +20,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <section class="page-header">
         <h1>Submit a dataset record</h1>
         <p>Share a leaf X-ray micro-CT dataset by sending metadata and a link to the data. The Leaf CT Hub team will review the submission, process preview images, and update the catalog.</p>
@@ -30,7 +31,8 @@
           <p class="eyebrow">Dataset Submission</p>
           <h2>Submit metadata and a dataset link</h2>
         </div>
-        <form class="submission-form" data-submission-form>
+        <form class="submission-form" data-submission-form data-endpoint="https://script.google.com/macros/s/AKfycbwnZEE-VtaVdGN0XV373XSx3hSbWjGonmwKS78reItu1tISoaDQrZVa6IxWjMplvJTdUg/exec">
+          <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="submission-form__note">
             <strong>How it works:</strong> add metadata and a dataset link. We review, process previews, and update the catalog. Fields marked <em>*</em> are required.
           </div>
@@ -101,21 +103,26 @@
               <span class="submission-form__label">Annotation classes</span>
               <p class="submission-form__hint">Check each class your masks include, and enter the exact pixel value (0-255) your mask files use for it.</p>
               <div class="class-grid">
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Background" checked> Background</label><input type="number" name="pixel_value__Background" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Air_Space" checked> Air space</label><input type="number" name="pixel_value__Air_Space" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Epidermis"> Epidermis</label><input type="number" name="pixel_value__Epidermis" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Adaxial_Epidermis"> Adaxial epidermis</label><input type="number" name="pixel_value__Adaxial_Epidermis" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Abaxial_Epidermis"> Abaxial epidermis</label><input type="number" name="pixel_value__Abaxial_Epidermis" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Mesophyll"> Mesophyll</label><input type="number" name="pixel_value__Mesophyll" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Palisade_Mesophyll"> Palisade mesophyll</label><input type="number" name="pixel_value__Palisade_Mesophyll" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Spongy_Mesophyll"> Spongy mesophyll</label><input type="number" name="pixel_value__Spongy_Mesophyll" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Region"> Vascular region</label><input type="number" name="pixel_value__Vascular_Region" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Tissue"> Vascular tissue</label><input type="number" name="pixel_value__Vascular_Tissue" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Bundle"> Vascular bundle</label><input type="number" name="pixel_value__Vascular_Bundle" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Bundle_Sheath"> Bundle sheath</label><input type="number" name="pixel_value__Bundle_Sheath" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Resin_Duct"> Resin duct</label><input type="number" name="pixel_value__Resin_Duct" min="0" max="255" placeholder="value"></div>
-                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Transfusion_Tissue"> Transfusion tissue</label><input type="number" name="pixel_value__Transfusion_Tissue" min="0" max="255" placeholder="value"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Background" checked> Background</label><input type="number" aria-label="Pixel value for background" inputmode="numeric" name="pixel_value__Background" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Adaxial_Epidermis"> Adaxial epidermis</label><input type="number" aria-label="Pixel value for adaxial epidermis" inputmode="numeric" name="pixel_value__Adaxial_Epidermis" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Abaxial_Epidermis"> Abaxial epidermis</label><input type="number" aria-label="Pixel value for abaxial epidermis" inputmode="numeric" name="pixel_value__Abaxial_Epidermis" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Palisade_Mesophyll"> Palisade mesophyll</label><input type="number" aria-label="Pixel value for palisade mesophyll" inputmode="numeric" name="pixel_value__Palisade_Mesophyll" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Spongy_Mesophyll"> Spongy mesophyll</label><input type="number" aria-label="Pixel value for spongy mesophyll" inputmode="numeric" name="pixel_value__Spongy_Mesophyll" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Tissue"> Vascular tissue</label><input type="number" aria-label="Pixel value for vascular tissue" inputmode="numeric" name="pixel_value__Vascular_Tissue" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Bundle_Sheath"> Bundle sheath</label><input type="number" aria-label="Pixel value for bundle sheath" inputmode="numeric" name="pixel_value__Bundle_Sheath" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Air_Space" checked> Air space</label><input type="number" aria-label="Pixel value for air space" inputmode="numeric" name="pixel_value__Air_Space" min="0" max="255" placeholder="0-255"></div>
               </div>
+              <details class="class-more">
+                <summary>More classes (6)</summary>
+                <div class="class-grid">
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Epidermis"> Epidermis</label><input type="number" aria-label="Pixel value for epidermis" inputmode="numeric" name="pixel_value__Epidermis" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Mesophyll"> Mesophyll</label><input type="number" aria-label="Pixel value for mesophyll" inputmode="numeric" name="pixel_value__Mesophyll" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Region"> Vascular region</label><input type="number" aria-label="Pixel value for vascular region" inputmode="numeric" name="pixel_value__Vascular_Region" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Vascular_Bundle"> Vascular bundle</label><input type="number" aria-label="Pixel value for vascular bundle" inputmode="numeric" name="pixel_value__Vascular_Bundle" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Resin_Duct"> Resin duct</label><input type="number" aria-label="Pixel value for resin duct" inputmode="numeric" name="pixel_value__Resin_Duct" min="0" max="255" placeholder="0-255"></div>
+                <div class="class-row"><label><input type="checkbox" name="segmentation_labels" value="Transfusion_Tissue"> Transfusion tissue</label><input type="number" aria-label="Pixel value for transfusion tissue" inputmode="numeric" name="pixel_value__Transfusion_Tissue" min="0" max="255" placeholder="0-255"></div>
+                </div>
+              </details>
             </div>
             <label>
               <span>Other class not listed above</span>
@@ -123,11 +130,11 @@
             </label>
             <label>
               <span>Pixel value</span>
-              <input name="segmentation_labels_other_value" type="number" min="0" max="255" placeholder="value">
+              <input name="segmentation_labels_other_value" type="number" inputmode="numeric" min="0" max="255" placeholder="0-255">
             </label>
             <label class="submission-form__wide">
               <span>Ignore / border pixel value</span>
-              <input name="ignore_index" type="number" min="0" max="255" placeholder="e.g. 254, if your masks use one">
+              <input name="ignore_index" type="number" inputmode="numeric" min="0" max="255" placeholder="e.g. 254, if your masks use one">
             </label>
           </fieldset>
 
@@ -155,14 +162,23 @@
             </label>
             <label class="submission-form__wide">
               <span>Contact email <em>*</em></span>
-              <input name="contact" type="email" placeholder="name@example.com" required>
+              <input name="contact" type="email" placeholder="name@example.com" required aria-describedby="contact-hint">
+              <small class="submission-form__hint" id="contact-hint">Only the Leaf CT Hub team sees this. We use it to follow up about your dataset.</small>
             </label>
           </fieldset>
 
+          <p class="submission-form__error" role="alert" data-form-error hidden></p>
+
           <div class="submission-form__actions">
-            <button class="button" type="submit">Create submission issue</button>
+            <button class="button" type="submit" data-submit-button>Submit request</button>
+            <p class="submission-form__public">Your request is sent privately to the Leaf CT Hub team.</p>
           </div>
         </form>
+        <div class="submission-done" data-submission-done role="status" tabindex="-1" hidden>
+          <h2>Request sent</h2>
+          <p>Thank you. The Leaf CT Hub team will review your dataset information and follow up by email.</p>
+          <a class="button" href="datasets.html">Back to the catalog</a>
+        </div>
       </section>
     </main>
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Parse a Leaf CT Hub "Dataset submission" GitHub issue body into a draft
+"""Parse a Leaf CT Hub "Dataset submission" request (the text emailed by the
+Submit page, or the matching row in the private Google Sheet) into a draft
 metadata.json AND config.json, matching the format submit.js generates and
 the field mapping documented in ADMIN_DATASET_UPLOAD.md.
 
@@ -9,8 +10,8 @@ contributor didn't provide. Anything missing is left blank for the admin to
 fill in or ask the contributor about, same as the manual workflow.
 
 Usage:
-    python3 scripts/parse_submission_issue.py --body-file issue_body.txt --out-dir incoming/some_id
-    cat issue_body.txt | python3 scripts/parse_submission_issue.py --out-dir incoming/some_id
+    python3 scripts/parse_submission_issue.py --body-file body.txt --out-dir incoming/some_id
+    cat body.txt | python3 scripts/parse_submission_issue.py --out-dir incoming/some_id
 
 Also prints a suggested dataset id (derived from scientific name) and a
 checklist of what still needs manual admin attention.
@@ -27,8 +28,9 @@ from pathlib import Path
 FIELD_MAP = {
     "Scientific name": "scientific_name",
     "Common name": "common_name",
-    "Treatment / condition": "treatment",
-    "Imaging modality": "ct_modality",
+    "Condition": "treatment",
+    "Treatment / condition": "treatment",  # older submissions used this label
+    "Imaging modality": "ct_modality",     # older submissions; now defaults to X-ray micro-CT
     "Instrument / facility": "scanner",
     "Beam energy": "beam_energy_kev",
     "Objective": "objective",
