@@ -6,29 +6,116 @@ This guide explains how a Leaf CT Hub admin reviews a submitted dataset, stores 
 
 Everything below only needs:
 
-1. **GitHub push access to this repo** -- enough to work on `submission/<id>` branches and merge pull requests. Ask the repo owner to add you as a collaborator.
+1. **GitHub push access to this repo** -- enough to push commits to `main` (or to a branch you merge yourself). Ask the repo owner to add you as a collaborator.
 2. **Git and Python 3** installed locally.
 3. **One dependency:** from the repo root, run `pip install -r requirements.txt` (installs Pillow, the only package `scripts/import_dataset.py` needs).
 4. This file, read once.
 
-You do **not** need: Ag Data Commons account credentials, GoatCounter analytics access, or any repo secrets -- the automated draft-PR workflow runs on GitHub's own built-in token, not a personal one. Depositing to Ag Data Commons ("Depositing to USDA Ag Data Commons" below) is a separate, later step that can stay restricted to whoever holds that account; you can do everything else in this guide without it.
+You do **not** need: Ag Data Commons account credentials, GoatCounter analytics access, or any repo secrets. Depositing to Ag Data Commons ("Depositing to USDA Ag Data Commons" below) is a separate, later step that can stay restricted to whoever holds that account; you can do everything else in this guide without it.
 
 ## Overview
 
-Contributors submit dataset information through the website form. The form creates a GitHub issue with metadata and links to the dataset. The moment that issue opens, `.github/workflows/dataset-submission.yml` automatically parses it and opens a pull request containing a draft `incoming/<id>/metadata.json` and, when the contributor gave a pixel value for every class they checked, a complete `config.json` too -- see Admin Step 1. From there, an admin reviews the draft, downloads the dataset, upload/stores it in the team storage workflow, and runs the import command below to update the web catalog before merging that PR.
+Contributors submit dataset information through the website form at `submit.html`. The form is private: it posts to a small Google Apps Script (`scripts/submission_receiver.gs`) that saves each request as a row in a private Google Sheet and emails it to the admin address(es). Nothing is posted publicly. The Sheet is the permanent record, so a request is never lost even if an email is delayed. The web address of the script is the `data-endpoint` attribute on the form in `submit.html`.
+
+Each email contains the request in the same layout the old GitHub-issue body used. Save that text to a file and run the draft script on it (see Admin Step 1). From there, an admin reviews the draft, downloads the dataset, uploads/stores it in the team storage workflow, and runs the import command below to update the web catalog.
+
+### Set up the private submission receiver (one time)
+
+1. In Google Drive create a new Google Sheet named "Leaf CT Hub requests". Share it with the other admin(s) if they should see requests.
+2. In the Sheet choose Extensions -> Apps Script. Delete the sample code and paste in the whole of `scripts/submission_receiver.gs`. At the top of the script, set `NOTIFY_EMAILS` to the admin address(es), separated by commas. Save.
+3. Choose Deploy -> New deployment. Type: Web app. Execute as: **Me**. Who has access: **Anyone**. Click Deploy and approve the permission screen (Google will warn that the app is unverified; choose Advanced -> Go to project). The script only writes to this Sheet and sends mail from your account.
+4. Copy the Web app URL (it ends in `/exec`). Open it in a browser: you should see `{"ok":true,"message":"Leaf CT Hub receiver is running."}`.
+5. Put that URL in `submit.html`, in `data-endpoint="..."` on the `<form data-submission-form>` tag, commit and publish.
+6. Test: submit the form on the live site and check that a row appears in the Sheet and an email arrives. Delete the test row.
+
+If you change the script later, use Deploy -> Manage deployments -> edit -> New version, so the web address stays the same. Google limits a free account to about 100 emails a day, far more than this form needs.
 
 The website does not directly accept large file uploads. Large X-ray micro-CT image stacks and masks should be stored in trusted storage first.
 
-Datasets added directly by an admin (bulk imports, data sourced outside the submit form) skip the PR step entirely -- start at Admin Step 2 and commit straight to `main` at the end (see "Final GitHub Update").
+Datasets added directly by an admin (bulk imports, data sourced outside the submit form) skip the draft step entirely -- start at Admin Step 2 and commit straight to `main` at the end (see "Final GitHub Update").
+
+## After a Request Arrives: Reply and Track
+
+**Who replies.** Whichever admin opens the email first. Reply the same working day if you can, and **before** doing anything else set that row's **Status** in the Google Sheet to `Acknowledged`, so the other admin does not send a second reply. If you are away, the other admin covers.
+
+**How.** Press Reply on the notification email. Reply goes to the contributor, not to the other admin. Do not forward their contact email anywhere public.
+
+**Status column** (dropdown in the Sheet, set by hand as the request moves along):
+
+| Status | Meaning |
+|---|---|
+| New | Just arrived; nobody has replied yet |
+| Acknowledged | You replied to confirm receipt |
+| Waiting for contributor | You asked for more information or the data |
+| Added to catalog | The dataset is live on the site |
+| Declined | Not suitable; the contributor was told why |
+
+Use the **Notes** column for anything worth remembering (who is handling it, what is missing, the `id` you chose, the date it went live).
+
+**Standard replies.** Edit the bracketed parts. The turnaround time is yours to choose; do not promise more than you can keep.
+
+*1. Receipt (send first, to every request):*
+
+> Subject: Re: Leaf CT Hub dataset request: [species]
+>
+> Hello [name],
+>
+> Thank you for submitting your [species] dataset to Leaf CT Hub. We have received your request and will review it. We expect to get back to you within [N] working days.
+>
+> Your request was sent privately and has not been published. Datasets are added to the public catalog only after we confirm access, attribution and reuse terms with you.
+>
+> Best regards,
+> [your name], Leaf CT Hub team
+
+*2. We need more information or the data:*
+
+> Hello [name],
+>
+> Thank you for your request. To add your dataset we still need: [list, for example the image and mask files, the pixel value for each class, the license you want to use, a citation or DOI].
+>
+> You can send the files by [shared drive link or email]. Please let us know if anything is unclear.
+>
+> Best regards,
+> [your name], Leaf CT Hub team
+
+*3. Added to the catalog:*
+
+> Hello [name],
+>
+> Your [species] dataset is now live in the Leaf CT Hub catalog: [link to the record page]. Please check that the details and attribution are correct and tell us if anything needs changing.
+>
+> Thank you for contributing.
+>
+> Best regards,
+> [your name], Leaf CT Hub team
+
+*4. Cannot add it:*
+
+> Hello [name],
+>
+> Thank you for your request. We are not able to add this dataset to the catalog because [reason, for example it does not include segmentation masks or the reuse terms are unclear]. If that changes, you are welcome to submit it again.
+>
+> Best regards,
+> [your name], Leaf CT Hub team
+
+**No automatic reply is sent to contributors.** The receiver script only emails the admins. A script that emailed whatever address a visitor typed could be abused to send mail to strangers, so confirmation is deliberately done by a person.
+
+**Updating the receiver script.** If `scripts/submission_receiver.gs` changes (for example to add an admin email to `NOTIFY_EMAILS`), paste the new version into Apps Script, then use Deploy -> Manage deployments -> edit (pencil) -> Version: New version -> Deploy. Do not create a new deployment: that gives a new web address, and `data-endpoint` in `submit.html` would stop working. The Status dropdown and the Status and Notes headers are added automatically on the next request.
 
 ## Admin Steps
 
-1. **Check the automatic draft PR.** `.github/workflows/dataset-submission.yml` already parsed the issue into `incoming/<id>/metadata.json`, and `config.json` too if the contributor gave a pixel value for every class they checked, on a `submission/<id>` branch -- and commented a checklist on both the issue and the PR. Read that checklist -- it flags exactly what's still missing. Before doing anything else:
+1. **Make the draft from the emailed request.** Copy the request text from the email (or from the Sheet row) into a file, then run:
+
+   ```bash
+   python3 scripts/parse_submission_issue.py --body-file body.txt --out-dir incoming/<id>
+   ```
+
+   This writes a draft `incoming/<id>/metadata.json`, and `config.json` too if the contributor gave a pixel value for every class they checked, and prints a checklist of what is still missing. Before doing anything else:
    - The suggested `id` is only a guess from the scientific name -- rename it to match this catalog's style (e.g. `almond_drought`, `v_carlsii`) if it doesn't, especially if two submissions would slugify to the same id.
-   - It never downloaded any files (a public-repo Action fetching arbitrary contributor-supplied URLs is a real abuse vector for little benefit) and never touched `data/datasets.json` -- both are still entirely on you.
+   - It never downloads any files and never touches `data/datasets.json` -- both are still entirely on you.
    - `family`, `plant_category`, `plant_group`, `license`, `doi`/`publication_url`/`citation` are always left blank -- these need admin judgment and are never guessed.
    - `config.json`, when present, was built from the contributor's self-reported pixel values -- spot-check it against the actual mask files before trusting it, and check the checklist for any class the contributor left a value blank on (those are dropped from the draft entirely, not guessed).
-   - No PR (or it looks wrong)? Open the issue directly and work from that instead -- the automation is a convenience, not a requirement.
+   - The contributor's contact email is in the request. Do not paste it into any public file or pull request.
 2. Check that the contributor provided:
    - Scientific name
    - Common name, if available
@@ -47,12 +134,12 @@ Datasets added directly by an admin (bulk imports, data sourced outside the subm
    - Confirm image and mask filenames match or can be paired.
    - Confirm the config file describes class names and label mapping.
 5. Upload/store the reviewed dataset in the team’s standard storage location.
-6. Finish building the local import folder. If a draft PR exists from Step 1, check out its branch (`git checkout submission/<id>`) and keep working in `incoming/<id>/` -- `metadata.json`, and often `config.json` too, are already started. Otherwise create both from scratch.
+6. Finish building the local import folder. If you made a draft in Step 1, keep working in `incoming/<id>/` -- `metadata.json`, and often `config.json` too, are already started. Otherwise create both from scratch.
 
 Example folder structure:
 
 ```text
-incoming/<id>/            (or new_dataset/ if there's no draft PR)
+incoming/<id>/            (or new_dataset/ if you skipped the draft)
 ├── images/
 │   ├── slice_001.tif
 │   ├── slice_002.tif
@@ -136,7 +223,7 @@ If a contributor provides a paper DOI or publication link, convert it into:
 
 ## Required Metadata File
 
-Create a small `metadata.json` file from the submitted GitHub issue.
+Create a small `metadata.json` file from the submitted request.
 
 Use this mapping from the Submit page:
 
@@ -307,8 +394,8 @@ git push
 
 `dataset/configs/` and `dataset/images/` are both gitignored and never staged — only their public/lightweight counterparts (`dataset/configs_public/`, preview images) go into the commit.
 
-- **Working from an automatic draft PR (Admin Step 1):** push this commit to that same `submission/<id>` branch instead of `main`, then merge the PR on GitHub once everything checks out. The merge is what actually publishes it.
-- **No PR — bulk or manually sourced import:** push straight to `main` as shown above.
+- **Working from a submitted request (Admin Step 1):** once everything checks out, push the commit to `main` as shown above. The push is what actually publishes it.
+- **Bulk or manually sourced import:** the same -- push straight to `main`.
 
 ## Depositing to USDA Ag Data Commons
 

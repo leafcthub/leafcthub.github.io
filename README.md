@@ -37,7 +37,9 @@ leafcthub.github.io/
 ├── dataset/
 │   └── configs_public/
 ├── scripts/
-│   └── import_dataset.py
+│   ├── import_dataset.py
+│   ├── parse_submission_issue.py
+│   └── submission_receiver.gs
 ├── ADMIN_DATASET_UPLOAD.md
 ├── README.md
 └── LICENSE
@@ -62,7 +64,21 @@ Use the Submit page on the website to share dataset metadata and a dataset or re
 
 https://leafcthub.github.io/submit.html
 
-The Leaf CT Hub team reviews submissions, confirms dataset access and attribution, prepares preview images, and updates the catalog.
+Submissions are sent privately to the Leaf CT Hub team (they are not posted publicly). The team reviews them, confirms dataset access and attribution, prepares preview images, and updates the catalog.
+
+## Adding a Submitted Dataset (for admins)
+
+Requests from the Submit page arrive by email and as a row in a private Google Sheet. The full, step-by-step procedure, with exact commands and reply templates, is in [ADMIN_DATASET_UPLOAD.md](ADMIN_DATASET_UPLOAD.md). In short:
+
+1. Reply to the contributor to confirm receipt, and set the row's Status in the Sheet to `Acknowledged`.
+2. Make a draft from the request: `python3 scripts/parse_submission_issue.py --body-file body.txt --out-dir incoming/<id>`.
+3. Fill in the details only an admin can decide (family, category, license, citation) and check `config.json`.
+4. Get the images and masks from the contributor, check them, and store them in the team storage.
+5. Import: `python3 scripts/import_dataset.py --id <id> --images-dir ... --masks-dir ... --config ... --metadata ...`.
+6. Check the site locally (`python3 -m http.server 8010`), then commit and push to publish.
+7. Tell the contributor it is live, and set Status to `Added to catalog`.
+
+One-time setup of the private receiver (the Google Sheet and script behind the Submit page) is described in the same guide, under "Set up the private submission receiver".
 
 ## Data Maintainers
 
