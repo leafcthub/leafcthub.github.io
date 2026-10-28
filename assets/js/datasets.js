@@ -349,6 +349,66 @@ function trackEvent(path, title) {
   }
 }
 
+// The detail page is rendered client-side, so search metadata is set here per record.
+function applyDetailSeo(record, title) {
+  const siteUrl = "https://leafcthub.github.io/";
+  const url = `${siteUrl}dataset.html?id=${encodeURIComponent(record.id)}`;
+  const species = record.scientific_name || record.plant_category || "plant";
+  const description =
+    record.description ||
+    `${record.ct_modality || "X-ray micro-CT"} leaf dataset for ${species}, with preview images, segmentation masks, and metadata.`;
+
+  const setHead = (selector, create, attr, value) => {
+    let el = document.head.querySelector(selector);
+    if (!el) {
+      el = create();
+      document.head.appendChild(el);
+    }
+    el.setAttribute(attr, value);
+  };
+  const link = () => Object.assign(document.createElement("link"), { rel: "canonical" });
+  const meta = (key, name) => () => {
+    const el = document.createElement("meta");
+    el.setAttribute(key, name);
+    return el;
+  };
+  setHead('link[rel="canonical"]', link, "href", url);
+  setHead('meta[name="description"]', meta("name", "description"), "content", description);
+  setHead('meta[property="og:url"]', meta("property", "og:url"), "content", url);
+  setHead('meta[property="og:title"]', meta("property", "og:title"), "content", document.title);
+  setHead('meta[property="og:description"]', meta("property", "og:description"), "content", description);
+  if (record.preview_image) {
+    const image = siteUrl + record.preview_image;
+    setHead('meta[property="og:image"]', meta("property", "og:image"), "content", image);
+    setHead('meta[name="twitter:image"]', meta("name", "twitter:image"), "content", image);
+  }
+
+  const downloadUrl = record.download_url || record.repository_url;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: title,
+    description,
+    url,
+    keywords: [record.plant_category, record.scientific_name, record.ct_modality, "leaf anatomy", "segmentation"].filter(Boolean),
+    isAccessibleForFree: true,
+    includedInDataCatalog: { "@type": "DataCatalog", name: "Leaf CT Hub", url: siteUrl },
+  };
+  if (record.license) data.license = record.license;
+  if (record.contributors) data.creator = { "@type": "Person", name: record.contributors };
+  if (record.doi) data.identifier = record.doi;
+  if (record.preview_image) data.image = siteUrl + record.preview_image;
+  if (downloadUrl) data.distribution = [{ "@type": "DataDownload", contentUrl: downloadUrl }];
+
+  let script = document.head.querySelector('script[type="application/ld+json"]');
+  if (!script) {
+    script = document.createElement("script");
+    script.type = "application/ld+json";
+    document.head.appendChild(script);
+  }
+  script.textContent = JSON.stringify(data);
+}
+
 function renderDetail(record) {
   const root = document.querySelector("[data-dataset-detail]");
   const imageMaskPairs =
@@ -358,6 +418,7 @@ function renderDetail(record) {
   const title = escapeHtml(formatCardTitle(record));
   const citation = record.citation || citationStatusLabel(record.citation_status);
   document.title = `${formatCardTitle(record)} | Leaf CT Hub`;
+  applyDetailSeo(record, formatCardTitle(record));
   root.innerHTML = `
     <section class="detail-hero">
       <div class="detail-hero__content">
