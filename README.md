@@ -82,7 +82,7 @@ One-time setup of the private receiver (the Google Sheet and script behind the S
 
 ## Data Maintainers
 
-- Dr. Worasit Sangjan, USDA-ARS researcher
+- Dr. Worasit Sangjan, USDA-ARS researcher [worasitsangjan.github.io](https://worasitsangjan.github.io/)
 - Dr. Devin A. Rippner, USDA-ARS researcher
 
 ## License
