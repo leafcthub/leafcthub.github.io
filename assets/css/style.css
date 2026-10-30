@@ -319,6 +319,16 @@ main {
   opacity: 0.48;
 }
 
+.button__badge {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fff8e1;
+  color: #5c4500;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
 .stats-band {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -343,6 +343,16 @@ function externalLink(url, label, className = "button", extraAttrs = "", newTab 
   return `<a class="${className}" href="${url}"${target}${extraAttrs}>${label}</a>`;
 }
 
+// Flip to true once the full datasets are published and download links are live.
+const DOWNLOADS_AVAILABLE = false;
+
+function downloadButton(record, label, className) {
+  if (!DOWNLOADS_AVAILABLE) {
+    return `<span class="${className} button--disabled" aria-disabled="true" title="Download is under development and coming soon">${label} <span class="button__badge">Coming soon</span></span>`;
+  }
+  return externalLink(record.download_url || record.repository_url, label, className, ` data-track-download="${record.id}" download`, false);
+}
+
 function trackEvent(path, title) {
   if (window.goatcounter && typeof window.goatcounter.count === "function") {
     window.goatcounter.count({ path, title, event: true });
@@ -383,7 +393,7 @@ function applyDetailSeo(record, title) {
     setHead('meta[name="twitter:image"]', meta("name", "twitter:image"), "content", image);
   }
 
-  const downloadUrl = record.download_url || record.repository_url;
+  const downloadUrl = DOWNLOADS_AVAILABLE ? record.download_url || record.repository_url : "";
   const data = {
     "@context": "https://schema.org",
     "@type": "Dataset",
@@ -431,7 +441,7 @@ function renderDetail(record) {
           ${record.gallery && record.gallery.length
             ? `<a class="button" href="gallery.html?id=${encodeURIComponent(record.id)}">View Gallery</a>`
             : `<span class="button button--disabled" aria-disabled="true" title="No slice gallery for this dataset yet">View Gallery (not available)</span>`}
-          ${externalLink(record.download_url || record.repository_url, "Download dataset", "button button--secondary", ` data-track-download="${record.id}" download`, false)}
+          ${downloadButton(record, "Download dataset", "button button--secondary")}
         </div>
         <dl class="access-strip" aria-label="Reuse information">
           <div><dt>License</dt><dd>${record.license ? escapeHtml(record.license) : "Not stated"}</dd></div>
@@ -552,7 +562,7 @@ function renderGalleryPage(record) {
         <p class="body-copy">
           ${gallery.length} slice${gallery.length === 1 ? "" : "s"} \u00b7 preview only.
           Full-resolution images, masks, and the config file are available as a zip:
-          ${externalLink(record.repository_url, "Download from Ag Data Commons", "button", ` data-track-download="${record.id}" download`, false)}
+          ${downloadButton(record, "Download from Ag Data Commons", "button")}
         </p>
       </div>
       ${galleryBlock("raw", gallery)}
