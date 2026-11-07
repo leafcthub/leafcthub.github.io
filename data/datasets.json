@@ -610,6 +610,159 @@
     "active_mask_label_value_count": 8
   },
   {
+    "id": "almond_nonpareil",
+    "title": "Prunus dulcis Nonpareil leaf CT dataset (almond_nonpareil)",
+    "plant_category": "Almond",
+    "scientific_name": "Prunus dulcis",
+    "common_name": "Almond",
+    "family": "Rosaceae",
+    "plant_group": "Angiosperm",
+    "species": "Prunus dulcis",
+    "cultivar_or_accession": "Nonpareil",
+    "treatment": "",
+    "tissue_or_anatomical_region": "Leaf",
+    "description": "",
+    "ct_modality": "X-ray micro-CT",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_year": "2023",
+    "scan_notes": "",
+    "voxel_size": "0.65",
+    "voxel_size_unit": "um",
+    "beam_energy_kev": "",
+    "objective": "",
+    "image_size": "1767 x 831",
+    "file_format": "TIF",
+    "slice_count": 9,
+    "no_of_leaves": "",
+    "split": "Train",
+    "classes": [
+      "Background",
+      "Adaxial_Epidermis",
+      "Abaxial_Epidermis",
+      "Bundle_Sheath",
+      "Vascular_Tissue",
+      "Palisade_Mesophyll",
+      "Spongy_Mesophyll",
+      "Air_Space"
+    ],
+    "annotation_type": "",
+    "annotation_classes_source_text": "",
+    "num_classes": 8,
+    "ignore_index": 254,
+    "label_mapping": {
+      "170": 0,
+      "85": 1,
+      "95": 2,
+      "152": 3,
+      "180": 4,
+      "55": 5,
+      "0": 6,
+      "255": 7
+    },
+    "annotation_features": {
+      "has_bse_label": true,
+      "has_tannin": false,
+      "has_resin_ducts": false,
+      "has_transfusion_tissue": false
+    },
+    "repository": "USDA Ag Data Commons",
+    "repository_url": "",
+    "download_url": "",
+    "doi": "",
+    "publication_url": "",
+    "citation": "",
+    "license": "Reuse permission confirmed",
+    "contributors": "Abby Hammermeister",
+    "contributor_affiliation": "Department of Viticulture and Enology, University of California, Davis, California, USA",
+    "contact": "",
+    "preview_image": "assets/images/previews/almond_nonpareil.jpg",
+    "preview_alt": "Representative X-ray micro-CT slice preview for Prunus dulcis Nonpareil leaf CT dataset (almond_nonpareil)",
+    "mask_preview_image": "assets/images/masks/almond_nonpareil.jpg",
+    "mask_preview_alt": "Representative grayscale segmentation mask preview for Prunus dulcis Nonpareil leaf CT dataset (almond_nonpareil)",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0001.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0002.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0003.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0004.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0005.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0006.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0006.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0007.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0007.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0008.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0008.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/almond_nonpareil/raw/0009.jpg",
+        "mask": "assets/images/gallery/almond_nonpareil/mask/0009.jpg"
+      }
+    ],
+    "gallery_count": 9,
+    "source_config": "dataset/configs/almond_nonpareil.json",
+    "source_image_folder": "dataset/images/almond_nonpareil/images",
+    "source_mask_folder": "dataset/images/almond_nonpareil/masks",
+    "source_image_count": 9,
+    "source_mask_count": 9,
+    "notes": "Segmented slices selected from larger micro-CT scans; Prunus dulcis Nonpareil; one image/mask pair per scan from 9 scans (NP_1 to NP_27); scanned June 2023; voxel size 0.65 um.",
+    "config_notes": {
+      "encoding": "Abby Hammermeister",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scan_location": "Berkeley, CA, United States",
+      "source_contributor": "Abby Hammermeister",
+      "note": "Prunus dulcis Nonpareil; one image/mask pair per scan from 9 scans (NP_1 to NP_27); scanned June 2023; voxel size 0.65 um."
+    },
+    "manual_review_needed": [
+      "repository_url",
+      "download_url",
+      "doi",
+      "citation",
+      "contact"
+    ],
+    "mask_label_values": [
+      "0",
+      "55",
+      "85",
+      "95",
+      "152",
+      "170",
+      "180",
+      "255"
+    ],
+    "mask_label_value_count": 8,
+    "active_mask_label_values": [
+      "0",
+      "55",
+      "85",
+      "95",
+      "152",
+      "170",
+      "180",
+      "255"
+    ],
+    "active_mask_label_value_count": 8
+  },
+  {
     "id": "arabidopsis1",
     "objective": "4x",
     "beam_energy_kev": "21",
@@ -2057,6 +2210,451 @@
     "gallery_count": 8
   },
   {
+    "id": "grape_cabernet",
+    "title": "Vitis vinifera Cabernet leaf CT dataset (grape_cabernet)",
+    "plant_category": "Grape",
+    "scientific_name": "Vitis vinifera",
+    "common_name": "Grape",
+    "family": "Vitaceae",
+    "plant_group": "Angiosperm",
+    "species": "Vitis vinifera",
+    "cultivar_or_accession": "Cabernet",
+    "treatment": "",
+    "tissue_or_anatomical_region": "Leaf",
+    "description": "",
+    "ct_modality": "X-ray micro-CT",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_year": "2023",
+    "scan_notes": "",
+    "voxel_size": "0.642",
+    "voxel_size_unit": "um",
+    "beam_energy_kev": "",
+    "objective": "",
+    "image_size": "2454 x 561",
+    "file_format": "TIF",
+    "slice_count": 81,
+    "no_of_leaves": "",
+    "split": "Train",
+    "classes": [
+      "Background",
+      "Adaxial_Epidermis",
+      "Abaxial_Epidermis",
+      "Bundle_Sheath",
+      "Vascular_Tissue",
+      "Palisade_Mesophyll",
+      "Spongy_Mesophyll",
+      "Air_Space"
+    ],
+    "annotation_type": "",
+    "annotation_classes_source_text": "",
+    "num_classes": 8,
+    "ignore_index": 254,
+    "label_mapping": {
+      "170": 0,
+      "85": 1,
+      "95": 2,
+      "152": 3,
+      "180": 4,
+      "55": 5,
+      "0": 6,
+      "255": 7,
+      "2": 254,
+      "225": 254,
+      "253": 254,
+      "254": 254
+    },
+    "annotation_features": {
+      "has_bse_label": true,
+      "has_tannin": false,
+      "has_resin_ducts": false,
+      "has_transfusion_tissue": false
+    },
+    "repository": "USDA Ag Data Commons",
+    "repository_url": "",
+    "download_url": "",
+    "doi": "",
+    "publication_url": "",
+    "citation": "",
+    "license": "Reuse permission confirmed",
+    "contributors": "Abby Hammermeister",
+    "contributor_affiliation": "Department of Viticulture and Enology, University of California, Davis, California, USA",
+    "contact": "",
+    "preview_image": "assets/images/previews/grape_cabernet.jpg",
+    "preview_alt": "Representative X-ray micro-CT slice preview for Vitis vinifera Cabernet leaf CT dataset (grape_cabernet)",
+    "mask_preview_image": "assets/images/masks/grape_cabernet.jpg",
+    "mask_preview_alt": "Representative grayscale segmentation mask preview for Vitis vinifera Cabernet leaf CT dataset (grape_cabernet)",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0001.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0002.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0003.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0004.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0005.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0006.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0006.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0007.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0007.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0008.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0008.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0009.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0009.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0010.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0010.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0011.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0011.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0012.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0012.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0013.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0013.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0014.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0014.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0015.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0015.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0016.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0016.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0017.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0017.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0018.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0018.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0019.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0019.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0020.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0020.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0021.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0021.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0022.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0022.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0023.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0023.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0024.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0024.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0025.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0025.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0026.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0026.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0027.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0027.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0028.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0028.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0029.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0029.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0030.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0030.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0031.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0031.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0032.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0032.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0033.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0033.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0034.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0034.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0035.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0035.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0036.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0036.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0037.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0037.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0038.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0038.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0039.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0039.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0040.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0040.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0041.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0041.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0042.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0042.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0043.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0043.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0044.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0044.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0045.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0045.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0046.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0046.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0047.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0047.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0048.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0048.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0049.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0049.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0050.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0050.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0051.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0051.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0052.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0052.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0053.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0053.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0054.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0054.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0055.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0055.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0056.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0056.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0057.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0057.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0058.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0058.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0059.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0059.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0060.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0060.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0061.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0061.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0062.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0062.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0063.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0063.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0064.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0064.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0065.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0065.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0066.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0066.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0067.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0067.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0068.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0068.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0069.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0069.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0070.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0070.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0071.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0071.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0072.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0072.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0073.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0073.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0074.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0074.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0075.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0075.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0076.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0076.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0077.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0077.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0078.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0078.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0079.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0079.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0080.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0080.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_cabernet/raw/0081.jpg",
+        "mask": "assets/images/gallery/grape_cabernet/mask/0081.jpg"
+      }
+    ],
+    "gallery_count": 81,
+    "source_config": "dataset/configs/grape_cabernet.json",
+    "source_image_folder": "dataset/images/grape_cabernet/images",
+    "source_mask_folder": "dataset/images/grape_cabernet/masks",
+    "source_image_count": 81,
+    "source_mask_count": 81,
+    "notes": "Segmented slices selected from larger micro-CT scans; Vitis vinifera Cabernet; one image/mask pair per sampled slice from 14 scans (PVC1A to PVC7B_2); scanned March 2023; voxel size 0.642 um. A few stray mask values (2, 225, 253, 254) are mapped to the ignore index.",
+    "config_notes": {
+      "encoding": "Abby Hammermeister",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scan_location": "Berkeley, CA, United States",
+      "source_contributor": "Abby Hammermeister",
+      "note": "Vitis vinifera Cabernet; one image/mask pair per sampled slice from 14 scans (PVC1A to PVC7B_2); scanned March 2023; voxel size 0.642 um. A few stray mask values (2, 225, 253, 254) are mapped to the ignore index."
+    },
+    "manual_review_needed": [
+      "repository_url",
+      "download_url",
+      "doi",
+      "citation",
+      "contact"
+    ],
+    "mask_label_values": [
+      "0",
+      "55",
+      "85",
+      "95",
+      "152",
+      "170",
+      "180",
+      "255"
+    ],
+    "mask_label_value_count": 8,
+    "active_mask_label_values": [
+      "0",
+      "55",
+      "85",
+      "95",
+      "152",
+      "170",
+      "180",
+      "255"
+    ],
+    "active_mask_label_value_count": 8
+  },
+  {
     "id": "grape_control",
     "title": "Vitis vinifera control leaf CT dataset (grape_control)",
     "plant_category": "Grape",
@@ -2818,6 +3416,155 @@
       }
     ],
     "gallery_count": 41
+  },
+  {
+    "id": "grape_grenache",
+    "title": "Vitis vinifera Grenache leaf CT dataset (grape_grenache)",
+    "plant_category": "Grape",
+    "scientific_name": "Vitis vinifera",
+    "common_name": "Grape",
+    "family": "Vitaceae",
+    "plant_group": "Angiosperm",
+    "species": "Vitis vinifera",
+    "cultivar_or_accession": "Grenache",
+    "treatment": "",
+    "tissue_or_anatomical_region": "Leaf",
+    "description": "",
+    "ct_modality": "X-ray micro-CT",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "scan_year": "2022",
+    "scan_notes": "",
+    "voxel_size": "0.65",
+    "voxel_size_unit": "um",
+    "beam_energy_kev": "",
+    "objective": "",
+    "image_size": "2560 x 561",
+    "file_format": "TIF",
+    "slice_count": 8,
+    "no_of_leaves": "",
+    "split": "Train",
+    "classes": [
+      "Background",
+      "Adaxial_Epidermis",
+      "Abaxial_Epidermis",
+      "Bundle_Sheath",
+      "Vascular_Tissue",
+      "Palisade_Mesophyll",
+      "Spongy_Mesophyll",
+      "Air_Space"
+    ],
+    "annotation_type": "",
+    "annotation_classes_source_text": "",
+    "num_classes": 8,
+    "ignore_index": 254,
+    "label_mapping": {
+      "170": 0,
+      "85": 1,
+      "95": 2,
+      "152": 3,
+      "180": 4,
+      "55": 5,
+      "0": 6,
+      "255": 7
+    },
+    "annotation_features": {
+      "has_bse_label": true,
+      "has_tannin": false,
+      "has_resin_ducts": false,
+      "has_transfusion_tissue": false
+    },
+    "repository": "USDA Ag Data Commons",
+    "repository_url": "",
+    "download_url": "",
+    "doi": "",
+    "publication_url": "",
+    "citation": "",
+    "license": "Reuse permission confirmed",
+    "contributors": "Abby Hammermeister",
+    "contributor_affiliation": "Department of Viticulture and Enology, University of California, Davis, California, USA",
+    "contact": "",
+    "preview_image": "assets/images/previews/grape_grenache.jpg",
+    "preview_alt": "Representative X-ray micro-CT slice preview for Vitis vinifera Grenache leaf CT dataset (grape_grenache)",
+    "mask_preview_image": "assets/images/masks/grape_grenache.jpg",
+    "mask_preview_alt": "Representative grayscale segmentation mask preview for Vitis vinifera Grenache leaf CT dataset (grape_grenache)",
+    "gallery": [
+      {
+        "raw": "assets/images/gallery/grape_grenache/raw/0001.jpg",
+        "mask": "assets/images/gallery/grape_grenache/mask/0001.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_grenache/raw/0002.jpg",
+        "mask": "assets/images/gallery/grape_grenache/mask/0002.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_grenache/raw/0003.jpg",
+        "mask": "assets/images/gallery/grape_grenache/mask/0003.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_grenache/raw/0004.jpg",
+        "mask": "assets/images/gallery/grape_grenache/mask/0004.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_grenache/raw/0005.jpg",
+        "mask": "assets/images/gallery/grape_grenache/mask/0005.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_grenache/raw/0006.jpg",
+        "mask": "assets/images/gallery/grape_grenache/mask/0006.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_grenache/raw/0007.jpg",
+        "mask": "assets/images/gallery/grape_grenache/mask/0007.jpg"
+      },
+      {
+        "raw": "assets/images/gallery/grape_grenache/raw/0008.jpg",
+        "mask": "assets/images/gallery/grape_grenache/mask/0008.jpg"
+      }
+    ],
+    "gallery_count": 8,
+    "source_config": "dataset/configs/grape_grenache.json",
+    "source_image_folder": "dataset/images/grape_grenache/images",
+    "source_mask_folder": "dataset/images/grape_grenache/masks",
+    "source_image_count": 8,
+    "source_mask_count": 8,
+    "notes": "Segmented slices selected from larger micro-CT scans; Vitis vinifera Grenache; one image/mask pair per scan from 8 scans; scanned December 2022; voxel size 0.65 um.",
+    "config_notes": {
+      "encoding": "Abby Hammermeister",
+      "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+      "scan_location": "Berkeley, CA, United States",
+      "source_contributor": "Abby Hammermeister",
+      "note": "Vitis vinifera Grenache; one image/mask pair per scan from 8 scans; scanned December 2022; voxel size 0.65 um."
+    },
+    "manual_review_needed": [
+      "repository_url",
+      "download_url",
+      "doi",
+      "citation",
+      "contact"
+    ],
+    "mask_label_values": [
+      "0",
+      "55",
+      "85",
+      "95",
+      "152",
+      "170",
+      "180",
+      "255"
+    ],
+    "mask_label_value_count": 8,
+    "active_mask_label_values": [
+      "0",
+      "55",
+      "85",
+      "95",
+      "152",
+      "170",
+      "180",
+      "255"
+    ],
+    "active_mask_label_value_count": 8
   },
   {
     "id": "grape_r",
@@ -6170,7 +6917,7 @@
     "voxel_size_unit": "um",
     "image_size": "1220 x 666",
     "file_format": "TIF",
-    "slice_count": 10,
+    "slice_count": 6,
     "no_of_leaves": "",
     "split": "Train",
     "classes": [
@@ -6216,8 +6963,8 @@
     "source_config": "dataset/configs/olive_rw1.json",
     "source_image_folder": "dataset/images/olive_rw1/images",
     "source_mask_folder": "dataset/images/olive_rw1/masks",
-    "source_image_count": 10,
-    "source_mask_count": 10,
+    "source_image_count": 6,
+    "source_mask_count": 6,
     "notes": "Re-watered treatment (rw); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "encoding": "Mina Momayyezi - Group",
@@ -6309,7 +7056,7 @@
     "voxel_size_unit": "um",
     "image_size": "1254 x 712",
     "file_format": "TIF",
-    "slice_count": 2,
+    "slice_count": 6,
     "no_of_leaves": "",
     "split": "Test",
     "classes": [
@@ -6355,8 +7102,8 @@
     "source_config": "dataset/configs/olive_rw2.json",
     "source_image_folder": "dataset/images/olive_rw2/images",
     "source_mask_folder": "dataset/images/olive_rw2/masks",
-    "source_image_count": 2,
-    "source_mask_count": 2,
+    "source_image_count": 6,
+    "source_mask_count": 6,
     "notes": "olive segmentation: Devin; value 225: unclassified/border region \u2192 ignore (254); Leaves were scanned at the mid-section within 24 h of excision.",
     "config_notes": {
       "encoding": "Mina Momayyezi - Group",

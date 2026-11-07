@@ -1,0 +1,33 @@
+{
+  "name": "almond_nonpareil",
+  "num_classes": 8,
+  "ignore_index": 254,
+  "has_bse_label": true,
+  "class_names": [
+    "Background",
+    "Adaxial_Epidermis",
+    "Abaxial_Epidermis",
+    "Bundle_Sheath",
+    "Vascular_Tissue",
+    "Palisade_Mesophyll",
+    "Spongy_Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "170": 0,
+    "85": 1,
+    "95": 2,
+    "152": 3,
+    "180": 4,
+    "55": 5,
+    "0": 6,
+    "255": 7
+  },
+  "_notes": {
+    "encoding": "Abby Hammermeister",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "source_contributor": "Abby Hammermeister",
+    "note": "Prunus dulcis Nonpareil; one image/mask pair per scan from 9 scans (NP_1 to NP_27); scanned June 2023; voxel size 0.65 um."
+  }
+}

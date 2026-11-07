@@ -1,0 +1,37 @@
+{
+  "name": "grape_cabernet",
+  "num_classes": 8,
+  "ignore_index": 254,
+  "has_bse_label": true,
+  "class_names": [
+    "Background",
+    "Adaxial_Epidermis",
+    "Abaxial_Epidermis",
+    "Bundle_Sheath",
+    "Vascular_Tissue",
+    "Palisade_Mesophyll",
+    "Spongy_Mesophyll",
+    "Air_Space"
+  ],
+  "mapping": {
+    "170": 0,
+    "85": 1,
+    "95": 2,
+    "152": 3,
+    "180": 4,
+    "55": 5,
+    "0": 6,
+    "255": 7,
+    "2": 254,
+    "225": 254,
+    "253": 254,
+    "254": 254
+  },
+  "_notes": {
+    "encoding": "Abby Hammermeister",
+    "scanner": "X-ray \u03bcCT beamline (8.3.2) at the Advanced Light Source, Lawrence Berkeley National Laboratory",
+    "scan_location": "Berkeley, CA, United States",
+    "source_contributor": "Abby Hammermeister",
+    "note": "Vitis vinifera Cabernet; one image/mask pair per sampled slice from 14 scans (PVC1A to PVC7B_2); scanned March 2023; voxel size 0.642 um. A few stray mask values (2, 225, 253, 254) are mapped to the ignore index."
+  }
+}
